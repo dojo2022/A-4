@@ -12,6 +12,7 @@ public class LaborPain implements Serializable {
 	private DateTime start_time;
 	private DateTime stop_time;
 	private Time interval;
+
 	public int getLabor_pain_id() {
 		return labor_pain_id;
 	}
