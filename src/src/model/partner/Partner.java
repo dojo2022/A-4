@@ -23,6 +23,7 @@ public class Partner implements Serializable {
 	private int tidying;
 	private int self_assertion;
 	private int poop;
+	private int tooth_brushing;
 	private DateTime created_at;
 	private DateTime updated_at;
 
@@ -134,6 +135,12 @@ public class Partner implements Serializable {
 	}
 	public void setPoop(int poop) {
 		this.poop = poop;
+	}
+	public int getTooth_brushing() {
+		return tooth_brushing;
+	}
+	public void setTooth_brushing(int tooth_brushing) {
+		this.tooth_brushing = tooth_brushing;
 	}
 	public DateTime getCreated_at() {
 		return created_at;
