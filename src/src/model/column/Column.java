@@ -7,6 +7,8 @@ public class Column implements Serializable {
 	private String title;
 	private String body;
 	private int genre_id;
+
+
 	public int getColumn_id() {
 		return column_id;
 	}
