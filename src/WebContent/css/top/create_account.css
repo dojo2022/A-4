@@ -1,1 +1,52 @@
 @charset "UTF-8";
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* ど真ん中に持っていく設定 */
+.all {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.item{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+h1 {
+    size: 200ox;
+}
+
+/* フォームの設定 */
+.all p{
+    margin: 0.1px;
+}
+
+.form_item1 {
+    width: 200px;
+    height: 40px;
+    margin: 0 50px 0 50px;
+}
+.form_item2{
+    width: 200px;
+    height: 40px;
+    margin: 0 50px 0 50px;
+}
+
+/* ログインページに戻るボタン */
+.item #return_page{
+    margin-top: 20px;
+
+}
