@@ -10,17 +10,6 @@ a {
   }
 
 
-  main {
-    background-color: #f1f1f1;
-    height: 800px;
-    display: flex;
-  }
-
-
-  .main {
-    margin: auto;
-  }
-
 
 
   /* ヘッダー */
@@ -34,6 +23,8 @@ a {
     top: 0;
     left: 0;
     right: 0;
+    border-bottom:dotted;
+    border-color:black;
     z-index: 999;
   }
 

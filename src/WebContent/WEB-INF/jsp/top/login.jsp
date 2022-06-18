@@ -10,12 +10,8 @@
 </head>
 <body>
 <div class="container">
+	<%@ include file="common.jsp"%>
 	<main>
-		<div class="logo">
-            <div class="logo_img">
-                <img src="<%= request.getContextPath() %>/images/logo.png">
-            </div>
-        </div>
         <div class="form">
             <h1>log in</h1>
             <p class="error_msg" style="color:red">${msg}<p>
@@ -53,5 +49,6 @@
 
     </main>
 </div>
+<script src="<%= request.getContextPath() %>/js/top/login.js"></script>
 </body>
 </html>

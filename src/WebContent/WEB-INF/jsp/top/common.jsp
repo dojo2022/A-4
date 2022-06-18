@@ -7,14 +7,15 @@
 <title>共通画面</title>
 <link rel="stylesheet" href="https://unpkg.com/sanitize.css" >
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/top/common.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
+
 <body>
-<div class="container">
     <header class="header">
         <div class="header__inner">
             <h1 class="header__title header-title">
                 <a href="#">
-                    famiTy(ロゴ)
+                    famiTy(ロ)
                   </a>
             </h1>
 
@@ -44,14 +45,21 @@
 
         </div>
     </header>
-    <main>
-      <div class="main">
-        メインコンテンツエリア
-      </div>
-    </main>
 
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="<%= request.getContextPath() %>/js/top/common.js"></script>
+
 </body>
+<script type="text/javascript">
+const ham = $('#js-hamburger');
+const nav = $('#js-nav');
+ham.on('click', function () { //ハンバーガーメニューをクリックしたら
+  ham.toggleClass('active'); // ハンバーガーメニューにactiveクラスを付け外し
+  nav.toggleClass('active'); // ナビゲーションメニューにactiveクラスを付け外し
+
+});
+
+console.log("hello");
+$('#btn').on('click',function(){
+console.log('click');
+});</script>
+
 </html>
