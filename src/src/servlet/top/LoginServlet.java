@@ -45,7 +45,8 @@ public class LoginServlet extends HttpServlet {
 			return;
 		}
 
-		System.out.println("email:"+user.getEmail()+" name:"+user.getName());		HttpSession session = request.getSession();
+		System.out.println("email:"+user.getEmail()+" name:"+user.getName());
+		HttpSession session = request.getSession();
 		session.setAttribute("loginUser", user);
 		if(user.getLogout_time()==null) {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/mypage/edit_profile.jsp");
