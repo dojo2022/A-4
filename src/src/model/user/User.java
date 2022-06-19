@@ -2,8 +2,6 @@ package model.user;
 import java.io.Serializable;
 import java.util.Date;
 
-import org.joda.time.DateTime;
-
 public class User implements Serializable {
 	private int user_id;
 	private String email;
@@ -16,10 +14,10 @@ public class User implements Serializable {
 	private String tel;
 	private String family_id;
 	private Date due_date;
-	private DateTime created_at;
-	private DateTime updated_at;
-	private DateTime login_time;
-	private DateTime logout_time;
+	private Date created_at;
+	private Date updated_at;
+	private Date login_time;
+	private Date logout_time;
 
 
 	public int getUser_id() {
@@ -110,35 +108,35 @@ public class User implements Serializable {
 		this.due_date = due_date;
 	}
 
-	public DateTime getCreated_at() {
+	public Date getCreated_at() {
 		return created_at;
 	}
 
-	public void setCreated_at(DateTime created_at) {
+	public void setCreated_at(Date created_at) {
 		this.created_at = created_at;
 	}
 
-	public DateTime getUpdated_at() {
+	public Date getUpdated_at() {
 		return updated_at;
 	}
 
-	public void setUpdated_at(DateTime updated_at) {
+	public void setUpdated_at(Date updated_at) {
 		this.updated_at = updated_at;
 	}
 
-	public DateTime getLogin_time() {
+	public Date getLogin_time() {
 		return login_time;
 	}
 
-	public void setLogin_time(DateTime login_time) {
+	public void setLogin_time(Date login_time) {
 		this.login_time = login_time;
 	}
 
-	public DateTime getLogout_time() {
+	public Date getLogout_time() {
 		return logout_time;
 	}
 
-	public void setLogout_time(DateTime logout_time) {
+	public void setLogout_time(Date logout_time) {
 		this.logout_time = logout_time;
 	}
 

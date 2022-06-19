@@ -8,6 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import dao.user.UserDAO;
+import model.user.User;
 
 /**
  * Servlet implementation class LoginServlet
@@ -20,7 +24,6 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/top/login.jsp");
 		dispatcher.forward(request, response);
 	}
@@ -29,8 +32,29 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		String email=request.getParameter("email");
+		String password=request.getParameter("password");
+
+		UserDAO uDao = new UserDAO();
+		User user = uDao.login(email, password);
+		if(user ==null) {
+			System.out.println("ログイン失敗");
+			request.setAttribute("msg", "メールアドレスかパスワードが間違っています");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/top/login.jsp");
+			dispatcher.forward(request, response);
+			return;
+		}
+
+		System.out.println("email:"+user.getEmail()+" name:"+user.getName());		HttpSession session = request.getSession();
+		session.setAttribute("loginUser", user);
+		if(user.getLogout_time()==null) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/mypage/edit_profile.jsp");
+			dispatcher.forward(request, response);
+		}else {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/home/home.jsp");
+			dispatcher.forward(request, response);
+		}
+
 	}
 
 }

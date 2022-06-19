@@ -15,10 +15,9 @@
         <div class="header__inner">
             <h1 class="header__title header-title">
                 <a href="#">
-                    famiTy(ロ)
+                    famiTy(ロゴ)
                   </a>
             </h1>
-
             <nav class="header__nav nav" id="js-nav">
             <ul class="nav__items nav-items">
                 <li class="nav-items__item"><img src="<%= request.getContextPath() %>/image/home.png" alt="ロゴ画像"><a href="HomeServlet">ホーム</a></li>
@@ -48,18 +47,6 @@
 
 
 </body>
-<script type="text/javascript">
-const ham = $('#js-hamburger');
-const nav = $('#js-nav');
-ham.on('click', function () { //ハンバーガーメニューをクリックしたら
-  ham.toggleClass('active'); // ハンバーガーメニューにactiveクラスを付け外し
-  nav.toggleClass('active'); // ナビゲーションメニューにactiveクラスを付け外し
-
-});
-
-console.log("hello");
-$('#btn').on('click',function(){
-console.log('click');
-});</script>
+ <script src="<%= request.getContextPath() %>/js/top/common.js"></script>
 
 </html>

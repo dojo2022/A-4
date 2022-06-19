@@ -10,7 +10,7 @@ import model.user.User;
 
 public class UserDAO {
 	// 引数paramで検索項目を指定し、検索結果のリストを返す
-	public User select(int user_id) {
+	public User getUser(int user_id) {
 		Connection conn = null;
 		User user = new User();
 		try {
@@ -61,6 +61,146 @@ public class UserDAO {
 		// 結果を返す
 		return user;
 	}
+	public User getUser(String email,String password) {
+		Connection conn = null;
+		User user = new User();
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
 
+			// データベースに接続する
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
+
+			// SQL文を準備する
+
+			String sql;
+			PreparedStatement pStmt;
+
+				sql = "select * from User WHERE email = ? and password = ?";
+				pStmt= conn.prepareStatement(sql);
+				pStmt.setString(1, email);
+				pStmt.setString(2, password);
+
+			// SQL文を実行し、結果表を取得する
+			ResultSet rs = pStmt.executeQuery();
+
+			// 結果表をコレクションにコピーする
+				if(rs.next()) {
+				user.setUser_id(rs.getInt("user_id"));
+				user.setName(rs.getString("name"));
+				user.setNickname(rs.getString("Nickname"));
+				user.setPost_code(rs.getString("post_code"));
+				user.setAddress(rs.getString("address"));
+				user.setBirthday(rs.getString("birthday"));
+				user.setGender(rs.getString("gender"));
+				user.setTel(rs.getString("tel"));
+				user.setFamily_id(rs.getString("family_id"));
+				user.setDue_date(rs.getDate("due_date"));
+				user.setCreated_at(rs.getTimestamp("created_at"));
+				user.setUpdated_at(rs.getTimestamp("updated_at"));
+				user.setLogin_time(rs.getTimestamp("login_time"));
+				user.setLogout_time(rs.getTimestamp("logout_time"));
+				}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+			user = null;
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			user = null;
+		}
+		finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+					user = null;
+				}
+			}
+		}
+
+		// 結果を返す
+		return user;
+	}
+
+	public User login(String email, String password) {
+		Connection conn = null;
+		User user = null;
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+
+			// データベースに接続する
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
+
+			// SQL文を準備する
+
+			String sql;
+			PreparedStatement pStmt;
+
+				sql = "update user set login_time = now() where exists("
+						+ "select * from user where email = ? and password = ?)";
+				pStmt= conn.prepareStatement(sql);
+				pStmt.setString(1,email);
+				pStmt.setString(2,password);
+			// SQL文を実行し、結果表を取得する
+			int rc = pStmt.executeUpdate();
+			if(rc!=0) {
+				sql="select * from user where email = ? and password = ?";
+				pStmt= conn.prepareStatement(sql);
+				pStmt.setString(1,email);
+				pStmt.setString(2,password);
+
+				ResultSet rs = pStmt.executeQuery();
+				if(rs.next()) {
+					user = new User();
+					user.setUser_id(rs.getInt("user_id"));
+					user.setEmail(rs.getString("email"));
+					user.setName(rs.getString("name"));
+					user.setNickname(rs.getString("nickname"));
+					user.setPost_code(rs.getString("post_code"));
+					user.setAddress(rs.getString("address"));
+					user.setBirthday(rs.getString("birthday"));
+					user.setGender(rs.getString("gender"));
+					user.setTel(rs.getString("tel"));
+					user.setFamily_id(rs.getString("family_id"));
+					user.setDue_date(rs.getDate("due_date"));
+					user.setCreated_at(rs.getTimestamp("created_at"));
+					user.setUpdated_at(rs.getTimestamp("updated_at"));
+					user.setLogin_time(rs.getTimestamp("login_time"));
+					user.setLogout_time(rs.getTimestamp("logout_time"));
+					}
+			}
+
+
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+			user = null;
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			user = null;
+		}
+		finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+					user = null;
+				}
+			}
+		}
+
+		return user;
+
+	}
 
 }
