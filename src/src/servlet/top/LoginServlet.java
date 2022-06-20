@@ -52,6 +52,7 @@ public class LoginServlet extends HttpServlet {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/mypage/edit_profile.jsp");
 			dispatcher.forward(request, response);
 		}else {
+
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/home/home.jsp");
 			dispatcher.forward(request, response);
 		}

@@ -33,8 +33,24 @@ public class UserDAO {
 			ResultSet rs = pStmt.executeQuery();
 
 			// 結果表をコレクションにコピーする
-				rs.next();
+			if(rs.next()) {
+				user = new User();
+				user.setUser_id(rs.getInt("user_id"));
+				user.setEmail(rs.getString("email"));
 				user.setName(rs.getString("name"));
+				user.setNickname(rs.getString("nickname"));
+				user.setPost_code(rs.getString("post_code"));
+				user.setAddress(rs.getString("address"));
+				user.setBirthday(rs.getString("birthday"));
+				user.setGender(rs.getString("gender"));
+				user.setTel(rs.getString("tel"));
+				user.setFamily_id(rs.getString("family_id"));
+				user.setDue_date(rs.getDate("due_date"));
+				user.setCreated_at(rs.getTimestamp("created_at"));
+				user.setUpdated_at(rs.getTimestamp("updated_at"));
+				user.setLogin_time(rs.getTimestamp("login_time"));
+				user.setLogout_time(rs.getTimestamp("logout_time"));
+				}
 
 		}
 		catch (SQLException e) {
