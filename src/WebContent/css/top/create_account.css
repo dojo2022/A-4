@@ -1,52 +1,70 @@
 @charset "UTF-8";
-body{
-    margin: 0;
-    padding: 0;
+main {
+	margin-top: -100px;
+
 }
 
-/* ど真ん中に持っていく設定 */
-.all {
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: center center;
-    position: relative;
-}
-.item{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    letter-spacing: 0.05em;
+.form {
+    padding: 20% 0 0;
     text-align: center;
+    height:auto;
+}
+.form h2{
+
+	text-align: center;
+}
+form table{
+    margin: 0 auto;
+    text-align: center;
+    height:auto;
+}
+form input {
+	margin-top:10px;
+	line-height: 50px;
+    height: 52px;
+    width:40em;
 }
 
-h1 {
-    size: 200ox;
+.create_account_button{
+	width:15em;
+	appearance: none;
+	border: 0;
+	border-radius: 30px;
+	background: #413F42;
+	color: #fff;
+	font-size: 16px;
 }
 
-/* フォームの設定 */
-.all p{
-    margin: 0.1px;
+
+#overlay{
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height:100%;
+  display:none;
+  background: rgba(0,0,0,0.6);
+}
+.cv-spinner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px #ddd solid;
+  border-top: 4px #2e93e6 solid;
+  border-radius: 50%;
+  animation: sp-anime 0.8s infinite linear;
+}
+@keyframes sp-anime {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.form_item1 {
-    width: 200px;
-    height: 40px;
-    margin: 0 50px 0 50px;
-}
-.form_item2{
-    width: 200px;
-    height: 40px;
-    margin: 0 50px 0 50px;
-}
-
-/* ログインページに戻るボタン */
-.item #return_page{
-    margin-top: 20px;
-
+.is-hide{
+  display:none;
 }

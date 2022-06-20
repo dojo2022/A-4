@@ -5,6 +5,7 @@ import java.util.Date;
 public class User implements Serializable {
 	private int user_id;
 	private String email;
+	private String password;
 	private String name;
 	private String nickname;
 	private String post_code;
@@ -12,7 +13,7 @@ public class User implements Serializable {
 	private String birthday;
 	private String gender;
 	private String tel;
-	private String family_id;
+	private int family_id;
 	private Date due_date;
 	private Date created_at;
 	private Date updated_at;
@@ -34,6 +35,14 @@ public class User implements Serializable {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getPassword() {
+		return email;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getName() {
@@ -92,11 +101,11 @@ public class User implements Serializable {
 		this.tel = tel;
 	}
 
-	public String getFamily_id() {
+	public int getFamily_id() {
 		return family_id;
 	}
 
-	public void setFamily_id(String family_id) {
+	public void setFamily_id(int family_id) {
 		this.family_id = family_id;
 	}
 

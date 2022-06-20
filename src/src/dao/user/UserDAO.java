@@ -44,7 +44,7 @@ public class UserDAO {
 				user.setBirthday(rs.getString("birthday"));
 				user.setGender(rs.getString("gender"));
 				user.setTel(rs.getString("tel"));
-				user.setFamily_id(rs.getString("family_id"));
+				user.setFamily_id(rs.getInt("family_id"));
 				user.setDue_date(rs.getDate("due_date"));
 				user.setCreated_at(rs.getTimestamp("created_at"));
 				user.setUpdated_at(rs.getTimestamp("updated_at"));
@@ -110,7 +110,7 @@ public class UserDAO {
 				user.setBirthday(rs.getString("birthday"));
 				user.setGender(rs.getString("gender"));
 				user.setTel(rs.getString("tel"));
-				user.setFamily_id(rs.getString("family_id"));
+				user.setFamily_id(rs.getInt("family_id"));
 				user.setDue_date(rs.getDate("due_date"));
 				user.setCreated_at(rs.getTimestamp("created_at"));
 				user.setUpdated_at(rs.getTimestamp("updated_at"));
@@ -183,7 +183,7 @@ public class UserDAO {
 					user.setBirthday(rs.getString("birthday"));
 					user.setGender(rs.getString("gender"));
 					user.setTel(rs.getString("tel"));
-					user.setFamily_id(rs.getString("family_id"));
+					user.setFamily_id(rs.getInt("family_id"));
 					user.setDue_date(rs.getDate("due_date"));
 					user.setCreated_at(rs.getTimestamp("created_at"));
 					user.setUpdated_at(rs.getTimestamp("updated_at"));
@@ -218,5 +218,119 @@ public class UserDAO {
 		return user;
 
 	}
+
+
+
+//メールアドレスがすでにあるかチェック
+	public Boolean existCheck(String email){
+		Connection conn = null;
+		boolean result = false;
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
+
+				// SQL文を準備する
+
+				String sql;
+				PreparedStatement pStmt;
+
+	          sql = "select count(*) from User WHERE email = ?";
+	          pStmt= conn.prepareStatement(sql);
+	          // SQL文を完成させる
+	          pStmt.setString(1,email);
+
+	          // SQL文を実行し、結果表を取得する
+				ResultSet rs = pStmt.executeQuery();
+
+				// 結果表をコレクションにコピーする
+				rs.next();
+	          if (rs.getInt("count(*)") == 1) {
+					result = true;
+				}
+
+
+	      }
+			catch (SQLException e) {
+				e.printStackTrace();
+				result = false;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				result = false;
+			}
+			catch (NullPointerException e) {
+				e.printStackTrace();
+				result = false;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						result = false;
+					}
+				}
+			}
+
+			// 結果を返す
+			return result;
+	}
+
+	//アカウント作成
+	public boolean createAccount(String email, String password, int family_id){
+		Connection conn = null;
+		boolean result = false;
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
+
+				// SQL文を準備する
+
+				String sql;
+				PreparedStatement pStmt;
+
+	          sql = "insert into User (email, password, family_id) value (?, ?, ?)";
+				pStmt= conn.prepareStatement(sql);
+				pStmt.setString(1, email);
+				pStmt.setString(2, password);
+				pStmt.setInt(3, family_id);
+
+				// SQL文を実行する
+				if (pStmt.executeUpdate() == 1) {
+					result = true;
+				}
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+				result = false;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				result = false;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						result = false;
+					}
+				}
+			}
+
+			return result;
+		}
 
 }

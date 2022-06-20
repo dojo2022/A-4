@@ -4,22 +4,45 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="https://unpkg.com/sanitize.css" >
-<link rel="stylesheet" href="/WebContent/css/top/create_account.css">
-<title>アカウント作成｜famiTy</title>
+<link rel="stylesheet" href="https://unpkg.com/sanitize.css" ></linkrel>
+<link rel="stylesheet" href="<%= request.getContextPath() %>/css/top/create_account.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<title>famiTy 新規アカウント作成</title>
 </head>
 <body>
-    <div class = "all">
-        <div class = "item">
+<div class = "container">
+    <main>
+        <div class = "form">
             <h1>ロゴ</h1>
-            <form method="POST" action="/MaternityApp/servlet/top/CreateAccountServlet.java">
-            <p><input type="text" class = "form_item1" name="email" placeholder="メールアドレス" required></p><br>
-            <p><input type="password"  class = "form_item2" name="password" placeholder="password" required></p><br>
-            <p><input type="button" name="createAccount" value="アカウント作成"><br>
-            </form>
-            <p id="return_page"><input type= "button" onclick="location.href='/MaternityApp/servlet/top/LoginServlet.java'" value="ログインページへ"
-                style="font-size:2px;width: 6rem; "></p>
+            <form id="create_account_from" method="POST" action="CreateAccountServlet">
+                <table>
+                    <tr>
+                        <td>
+                            <p><input type="text" id="email" class = "form_item1" name="email" value="${param.email}" placeholder="メールアドレス" required></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><input type="password" id="password" class = "form_item2" name="password" value="${param.password}" placeholder="password" required></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><input class="create_account_button" type="button" name="createAccount" value="アカウント作成" onclick="goAjax()"></p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input class="create_account_button" type= "button" onclick="location.href='LoginServlet'" value="ログインページへ"
+                            style="font-size:2px;width: 6rem; ">
+                 		</td>
+                 	</tr>
+				</table>
+			</form>
         </div>
-    </div>
+    </main>
+</div>
+<script src="<%= request.getContextPath() %>/js/top/create_account.js"></script>
 </body>
 </html>
