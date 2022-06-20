@@ -1,8 +1,7 @@
 package model.partner;
 
 import java.io.Serializable;
-
-import org.joda.time.DateTime;
+import java.util.Date;
 
 public class Partner implements Serializable {
 	private int partner_id;
@@ -13,6 +12,7 @@ public class Partner implements Serializable {
 	private int sleepiness;
 	private int humor;
 	private int nausea;
+	private int stress;
 	private int dizziness;
 	private int fatigue;
 	private int stiff_shoulder;
@@ -24,8 +24,8 @@ public class Partner implements Serializable {
 	private int self_assertion;
 	private int poop;
 	private int tooth_brushing;
-	private DateTime created_at;
-	private DateTime updated_at;
+	private Date created_at;
+	private Date updated_at;
 
 
 	public int getPartner_id() {
@@ -75,6 +75,12 @@ public class Partner implements Serializable {
 	}
 	public void setNausea(int nausea) {
 		this.nausea = nausea;
+	}
+	public int getStress() {
+		return stress;
+	}
+	public void setStress(int stress) {
+		this.stress = stress;
 	}
 	public int getDizziness() {
 		return dizziness;
@@ -142,16 +148,16 @@ public class Partner implements Serializable {
 	public void setTooth_brushing(int tooth_brushing) {
 		this.tooth_brushing = tooth_brushing;
 	}
-	public DateTime getCreated_at() {
+	public Date getCreated_at() {
 		return created_at;
 	}
-	public void setCreated_at(DateTime created_at) {
+	public void setCreated_at(Date created_at) {
 		this.created_at = created_at;
 	}
-	public DateTime getUpdated_at() {
+	public Date getUpdated_at() {
 		return updated_at;
 	}
-	public void setUpdated_at(DateTime updated_at) {
+	public void setUpdated_at(Date updated_at) {
 		this.updated_at = updated_at;
 	}
 
