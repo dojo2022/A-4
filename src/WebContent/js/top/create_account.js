@@ -38,7 +38,7 @@ function goAjax(){
             alert('登録に成功しました。');
 
             /*アカウントを作成したので自動的に初回ログイン、プロフィール編集画面へ*/
-            window.location.href = '<%= request.getContextPath() %>/servlet/mypage/EditProfileServlet.java';
+            window.location.href = '/MaternityApp/servlet/mypage/EditProfileServlet';
 
         } else if(data.equals('exist')){
             alart('すでに登録されています。');
