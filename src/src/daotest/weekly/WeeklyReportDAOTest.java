@@ -31,6 +31,7 @@ public class WeeklyReportDAOTest {
 			System.out.println(wr.getPerson());
 			System.out.println(wr.getTitle());
 			System.out.println(wr.getBody());
+			System.out.println(wr.getImage());
 		}
 
 

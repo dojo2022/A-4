@@ -46,6 +46,7 @@ public class WeeklyReportDAO {
 				wr.setPerson(rs.getString("person"));
 				wr.setTitle(rs.getString("title"));
 				wr.setBody(rs.getString("body"));
+				wr.setImage(rs.getString("image"));
 				wrList.add(wr);
 				}
 
@@ -107,6 +108,7 @@ public class WeeklyReportDAO {
 				wr.setPerson(rs.getString("person"));
 				wr.setTitle(rs.getString("title"));
 				wr.setBody(rs.getString("body"));
+				wr.setImage(rs.getString("image"));
 				}
 
 		}

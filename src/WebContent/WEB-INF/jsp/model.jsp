@@ -5,14 +5,18 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://unpkg.com/sanitize.css" >
-<link rel="stylesheet" href="<%= request.getContextPath() %>/css/model.css" >それぞれのcss指定
+<link rel="stylesheet" href="../css/weekle_report.css" >
 <title>ページのタイトル</title>
 </head>
 <body>
 <div class="container">
 	<%@ include file="top/common.jsp"%>ヘッダー、ハンバーガーメニューのインクルード
 	<main>
-	メインコンテンツ（ここ書き換えて）
+		<div class="mother_report">
+
+		</div>
+		<div class="baby_report">
+		</div>
     </main>
 </div>
 

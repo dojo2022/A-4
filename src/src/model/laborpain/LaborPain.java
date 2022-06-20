@@ -2,15 +2,14 @@ package model.laborpain;
 
 import java.io.Serializable;
 import java.sql.Time;
-
-import org.joda.time.DateTime;
+import java.util.Date;
 
 public class LaborPain implements Serializable {
 
 	private int labor_pain_id;
 	private int user_id;
-	private DateTime start_time;
-	private DateTime stop_time;
+	private Date start_time;
+	private Date stop_time;
 	private Time interval;
 
 	public int getLabor_pain_id() {
@@ -25,16 +24,16 @@ public class LaborPain implements Serializable {
 	public void setUser_id(int user_id) {
 		this.user_id = user_id;
 	}
-	public DateTime getStart_time() {
+	public Date getStart_time() {
 		return start_time;
 	}
-	public void setStart_time(DateTime start_time) {
+	public void setStart_time(Date start_time) {
 		this.start_time = start_time;
 	}
-	public DateTime getStop_time() {
+	public Date getStop_time() {
 		return stop_time;
 	}
-	public void setStop_time(DateTime stop_time) {
+	public void setStop_time(Date stop_time) {
 		this.stop_time = stop_time;
 	}
 	public Time getInterval() {

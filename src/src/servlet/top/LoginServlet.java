@@ -53,8 +53,7 @@ public class LoginServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 		}else {
 
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/home/home.jsp");
-			dispatcher.forward(request, response);
+			response.sendRedirect("/MaternityApp/HomeServlet");
 		}
 
 	}
