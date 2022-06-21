@@ -15,6 +15,7 @@ public class Product implements Serializable{
 	public int purchase_user_id;
 	public DateTime listing_date;
 	public DateTime purchase_date;
+
 	public int getProduct_id() {
 		return product_id;
 	}
