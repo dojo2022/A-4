@@ -1,1 +1,39 @@
 @charset "UTF-8";
+main {
+	margin-top: -100px;
+
+}
+
+.form {
+    padding:0;
+    text-align: center;
+    height:auto;
+}
+
+.form h2{
+
+	text-align: center;
+}
+form table{
+    margin: 0 auto;
+    text-align: center;
+    height:auto;
+}
+form input {
+	margin-top:10px;
+	line-height: 50px;
+    height: 20px;
+    width:50em;
+}
+
+.user_profile_button{
+	width:10em;
+	appearance: none;
+	border: 0;
+	border-radius: 30px;
+	background: #413F42;
+	color: #fff;
+	font-size: 16px;
+}
+
+
