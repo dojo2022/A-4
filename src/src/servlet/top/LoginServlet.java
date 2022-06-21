@@ -1,7 +1,6 @@
 package servlet.top;
 
 import java.io.IOException;
-import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -47,7 +46,6 @@ public class LoginServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 			return;
 		}
-		Date birthday = user.getBirthday();
 		System.out.println("email:"+user.getEmail()+" name:"+user.getName());
 		HttpSession session = request.getSession();
 		session.setAttribute("loginUser", user);

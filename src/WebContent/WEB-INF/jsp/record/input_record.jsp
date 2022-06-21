@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +9,8 @@
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/record/input_record.css">
 <%@ include file="../top/common.jsp"%>
 </head>
-<main>
 <body>
+<main>
 <!-- 今日の日付 -->
 <form class="input_record" method="POST" action="<%= request.getContextPath() %>/src/servlet.record/InputRecordServlet">
 <span id="today"></span>
@@ -28,7 +29,7 @@
 </div>
 <!-- 家族メーター -->
 <c:forEach var="e" items="${PartnerList}" >
-<label>項目${e. }</label>
+<label id="${e.partner_id }">項目${e.appetite }</label>
 	<label>
 		<input type="radio" name="meter" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
 	</label>
@@ -53,8 +54,20 @@
 
 </div>
 </form>
-
+</main>
+</body>
 <script>
+
+
+
+console.log(pl[1]);
+
+
+
+
+
+
+}
 'use strict';
 <!-- 日付 -->
 function recalc() {
@@ -113,6 +126,6 @@ function goAjax(){
 		  });
 	}
 </script>
-</body>
-</main>
+
+
 </html>
