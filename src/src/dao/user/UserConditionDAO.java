@@ -3,7 +3,11 @@ package dao.user;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
+import org.joda.time.LocalDate;
 
 import model.user.UserCondition;
 
@@ -76,4 +80,80 @@ public class UserConditionDAO {
 			// 結果を返す
 			return result;
  }
+
+public ArrayList<UserCondition> select(int family_id){
+	Connection conn = null;
+	ArrayList<UserCondition> ucList = new ArrayList<UserCondition>();
+	try {
+		// JDBCドライバを読み込む
+		Class.forName("org.h2.Driver");
+
+		// データベースに接続する
+		conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
+
+
+		// SQL文を準備する
+		String sql;
+		PreparedStatement pStmt;
+
+		sql = "select * from partner join user_condition on partner.partner_id = user_condition.partner_id"
+				+ " WHERE partner.family_id = ? and created_at = ?";
+		pStmt= conn.prepareStatement(sql);
+
+		pStmt.setInt(1,family_id);
+		LocalDate today = LocalDate.now();
+		pStmt.setString(2,today+"%");
+
+		ResultSet rs = pStmt.executeQuery();
+
+		while(rs.next()) {
+			UserCondition card = new UserCondition();
+			card.setPartner_id(rs.getInt("partner_id"));
+			card.setWeight(rs.getFloat("weight"));
+			card.setBody_temparture(rs.getFloat("body_temparture"));
+			card.setText(rs.getString("text"));
+			card.setAppetite(rs.getInt("appetite"));
+			card.setSleepiness(rs.getInt("sleepiness"));
+			card.setHumor(rs.getInt("humor"));
+			card.setNausea(rs.getInt("nausea"));
+			card.setStress(rs.getInt("stress"));
+			card.setDizziness(rs.getInt("dizziness"));
+			card.setFatigue(rs.getInt("fatigue"));
+			card.setStiff_shoulder(rs.getInt("stiff_shoulder"));
+			card.setHeadache(rs.getInt("headache"));
+			card.setBackache(rs.getInt("backache"));
+			card.setStomach_ache(rs.getInt("stomach_ache"));
+			card.setFeeling(rs.getInt("feeleng"));
+			card.setTidying(rs.getInt("tidying"));
+			card.setSelf_assertion(rs.getInt("self_assertion"));
+			card.setPoop(rs.getInt("poop"));
+			card.setTooth_brushing(rs.getInt("tooth_brushing"));
+			card.setCreated_at(rs.getDate("created_at"));
+			ucList.add(card);
+		}
+	}
+	catch (SQLException e) {
+		e.printStackTrace();
+		ucList = null;
+	}
+	catch (ClassNotFoundException e) {
+		e.printStackTrace();
+		ucList = null;
+	}
+	finally {
+		// データベースを切断
+		if (conn != null) {
+			try {
+				conn.close();
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+				ucList = null;
+			}
+		}
+	}
+
+	// 結果を返す
+	return ucList;
+	}
 }
