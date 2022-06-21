@@ -27,7 +27,8 @@
 	<label>体温(℃)</label><input type = "number" name = "body_temparture" min = "30" max = "50" step = "0.1" value = "36">
 </div>
 <!-- 家族メーター -->
-<label>項目</label>
+<c:forEach var="e" items="${PartnerList}" >
+<label>項目${ }</label>
 	<label>
 		<input type="radio" name="meter" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
 	</label>
@@ -43,7 +44,7 @@
 	<label>
 		<input type="radio" name="meter" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
 	</label>
-
+</c:if>
 
 <!-- 記録ボタン -->
 <div>

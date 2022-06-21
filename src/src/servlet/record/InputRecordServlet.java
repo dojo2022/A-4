@@ -38,9 +38,9 @@ public class InputRecordServlet extends HttpServlet {
 		//リクエストスコープにいれて
 		PartnerDAO pDao = new PartnerDAO();
 		Partner pc = new Partner();
-		ArrayList<Partner> PartnerList  = pDao.select(pc);
+		ArrayList<Partner> PartnerList  = pDao.selectFamilyPartner(pc);
 
-		request.setAttribute("",);
+		request.setAttribute("PartnerList", PartnerList);
 
 
 		//input_record.jspにフォワード
