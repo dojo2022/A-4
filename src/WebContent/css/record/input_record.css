@@ -1,1 +1,30 @@
 @charset "UTF-8";
+main {
+	padding-top:50px; /*ヘッダーと被らないようにしてる*/
+}
+body{
+	text-align: center;
+}
+div.outline{
+	border: 1px solid #767171;
+	width: 800px;
+	height: auto;
+	margin: auto;
+}
+input[text]+.text {
+	height: 100px;
+}
+.radio {
+	display: none;
+}
+
+.radio + .radio_image {
+	border: 3px #ffffff solid;
+	background-color: #ffffff;
+}
+.radio:checked + .radio_image {
+	background-color: #EF5350;
+}
+input[submit]{
+	text-align: right;
+}

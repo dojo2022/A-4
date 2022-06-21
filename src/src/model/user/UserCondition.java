@@ -1,21 +1,20 @@
 package model.user;
 
 import java.io.Serializable;
+import java.util.Date;
 
-import org.joda.time.DateTime;
 
 public class UserCondition implements Serializable {
 	private int user_condition_id;
 	private int partner_id;
-	private int family_id;
-	private String name;
-	private String attribute;
 	private float weight;
 	private float body_temparture;
+	private String text;
 	private int appetite;
 	private int sleepiness;
 	private int humor;
 	private int nausea;
+	private int stress;
 	private int dizziness;
 	private int fatigue;
 	private int stiff_shoulder;
@@ -27,7 +26,7 @@ public class UserCondition implements Serializable {
 	private int self_assertion;
 	private int poop;
 	private int tooth_brushing;
-	private DateTime created_at;
+	private Date created_at;
 
 
 	public int getUser_condition_id() {
@@ -42,35 +41,23 @@ public class UserCondition implements Serializable {
 	public void setPartner_id(int partner_id) {
 		this.partner_id = partner_id;
 	}
-	public int getFamily_id() {
-		return family_id;
-	}
-	public void setFamily_id(int family_id) {
-		this.family_id = family_id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getAttribute() {
-		return attribute;
-	}
-	public void setAttribute(String attribute) {
-		this.attribute = attribute;
-	}
 	public float getWeight() {
 		return weight;
 	}
-	public void setWeight(float weight) {
-		this.weight = weight;
+	public void setWeight(float d) {
+		this.weight = d;
 	}
 	public float getBody_temparture() {
 		return body_temparture;
 	}
 	public void setBody_temparture(float body_temparture) {
 		this.body_temparture = body_temparture;
+	}
+	public String getText() {
+		return text;
+	}
+	public void setText(String text) {
+		this.text = text;
 	}
 	public int getAppetite() {
 		return appetite;
@@ -95,6 +82,12 @@ public class UserCondition implements Serializable {
 	}
 	public void setNausea(int nausea) {
 		this.nausea = nausea;
+	}
+	public int getStress() {
+		return stress;
+	}
+	public void setStress(int stress) {
+		this.stress = stress;
 	}
 	public int getDizziness() {
 		return dizziness;
@@ -162,10 +155,10 @@ public class UserCondition implements Serializable {
 	public void setTooth_brushing(int tooth_brushing) {
 		this.tooth_brushing = tooth_brushing;
 	}
-	public DateTime getCreated_at() {
+	public Date getCreated_at() {
 		return created_at;
 	}
-	public void setCreated_at(DateTime created_at) {
+	public void setCreated_at(Date created_at) {
 		this.created_at = created_at;
 	}
 
