@@ -10,7 +10,7 @@ public class User implements Serializable {
 	private String nickname;
 	private String post_code;
 	private String address;
-	private String birthday;
+	private Date birthday;
 	private String gender;
 	private String tel;
 	private int family_id;
@@ -77,11 +77,11 @@ public class User implements Serializable {
 		this.address = address;
 	}
 
-	public String getBirthday() {
+	public Date getBirthday() {
 		return birthday;
 	}
 
-	public void setBirthday(String birthday) {
+	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
 

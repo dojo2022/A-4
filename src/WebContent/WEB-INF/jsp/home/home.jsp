@@ -6,6 +6,8 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://unpkg.com/sanitize.css" >
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/home/home.css" >
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script defer src="<%= request.getContextPath() %>/js/home/home.js"></script>
 <title>ページのタイトル</title>
 </head>
 <body>
@@ -22,8 +24,8 @@
             </table>
         </div>
         <div class="labor">
-            <input type="button" name="labor_pain" value="陣痛きた！">
-            <span>O回</span>
+            <input type="button" id="labor_btn" name="labor_pain" >
+            <span id="today_labor_count"></span>
         </div>
         <div class="report">
             <div class="report_info mother">

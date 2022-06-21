@@ -41,7 +41,7 @@ public class UserDAO {
 				user.setNickname(rs.getString("nickname"));
 				user.setPost_code(rs.getString("post_code"));
 				user.setAddress(rs.getString("address"));
-				user.setBirthday(rs.getString("birthday"));
+				user.setBirthday(rs.getDate("birthday"));
 				user.setGender(rs.getString("gender"));
 				user.setTel(rs.getString("tel"));
 				user.setFamily_id(rs.getInt("family_id"));
@@ -107,7 +107,7 @@ public class UserDAO {
 				user.setNickname(rs.getString("Nickname"));
 				user.setPost_code(rs.getString("post_code"));
 				user.setAddress(rs.getString("address"));
-				user.setBirthday(rs.getString("birthday"));
+				user.setBirthday(rs.getDate("birthday"));
 				user.setGender(rs.getString("gender"));
 				user.setTel(rs.getString("tel"));
 				user.setFamily_id(rs.getInt("family_id"));
@@ -180,7 +180,7 @@ public class UserDAO {
 					user.setNickname(rs.getString("nickname"));
 					user.setPost_code(rs.getString("post_code"));
 					user.setAddress(rs.getString("address"));
-					user.setBirthday(rs.getString("birthday"));
+					user.setBirthday(rs.getDate("birthday"));
 					user.setGender(rs.getString("gender"));
 					user.setTel(rs.getString("tel"));
 					user.setFamily_id(rs.getInt("family_id"));
