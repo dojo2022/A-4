@@ -1,1 +1,13 @@
 @charset "UTF-8";
+.genre{
+		border: solid 1px yellow;
+		padding: 10px;
+		padding-left:30px;
+		background-color: pink;
+		margin:10px;
+		width:40%;
+		margin-left:30%;
+	}
+.genre a{
+		text-decoration: none;
+	}
