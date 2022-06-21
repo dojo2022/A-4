@@ -24,10 +24,10 @@ function inLabor(){
 	}).done(function(data) {
 		console.log(data);
 		if(data == false){
-			$("#labor_btn").val("陣痛収まった！");
+			$("#labor_btn").val("陣痛きた！");
 		}
 		else{
-			$("#labor_btn").val("陣痛きた！");
+			$("#labor_btn").val("陣痛収まった！");
 		}
 	  })
 	   //非同期通信が失敗したときの処理
@@ -69,23 +69,30 @@ function getTodayLaborCount(){
 
 
 }
-$('#labor_btn').on('click',function(){
+$('#labor_btn').on('click', async function(){
 	var data;
 	if($(this).val()=="陣痛きた！"){
 		data = {"process":"createLabor"};
-		createLabor(data).then(function(data){
-			console.log(data);
-		});
+		let message = await create_labor(data);
+			if(message){
+				$('#labor_btn').val("陣痛収まった！");
+			}
+
+
 	}else if($(this).val()=="陣痛収まった！"){
 		data = {"process":"stopLabor"};
-		createLabor(data).then(function(data){
-			console.log(data);
-		});
+		let message =await create_labor(data);
+			if(message){
+			$('#labor_btn').val("陣痛きた！");
+			}
 	}
-	});
+	getTodayLaborCount()
+});
 
 
 function create_labor(data){
+return new Promise((resolve,reject) =>{
+
 	$.ajaxSetup({scriptCharset:'utf-8'});
 	$.ajax({
 		//どのサーブレットに送るか
@@ -102,15 +109,17 @@ function create_labor(data){
 		timeStamp: new Date().getTime()
 	   //非同期通信が成功したときの処理
 	}).done(function(data) {
-		console.log(data);
-		return data;
+		resolve(data);
 	  })
 	   //非同期通信が失敗したときの処理
 	  .fail(function() {
 		//失敗とアラートを出す
 		alert("失敗！");
+		reject();
 	  });
-};
- console.log("############");
+	})
+   }
+
+
 
 

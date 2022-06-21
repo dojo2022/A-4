@@ -81,7 +81,7 @@ public class LaborPainDAO {
 			String sql;
 			PreparedStatement pStmt;
 
-				sql = "SELECT * FROM LABOR_PAIN where user_id = ? order by start_time desc  limit 1;";
+				sql = "SELECT * FROM LABOR_PAIN where user_id = ? AND start_time = (select max(start_time) from labor_pain)";
 				pStmt= conn.prepareStatement(sql);
 				pStmt.setInt(1,user_id);
 
