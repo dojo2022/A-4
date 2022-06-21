@@ -28,7 +28,7 @@
 </div>
 <!-- 家族メーター -->
 <c:forEach var="e" items="${PartnerList}" >
-<label>項目${ }</label>
+<label>項目${e. }</label>
 	<label>
 		<input type="radio" name="meter" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
 	</label>
@@ -44,7 +44,7 @@
 	<label>
 		<input type="radio" name="meter" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
 	</label>
-</c:if>
+</c:forEach>
 
 <!-- 記録ボタン -->
 <div>

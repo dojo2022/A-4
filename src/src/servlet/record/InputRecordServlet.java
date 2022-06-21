@@ -1,6 +1,7 @@
 package servlet.record;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -42,10 +43,12 @@ public class InputRecordServlet extends HttpServlet {
 
 		request.setAttribute("PartnerList", PartnerList);
 
-
-		//input_record.jspにフォワード
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/record/input_record.jsp");
-		dispatcher.forward(request, response);
+		if(LocalDate today == LocalDate.now()) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/record/input_record.jsp");
+			dispatcher.forward(request, response);
+		}else {
+			response.sendRedirect("/WEB-INF/jsp/record/input_record.jsp");
+		}
 
 
 	}
