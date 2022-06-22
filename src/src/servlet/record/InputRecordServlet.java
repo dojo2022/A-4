@@ -38,14 +38,19 @@ public class InputRecordServlet extends HttpServlet {
 		//リクエストスコープにいれて
 		PartnerDAO pDao = new PartnerDAO();
 		Partner pc = new Partner();
-		ArrayList<Partner> PartnerList  = pDao.selectFamilyPartner(pc);
+		ArrayList<Partner> PartnerList  = pDao.selectFamilyPartner(family_id);
 
 		request.setAttribute("PartnerList", PartnerList);
 
-
-		//input_record.jspにフォワード
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/record/input_record.jsp");
 		dispatcher.forward(request, response);
+
+//		if(LocalDate today == LocalDate.now()) {
+//			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/record/input_record.jsp");
+//			dispatcher.forward(request, response);
+//		}else {
+//			response.sendRedirect("/WEB-INF/jsp/record/input_record.jsp");
+//		}
 
 
 	}

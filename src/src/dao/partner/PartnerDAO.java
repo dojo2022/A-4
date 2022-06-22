@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import model.partner.Partner;
 
 public class PartnerDAO {
-	public ArrayList<Partner> selectFamilyPartner(Partner pc){
+	public ArrayList<Partner> selectFamilyPartner(int family_id){
 		Connection conn = null;
 		ArrayList<Partner> PartnerList = new ArrayList<Partner>();
 			try {
@@ -30,7 +30,7 @@ public class PartnerDAO {
 				pStmt= conn.prepareStatement(sql);
 
 				// SQL文を完成させる
-				pStmt.setInt(1, pc.getFamily_id());
+				pStmt.setInt(1, family_id);
 
 
 				// SQL文を実行し、結果表を取得する
@@ -53,7 +53,7 @@ public class PartnerDAO {
 					card.setHeadache(rs.getInt("headache"));
 					card.setBackache(rs.getInt("backache"));
 					card.setStomach_ache(rs.getInt("stomach_ache"));
-					card.setFeeling(rs.getInt("feeleng"));
+					card.setFeeling(rs.getInt("feeling"));
 					card.setTidying(rs.getInt("tidying"));
 					card.setSelf_assertion(rs.getInt("self_assertion"));
 					card.setPoop(rs.getInt("poop"));

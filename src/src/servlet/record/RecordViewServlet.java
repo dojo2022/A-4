@@ -1,11 +1,19 @@
 package servlet.record;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import dao.user.UserConditionDAO;
+import model.user.User;
+import model.user.UserCondition;
 
 /**
  * Servlet implementation class RecordViewServlet
@@ -18,8 +26,21 @@ public class RecordViewServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		HttpSession session = request.getSession();
+		if (session.getAttribute("loginUser") == null) {
+			response.sendRedirect("../top/LoginServlet");
+			return;
+		}
+
+		User user = (User)session.getAttribute("loginUser");
+		int family_id = user.getFamily_id();
+		/*UserCondition uc = new UserCondition();*/
+		UserConditionDAO ucDAO = new UserConditionDAO();
+		ArrayList<UserCondition> ucList = ucDAO.select(family_id);
+		request.setAttribute("ucList", ucList);
+
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/record/record_view.jsp");
+		dispatcher.forward(request, response);
 	}
 
 	/**

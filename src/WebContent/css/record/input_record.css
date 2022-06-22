@@ -5,17 +5,54 @@ main {
 body{
 	text-align: center;
 }
+.tab-group{
+  display: flex;
+  justify-content: center;
+}
+.tab{
+  flex-grow: 1;
+  padding:5px;
+  list-style:none;
+  border:solid 1px #CCC;
+  text-align:center;
+  cursor:pointer;
+}
+.panel-group{
+  height:100px;
+  border:solid 1px #CCC;
+  border-top:none;
+  background:#eee;
+}
+.panel{
+  display:none;
+}
+#status.index{
+  background:#F00;
+  color:#FFF;
+  transition: all 0.2s ease-out;
+}
+.panel.is-show{
+  display:block;
+}
 div.outline{
 	border: 1px solid #767171;
 	width: 800px;
 	height: auto;
 	margin: auto;
 }
-input[text]+.text {
-	height: 100px;
+input.text {
+	height: 200px;
+	width: 300px;
+	margin-bottom: 20px;
 }
-.radio {
+input.number {
+	height: 40px;
+	width: auto;
+	margin-bottom: 20px;
+}
+input.radio {
 	display: none;
+	margin-bottom: 20px;
 }
 
 .radio + .radio_image {

@@ -1,21 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>famiTy | 記録入力</title>
+<title>famiTy 記録入力</title>
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/record/input_record.css">
 <%@ include file="../top/common.jsp"%>
 </head>
-<main>
 <body>
+<main>
+
 <!-- 今日の日付 -->
 <form class="input_record" method="POST" action="<%= request.getContextPath() %>/src/servlet.record/InputRecordServlet">
 <span id="today"></span>
-<!-- アカウント切り替え -->
 
-<div class="outline">
+
+<!-- アカウント切り替え -->
+<c:forEach var="e" items="${PartnerList}" varStatus="status">
+<div class="tab-panel">
+ 	<ul class="tab-group">
+    	<li class="tab " id="${status.index}" onclick="tabClick()">${e.name}</li>
+	</ul>
+<div class="panel" id="${status.index}">
+
+
 <!-- 状態文 -->
 <div>
 	<input type = "text" name = "detail" placeholder = "の状態" class="text">
@@ -23,39 +33,307 @@
 
 <!-- 体温・体重 -->
 <div>
-	<label>体重(kg)</label><input type = "number" name = "weight" min = "0" max = "200" step = "0.1" value = "60">
-	<label>体温(℃)</label><input type = "number" name = "body_temparture" min = "30" max = "50" step = "0.1" value = "36">
+	<label>体重(kg)</label><input type = "number" class="number" name = "weight" min = "0" max = "200" step = "0.1" value = "60">
+	<label>体温(℃)</label><input type = "number" class="number" name = "body_temparture" min = "30" max = "50" step = "0.1" value = "36">
 </div>
 <!-- 家族メーター -->
-<c:forEach var="e" items="${PartnerList}" >
-<label>項目${ }</label>
+<label id="${e.appetite}">食欲</label>
 	<label>
-		<input type="radio" name="meter" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
+		<input type="radio" name="meter1" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
 	</label>
 	<label>
-		<input type="radio" name="meter" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+		<input type="radio" name="meter1" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
 	</label>
 	<label>
-		<input type="radio" name="meter" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+		<input type="radio" name="meter1" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
 	</label>
 	<label>
-		<input type="radio" name="meter" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+		<input type="radio" name="meter1" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
 	</label>
 	<label>
-		<input type="radio" name="meter" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+		<input type="radio" name="meter1" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
+
+	<label id="${e.partner_id}">眠気${e.sleepiness}</label>
+	<label>
+		<input type="radio" name="meter2" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
 	</label>
-</c:if>
+	<label>
+		<input type="radio" name="meter2" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter2" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter2" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter2" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
+
+	<label id="${e.partner_id}">機嫌${e.humor}</label>
+	<label>
+		<input type="radio" name="meter3" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter3" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter3" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter3" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter3" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
+
+	<label id="${e.partner_id}">吐き気${e.nausea}</label>
+	<label>
+		<input type="radio" name="meter4" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter4" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter4" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter4" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter4" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
+
+		<label id="${e.partner_id}">ストレス${e.stress}</label>
+	<label>
+		<input type="radio" name="meter5" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter5" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter5" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter5" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter5" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
+
+		<label id="${e.partner_id}">めまい${e.dizziness}</label>
+	<label>
+		<input type="radio" name="meter6" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter6" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter6" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter6" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter6" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
+
+		<label id="${e.partner_id}">疲労${e.fatigue}</label>
+	<label>
+		<input type="radio" name="meter7" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter7" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter7" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter7" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter7" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
+
+		<label id="${e.partner_id}">肩こり${e.stiff_shoulder}</label>
+	<label>
+		<input type="radio" name="meter8" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter8" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter8" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter8" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter8" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
+
+		<label id="${e.partner_id}">頭痛${e.headache}</label>
+	<label>
+		<input type="radio" name="meter9" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter9" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter9" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter9" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter9" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
+
+		<label id="${e.partner_id}">腰痛${e.backache}</label>
+	<label>
+		<input type="radio" name="meter10" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter10" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter10" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter10" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter10" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
+
+		<label id="${e.partner_id}">腹痛${e.stomach_ache}</label>
+	<label>
+		<input type="radio" name="meter11" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter11" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter11" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter11" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter11" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
+
+		<label id="${e.partner_id}">気分${e.feeling}</label>
+	<label>
+		<input type="radio" name="meter12" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter12" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter12" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter12" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter12" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
+
+		<label id="${e.partner_id}">お片付け${e.tidying}</label>
+	<label>
+		<input type="radio" name="meter13" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter13" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter13" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter13" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter13" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
+
+		<label id="${e.partner_id}">イヤイヤ${self_assertion}</label>
+	<label>
+		<input type="radio" name="meter14" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter14" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter14" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter14" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter14" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
+
+		<label id="${e.partner_id}">うんち${e.poop}</label>
+	<label>
+		<input type="radio" name="meter15" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter15" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter15" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter15" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter15" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
+
+		<label id="${e.partner_id}">歯磨き${e.tooth_brushing}</label>
+	<label>
+		<input type="radio" name="meter16" value="1" class="radio"><img src="<%= request.getContextPath() %>/image/level1.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter16" value="2" class="radio"><img src="<%= request.getContextPath() %>/image/level2.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter16" value="3" class="radio"><img src="<%= request.getContextPath() %>/image/level3.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter16" value="4" class="radio"><img src="<%= request.getContextPath() %>/image/level4.png" class="radio_image">
+	</label>
+	<label>
+		<input type="radio" name="meter16" value="5" class="radio"><img src="<%= request.getContextPath() %>/image/level5.png" class="radio_image">
+	</label><br>
 
 <!-- 記録ボタン -->
 <div>
 	<input type = "submit" name = "submit" value = "記録する"  onclick="goAjax()" class="record">
 </div>
-
 </div>
-</form>
+</div>
+</c:forEach>
 
+</form>
+</main>
+</body>
 <script>
+
+
+
+
+
+
+
 'use strict';
+
+if($(.appetite) == 0){
+	document.getElementById("appetite").style.display ="none";
+}
+
 <!-- 日付 -->
 function recalc() {
 	  let dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'];
@@ -67,52 +345,34 @@ function recalc() {
 		=month + '月' + date + '日' + '(' + dayOfWeek[now.getDay()] + ')';
 		refresh();
 	}
-
 	function refresh() {
 		setTimeout(recalc, 1000);
 	}
-
 	recalc();
+// 選んだタブをアクティブにする
+document.getElementById('0').classList.add('is-active');
+function tabClick(){
+	// タブに対してクリックイベントを適用
+	const tabs = document.getElementsByClassName('tab');
+	for(let i = 0; i < tabs.length; i++) {
+	tabs[i].addEventListener('click', tabSwitch, false);
+}
 
-function goAjax(){
-		alert("記録しました");
-		//入力値を取得してくる
-		let testData1 = document.getElementById('test_data1').value;
-		let testData2 = document.getElementById('test_data2').value;
-		let testData3 = document.getElementById('test_data3').value;
+document.getElementById('0').classList.add('is-show')
+	// タブをクリックすると実行する関数
+	function tabSwitch(){
+	// タブのclassの値を変更
+	document.getElementsByClassName('is-active')[0].classList.remove('is-active');
+	this.classList.add('is-active');
+	// コンテンツのclassの値を変更
+	document.getElementsByClassName('is-show')[0].classList.remove('is-show');
+	const arrayTabs = Array.prototype.slice.call(tabs);
+	const index = arrayTabs.indexOf(this);
+	document.getElementsByClassName('panel')[index].classList.add('is-show');
+	};
+}
 
-		//{変数名：中に入れるもの}みたいに書いて、複数の値をpostData変数に格納
-		let postData = {data1:testData1,data2:testData2,data3:testData3}
-
-
-		//非同期通信始めるよ
-		$.ajaxSetup({scriptCharset:'utf-8'});
-		$.ajax({
-			//どのサーブレットに送るか
-			//ajaxSampleのところは自分のプロジェクト名に変更する必要あり。
-			url: '/sampleProgram/AjaxSampleServlet',
-			//どのメソッドを使用するか
-			type:"POST",
-			//受け取るデータのタイプ
-			dataType:"json",
-			//何をサーブレットに飛ばすか（変数を記述）
-			data: postData,
-			//この下の２行はとりあえず書いてる（書かなくても大丈夫？）
-			processDate:false,
-			timeStamp: new Date().getTime()
-		   //非同期通信が成功したときの処理
-		}).done(function(data) {
-			alert("成功1");
-			// 今回は上の<div id="test"></div>の中に返ってきた文字列を入れる
-			document.getElementById("test").innerText=data[0].name;
-		  })
-		   //非同期通信が失敗したときの処理
-		  .fail(function() {
-			//失敗とアラートを出す
-			alert("失敗！");
-		  });
-	}
 </script>
-</body>
-</main>
+
+
 </html>
