@@ -32,8 +32,6 @@ public class ChildcareQuestServlet extends HttpServlet {
 		response.setContentType("application/json");
 		response.setHeader("Cache-Control", "nocache");
 		response.setCharacterEncoding("utf-8");
-
-		System.out.println("in servlert");
 		String process = request.getParameter("process");
 		if(process == null) {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/childcare/childcare_quest.jsp");
@@ -41,7 +39,6 @@ public class ChildcareQuestServlet extends HttpServlet {
 			return;
 		}
 		if(process.equals("getQuestList")) {
-			System.out.println("getCQl");
 			ChildcareQuestDAO cqDao = new ChildcareQuestDAO();
 			HttpSession session = request.getSession();
 			User user = (User)session.getAttribute("loginUser");
@@ -51,7 +48,6 @@ public class ChildcareQuestServlet extends HttpServlet {
 	            //JavaオブジェクトからJSONに変換
 	            String testJson = mapper.writeValueAsString(cqList);
 	            //JSONの出力
-	            System.out.println(testJson);
 	            response.getWriter().write(testJson);
 	        } catch (JsonProcessingException e) {
 	            e.printStackTrace();
