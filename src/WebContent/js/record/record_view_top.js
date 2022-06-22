@@ -11,7 +11,8 @@ window.onload = function () {
 function prev(){
     showDate.setMonth(showDate.getMonth() - 1);
     var month = showDate.getMonth();
-    getMonthDay(month+1)
+    var year = showDate.getFullYear();
+    getMonthDay(year,month+1)
     showProcess(showDate);
 }
 
@@ -19,7 +20,8 @@ function prev(){
 function next(){
     showDate.setMonth(showDate.getMonth() + 1);
     var month = showDate.getMonth();
-    getMonthDay(month+1)
+    var year = showDate.getFullYear();
+    getMonthDay(year,month+1)
     showProcess(showDate);
 }
 
@@ -33,11 +35,13 @@ function showProcess(date) {
     document.querySelector('#calendar').innerHTML = calendar;
 }
 
-function getMonthDay(month){
+function getMonthDay(year,month){
      /*非同期処理開始*/
 	var postData={
 				"process":"getmonthday",
-				"month":month}
+				"year":year,
+				"month":month
+				}
     /*非同期処理開始*/
     let postdata={month:6}
 

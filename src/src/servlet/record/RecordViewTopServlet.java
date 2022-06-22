@@ -28,10 +28,13 @@ public class RecordViewTopServlet extends HttpServlet {
 				 RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/record/record_view_top.jsp");
 					dispatcher.forward(request, response);
 			}else if(process.equals("getmonthday")){
+				String year = request.getParameter("year");
 				String month = request.getParameter("month");
+				System.out.println(year);
 				System.out.println(month);
 				//UserConditionDAOでfamily_idと受け渡した月を引数に
 				//その月の何日に記録が入っているかを確認する。
+
 				PrintWriter out = response.getWriter();
 				//outの中に持ってきたデータを連結したものを入れる
 				//勝手にJSPに渡り、dataという名前で使用することができる
