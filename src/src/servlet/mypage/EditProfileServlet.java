@@ -1,7 +1,6 @@
 package servlet.mypage;
 
 import java.io.IOException;
-import java.sql.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -23,7 +22,6 @@ public class EditProfileServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/mypage/edit_profile.jsp");
@@ -51,14 +49,29 @@ public class EditProfileServlet extends HttpServlet {
 				String tel = request.getParameter("tel");
 				upr.setTel (request.getParameter("tel"));
 
-				Date birthday = request.getParameter("birthday");
-				upr.setBirthday (request.getParameter("birthday"));
+				String birthday = request.getParameter("birthday");
+				/*
+				Date d = new Date(birthday);
+				upr.setBirthday (request.getParameter("d"));
+
 
 				String gender = request.getParameter("gender");
 				upr.setGender (request.getParameter("gender"));
 
-				Date due_date = request.getParameter("due_date");
+				String due_date = request.getParameter("due_date");
 				upr.setDue_date (request.getParameter("due_date"));
+
+				User uprDao = new User();
+				boolean ans = uprDao.update(upr);
+				if(ans) { //編集成功
+
+				}else{	// 編集失敗
+
+				}
+				*/
+				// マイページにフォワード
+				RequestDispatcher dispatcher = request.getRequestDispatcher("<%= request.getContextPath() %>/jsp/mypage/mypage.jsp");
+				dispatcher.forward(request, response);
 	}
 
 }

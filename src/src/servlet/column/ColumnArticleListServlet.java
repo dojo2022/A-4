@@ -25,18 +25,16 @@ public class ColumnArticleListServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		/*String column_genre_id = request.getParameter("column_genre_id");
-		System.out.println(column_genre_id);
 
-		response.getWriter().append("column_genre_id: ").append(column_genre_id);*/
-		String column_genre_id = request.getParameter("colum_genre_id");
+		String column_genre_id = request.getParameter("column_genre_id");
 
 
 		//daoをインスタンス化する
 		ColumnDAO cDAO = new ColumnDAO();
 
 		//インスタンス化したdaoにコラムのジャンルを取得するように命令を出す（ちゃんと受け取る）
-		ArrayList<Column> list = cDAO.select();
+		ArrayList<Column> list = cDAO.select(column_genre_id);
+        System.out.print(list.size());
 
 		//取得した一覧データ↑をリクエストスコープに格納する
 		request.setAttribute("list", list);

@@ -5,8 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://unpkg.com/sanitize.css" >
-<link rel="stylesheet" href="<%= request.getContextPath() %>/css/model.css" >それぞれのcss指定
-<title>ページのタイトル</title>
+<link rel="stylesheet" href="<%= request.getContextPath() %>/css/model.css" >
+<link rel="stylesheet" href="<%= request.getContextPath() %>/css/record/record_view_top.css" >
+<title>famiTy 記録閲覧</title>
 </head>
 <body>
 <div class="container">
@@ -24,10 +25,12 @@
 
     		<!-- カレンダー -->
     		<div id="calendar"></div>
+    		<div id="test"></div>
 		</div>
     </main>
 </div>
 
-<script src="<%= request.getContextPath() %>/js/model.js">←ここにjavascriptのファイル指定</script>
 </body>
+<script defer src="<%= request.getContextPath() %>/js/record/record_view_top.js"></script>
+
 </html>
