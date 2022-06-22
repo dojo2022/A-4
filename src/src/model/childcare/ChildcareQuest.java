@@ -1,26 +1,24 @@
 package model.childcare;
 
 import java.io.Serializable;
-import java.util.Date;
-
-import org.joda.time.DateTime;
+import java.sql.Date;
 
 public class ChildcareQuest implements Serializable {
-	private String childcare_quest_id;
+	private int childcare_quest_id;
 	private int family_id;
 	private String title;
 	private String body;
 	private Date time_limit;
 	private String label;
 	private int completed_flag;
-	private DateTime created_at;
-	private DateTime updated_date;
+	private Date created_at;
+	private Date updated_date;
 
 
-	public String getChildcare_quest_id() {
+	public int getChildcare_quest_id() {
 		return childcare_quest_id;
 	}
-	public void setChildcare_quest_id(String childcare_quest_id) {
+	public void setChildcare_quest_id(int childcare_quest_id) {
 		this.childcare_quest_id = childcare_quest_id;
 	}
 	public int getFamily_id() {
@@ -59,18 +57,19 @@ public class ChildcareQuest implements Serializable {
 	public void setCompleted_flag(int completed_flag) {
 		this.completed_flag = completed_flag;
 	}
-	public DateTime getCreated_at() {
+	public Date getCreated_at() {
 		return created_at;
 	}
-	public void setCreated_at(DateTime created_at) {
+	public void setCreated_at(Date created_at) {
 		this.created_at = created_at;
 	}
-	public DateTime getUpdated_date() {
+	public Date getUpdated_date() {
 		return updated_date;
 	}
-	public void setUpdated_date(DateTime updated_date) {
+	public void setUpdated_date(Date updated_date) {
 		this.updated_date = updated_date;
 	}
+
 
 
 }

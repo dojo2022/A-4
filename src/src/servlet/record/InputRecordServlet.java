@@ -60,8 +60,35 @@ public class InputRecordServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		response.setContentType("application/json");
+		response.setHeader("Cache-Control", "nocache");
+		response.setCharacterEncoding("utf-8");
+
+		// 送信されたデータの取得
+		String data1 = request.getParameter("data1");
+		String data2 = request.getParameter("data2");
+		String data3 = request.getParameter("data3");
+		String data4 = request.getParameter("data4");
+		String data5 = request.getParameter("data5");
+		String data6 = request.getParameter("data6");
+		String data7 = request.getParameter("data7");
+		String data8 = request.getParameter("data8");
+		String data9 = request.getParameter("data9");
+		String data10 = request.getParameter("data10");
+		String data11 = request.getParameter("data11");
+		String data12 = request.getParameter("data12");
+		String data13 = request.getParameter("data13");
+		String data14 = request.getParameter("data14");
+		String data15 = request.getParameter("data15");
+		String data16 = request.getParameter("data16");
+		String data17 = request.getParameter("data17");
+		String data18 = request.getParameter("data18");
+		String data19 = request.getParameter("data19");
+
+
 				// 先にインスタンス化
 				UserCondition uc = new UserCondition();
+				String result_message;
 
 				// リクエストパラメータを取得する
 				request.setCharacterEncoding("UTF-8");
@@ -90,9 +117,9 @@ public class InputRecordServlet extends HttpServlet {
 				UserConditionDAO ucDao = new UserConditionDAO();
 				boolean ans = ucDao.insert(uc);
 				if(ans) { //記録成功
-
+					result_message = "success";
 				}else{	// 記録失敗
-
+					result_message = "false";
 				}
 
 				// 結果ページにフォワードする
