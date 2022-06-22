@@ -159,9 +159,9 @@ public ArrayList<UserCondition> select(int family_id){
 	}
 
 
-	public ArrayList<Date> selectRecordedDay(int family_id,int year,int month) {
+	public ArrayList<Integer> selectRecordedDay(int family_id,int year,int month) {
 		Connection conn = null;
-		ArrayList<Date> dayList = new ArrayList<Date>();
+		ArrayList<Integer> dayList = new ArrayList<Integer>();
 			try {
 				// JDBCドライバを読み込む
 				Class.forName("org.h2.Driver");
@@ -185,7 +185,9 @@ public ArrayList<UserCondition> select(int family_id){
 				ResultSet rs = pStmt.executeQuery();
 				// 結果表をコレクションにコピーする
 				if(rs.next()) {
-					dayList.add(rs.getDate("created_at"));
+					Date d=rs.getDate("created_at");
+							int day = d.getDate();
+							dayList.add(day);
 				}
 
 				}
