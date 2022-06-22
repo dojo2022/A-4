@@ -1,6 +1,7 @@
 package dao.user;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -157,4 +158,59 @@ public ArrayList<UserCondition> select(int family_id){
 	return ucList;
 	}
 
+
+	public ArrayList<Date> selectRecordedDay(int family_id,int year,int month) {
+		Connection conn = null;
+		ArrayList<Date> dayList = new ArrayList<Date>();
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
+
+				// SQL文を準備する
+
+				String sql;
+				PreparedStatement pStmt;
+
+				sql = "select created_at from partner join use_condition on partner.partner_id = user_condition.partner_id"
+						+ "WHERE partner.family_id = ? and user_condition.created_at='?-?-%";
+				pStmt= conn.prepareStatement(sql);
+				pStmt.setInt(1,family_id);
+				pStmt.setInt(2,year);
+				pStmt.setInt(1,month);
+
+				// SQL文を実行し、結果表を取得する
+				ResultSet rs = pStmt.executeQuery();
+				// 結果表をコレクションにコピーする
+				if(rs.next()) {
+					dayList.add(rs.getDate("created_at"));
+				}
+
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+					dayList = null;
+				}
+				catch (ClassNotFoundException e) {
+					e.printStackTrace();
+					dayList = null;
+				}
+				finally {
+					// データベースを切断
+					if (conn != null) {
+						try {
+							conn.close();
+						}
+						catch (SQLException e) {
+							e.printStackTrace();
+							dayList = null;
+						}
+					}
+				}
+
+				// 結果を返す
+				return dayList;
+			}
 }
