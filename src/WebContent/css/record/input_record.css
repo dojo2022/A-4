@@ -5,7 +5,7 @@ main {
 body{
 	text-align: center;
 }
-.tab-group{
+ul.tab-group{
   display: flex;
   justify-content: center;
 }
@@ -16,6 +16,9 @@ body{
   border:solid 1px #CCC;
   text-align:center;
   cursor:pointer;
+}
+.tab-panel{
+	display: flex;
 }
 .panel-group{
   height:100px;
@@ -34,11 +37,12 @@ body{
 .panel.is-show{
   display:block;
 }
-div.outline{
+div.panel.is-show{
 	border: 1px solid #767171;
 	width: 800px;
 	height: auto;
 	margin: auto;
+	padding-top: 20px;
 }
 input.text {
 	height: 200px;
@@ -62,6 +66,13 @@ input.radio {
 .radio:checked + .radio_image {
 	background-color: #EF5350;
 }
-input[submit]{
+input.record{
 	text-align: right;
+	margin-bottom: 20px;
+}
+table#family-meter {
+	margin: auto;
+}
+tr.view0{
+	display: none;
 }
