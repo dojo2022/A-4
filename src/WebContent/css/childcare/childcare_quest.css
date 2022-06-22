@@ -1,1 +1,27 @@
 @charset "UTF-8";
+main {
+
+	padding-top:50px;
+}
+#childcare_quest{
+	text-align:center;
+}
+.sort_filter{
+	width:80vw;
+	margin:0 auto;
+	text-align:right;
+}
+.childcare_quest_table{
+}
+
+
+table {
+	margin: 0 auto;
+
+	border:dotted 2px gray;
+}
+
+table tr{
+	border: solid 2px gray;
+	border-radius:10px;
+}
