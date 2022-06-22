@@ -10,7 +10,7 @@ main {
     height:auto;
 }
 
-.form h2{
+.form h1{
 
 	text-align: center;
 }
@@ -22,12 +22,12 @@ form table{
 form input {
 	margin-top:10px;
 	line-height: 50px;
-    height: 20px;
-    width:50em;
+    height: 30px;
 }
 
 .user_profile_button{
 	width:10em;
+	height: 30px;
 	appearance: none;
 	border: 0;
 	border-radius: 30px;
