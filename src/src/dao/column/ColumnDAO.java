@@ -11,7 +11,7 @@ import model.column.Column;
 
 public class ColumnDAO {
 
-	public ArrayList<Column> select() {
+	public ArrayList<Column> select(String id) {
 		Connection conn = null;
 		ArrayList<Column> columnList = new ArrayList<Column>();
 
@@ -23,8 +23,9 @@ public class ColumnDAO {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
 
 			// SQL文を準備する
-			String sql = "SELECT * from column";
+			String sql = "SELECT * from column WHERE column_id = ?";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
+			pStmt.setString(1, id); //SQL文の？に値を入れる
 
 
 
@@ -36,6 +37,9 @@ public class ColumnDAO {
 				Column column = new Column();
 				column.setColumn_id(rs.getInt("column_id"));
 				column.setTitle(rs.getString("title"));
+				column.setBody(rs.getString("body"));
+				column.setGenre_id(rs.getInt("genre_id"));
+
 
 				columnList.add(column);//←？
 			}

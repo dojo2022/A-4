@@ -10,7 +10,7 @@
 <body>
 
 <c:forEach var="e" items="${list}" >
-<div class="genre"><a href="ColumnArticleListServlet?column_id=${e.column_id}">${e.column_id}</a></div>
+<div class="genre"><a href="ColumnArticleListServlet?column_id=${e.column_id}">${e.column_name}</a></div>
 
 </c:forEach>
 
