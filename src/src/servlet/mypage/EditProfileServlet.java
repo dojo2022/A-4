@@ -1,6 +1,7 @@
 package servlet.mypage;
 
 import java.io.IOException;
+import java.sql.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,7 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import dao.user.UserDAO;
 import model.user.User;
 
 /**
@@ -50,28 +53,35 @@ public class EditProfileServlet extends HttpServlet {
 				upr.setTel (request.getParameter("tel"));
 
 				String birthday = request.getParameter("birthday");
-				/*
-				Date d = new Date(birthday);
-				upr.setBirthday (request.getParameter("d"));
-
+				Date da_birthday = java.sql.Date.valueOf(birthday);
+				upr.setBirthday(da_birthday);
 
 				String gender = request.getParameter("gender");
 				upr.setGender (request.getParameter("gender"));
 
 				String due_date = request.getParameter("due_date");
-				upr.setDue_date (request.getParameter("due_date"));
+				Date da_due_date = java.sql.Date.valueOf(due_date);
+				upr.setDue_date (da_due_date);
 
-				User uprDao = new User();
-				boolean ans = uprDao.update(upr);
-				if(ans) { //編集成功
+				int user_id;
 
-				}else{	// 編集失敗
+				String result_message;
 
-				}
-				*/
+				//userテーブルに編集命令
+				UserDAO uDao = new UserDAO();
+
+	            if(uDao.updateUser(upr)){//編集できた
+	                //セッションにuserのデータを入れる。
+	            	HttpSession session = request.getSession();
+	                session.setAttribute("User",upr);
+	                result_message = "success";
+	            } else {//編集できてない
+	                result_message = "false";
+	            }
 				// マイページにフォワード
 				RequestDispatcher dispatcher = request.getRequestDispatcher("<%= request.getContextPath() %>/jsp/mypage/mypage.jsp");
 				dispatcher.forward(request, response);
 	}
+
 
 }

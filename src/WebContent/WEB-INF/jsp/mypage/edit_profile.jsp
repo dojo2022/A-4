@@ -11,8 +11,8 @@
 <body>
 	<div class = "container">
 		<main>
+		<h2>ユーザー情報登録</h2>
 			<div class = "form">
-				<h1>ユーザー情報登録</h1>
 				<form id="user_profile_from" method="POST" name="uprform" action="EditProfileServlet">
 					<tr>
 						<td>
@@ -42,11 +42,14 @@
 					<tr>
 						<td>
 							生年月日
+							<input type="date" name ="birthday" id="edityear">
+							<!--
 							<select id="edityear" class = "form_user6" name="year" onclick="return year(); value="${user.birthday}"></select>
 
 							<select id="editmonth" class = "form_user7" name="month" onclick="return month(); value="${user.month}"></select>
 
 							<select id="editday" class = "form_user8" name="day" onclick="return day(); value="${user.day}"></select><br>
+ -->
 						</td>
 					</tr>
 					<tr>

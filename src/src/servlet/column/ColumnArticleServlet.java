@@ -32,7 +32,7 @@ public class ColumnArticleServlet extends HttpServlet {
 			//daoをインスタンス化する
 			ColumnDAO cDAO = new ColumnDAO();
 
-			//インスタンス化したdaoにコラムのジャンルを取得するように命令を出す（ちゃんと受け取る）一つでいい　cDAO　タイトルもbodも取ってくる
+			//インスタンス化したdaoにコラムのジャンルを取得するように命令を出す（ちゃんと受け取る）一つでいい　cDAO　タイトルもbodyも取ってくる
 			ArrayList<Column> title = cDAO.select("2");
 			ArrayList<Column> body = cDAO.select("2");
 
