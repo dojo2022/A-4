@@ -29,23 +29,38 @@ public class ChildcareQuestServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("in servlert");
-		ChildcareQuestDAO cqDao = new ChildcareQuestDAO();
-		HttpSession session = request.getSession();
-		User user = (User)session.getAttribute("loginUser");
-		ArrayList<ChildcareQuest> cqList = cqDao.getChildcareQuest(user.getFamily_id());
-		ObjectMapper mapper = new ObjectMapper();
-		try {
-            //JavaオブジェクトからJSONに変換
-            String testJson = mapper.writeValueAsString(cqList);
-            //JSONの出力
-            response.getWriter().write(testJson);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
+		response.setContentType("application/json");
+		response.setHeader("Cache-Control", "nocache");
+		response.setCharacterEncoding("utf-8");
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/childcare/childcare_quest.jsp");
-		dispatcher.forward(request, response);
+		System.out.println("in servlert");
+		String process = request.getParameter("process");
+		if(process == null) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/childcare/childcare_quest.jsp");
+			dispatcher.forward(request, response);
+			return;
+		}
+		if(process.equals("getQuestList")) {
+			System.out.println("getCQl");
+			ChildcareQuestDAO cqDao = new ChildcareQuestDAO();
+			HttpSession session = request.getSession();
+			User user = (User)session.getAttribute("loginUser");
+			ArrayList<ChildcareQuest> cqList = cqDao.getChildcareQuest(2);
+			ObjectMapper mapper = new ObjectMapper();
+			try {
+	            //JavaオブジェクトからJSONに変換
+	            String testJson = mapper.writeValueAsString(cqList);
+	            //JSONの出力
+	            System.out.println(testJson);
+	            response.getWriter().write(testJson);
+	        } catch (JsonProcessingException e) {
+	            e.printStackTrace();
+	        }
+
+		}
+
+
+
 	}
 
 	/**
