@@ -23,9 +23,35 @@
                     </select>
             </div>
             <input type="button" id="btn">←押したら出る
+            <select name="number">ソート
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+
+			</select>
+			<select name="number">完了
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+
+			</select>
+			<select name="number">ラベル
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
             <div class="childcare_quest_list">
-				<table id="cq_table">
-				<tr><td>タイトル</td><td>本文</td><td>期限</td><td>ラベル</td>
+				<table style="border:dotted black">
+				<thead>
+				<tr>
+				<th style="width:20vw">タイトル</th>
+				<th style="width:20vw">本文</th>
+				<th style="width:20vw">期限</th>
+				<th style="width:20vw">ラベル</th>
+				</tr>
+				</thead>
+				<tbody id="cq_table">
+				</tbody>
 				</table>
             </div>
         </div>
@@ -36,6 +62,7 @@
 </body>
 <script>
 $("#btn").on('click',async function(){
+	$("#cq_table").empty()
 	data={
 			"process":"getQuestList"
 	}
