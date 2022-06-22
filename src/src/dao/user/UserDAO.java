@@ -298,7 +298,7 @@ public class UserDAO {
 				String sql;
 				PreparedStatement pStmt;
 
-	          sql = "insert into User (email, password, family_id) value (?, ?, ?)";
+	          sql = "insert into User (email, password, family_id) values (?, ?, ?)";
 				pStmt= conn.prepareStatement(sql);
 				pStmt.setString(1, email);
 				pStmt.setString(2, password);

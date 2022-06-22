@@ -33,7 +33,7 @@ public class FamilyDAO {
 			//成功だったら
 			if(ans==1) {
 				String sql2 = "select max(family_id) from family";
-				pStmt =conn.prepareStatement(sql);
+				pStmt =conn.prepareStatement(sql2);
 				rs = pStmt.executeQuery();
 			}
 
