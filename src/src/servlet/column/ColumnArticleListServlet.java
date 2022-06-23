@@ -33,7 +33,7 @@ public class ColumnArticleListServlet extends HttpServlet {
 		ColumnDAO cDAO = new ColumnDAO();
 
 		//インスタンス化したdaoにコラムのジャンルを取得するように命令を出す（ちゃんと受け取る）
-		ArrayList<Column> list = cDAO.select(column_genre_id);
+		ArrayList<Column> list = cDAO.selectArticleList(column_genre_id);
         System.out.print(list.size());
 
 		//取得した一覧データ↑をリクエストスコープに格納する

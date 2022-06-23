@@ -4,7 +4,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<link rel="stylesheet" href="https://unpkg.com/sanitize.css" >
+<link rel="stylesheet" href="<%= request.getContextPath() %>/css/column/mypage.css" >
+
+<title>famiTy マイページ</title>
+
+
+
+プロフィール編集
+
+パートナー設定
+
+パートナーを登録する
+
+利用規約
+
+お問い合わせ
+
+ログアウト
+
 </head>
 <body>
 

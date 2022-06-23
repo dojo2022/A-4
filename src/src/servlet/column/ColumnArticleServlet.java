@@ -1,7 +1,6 @@
 package servlet.column;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -26,19 +25,17 @@ public class ColumnArticleServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-			String column_genre_id = request.getParameter("colum_genre_id");
+			String column_id = request.getParameter("column_id");
 
 
 			//daoをインスタンス化する
 			ColumnDAO cDAO = new ColumnDAO();
 
-			//インスタンス化したdaoにコラムのジャンルを取得するように命令を出す（ちゃんと受け取る）一つでいい　cDAO　タイトルもbodyも取ってくる
-			ArrayList<Column> title = cDAO.select("2");
-			ArrayList<Column> body = cDAO.select("2");
+			//！28行目でパラメータから取ってきて用意したcolumn_idを、      コラム型のarticle（ここで定義？）に格納する。　　　インスタンス化したdaoにコラムのを取得するように命令を出す（ちゃんと受け取る）一つでいい　cDAO　タイトルもbodyも取ってくる
+			Column article = cDAO.selectArticle(column_id);
 
 			//取得した一覧データ↑をリクエストスコープに格納する
-			request.setAttribute("title", title);
-			request.setAttribute("body", body);
+			request.setAttribute("article", article);
 			System.out.println("ColumnArticleServlet");
 
 			//jspへ処理を依頼する（フォワード）

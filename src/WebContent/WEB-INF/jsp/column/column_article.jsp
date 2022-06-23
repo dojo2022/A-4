@@ -11,27 +11,18 @@
 </head>
 <body>
 <%-- DBから取ってきたタイトルを表示する --%>
-
- <c:forEach var="e" items="${title}" > <!-- eていう変数に入れる -->
-  ${e.title}<br>
-
-</c:forEach>
-
-
+  ${article.title}
 
 
 <%--本文を表示する。スクロール --%>
-<div id="body">
-<table class="table" id="body" >
+<div class="scroller">
+  ${article.body}
 
-
-
-
-</a></div>
-  </table>
-  </div>
+</div>
 
 <%-- 戻るボタン--%>
-<%-- --%>
-<%-- --%>
-<%-- --%>
+<a href="ColumnArticleListServlet.java"><img src="back_botton.png" width="90px" height="90px"></a>
+
+
+</body>
+</html>
