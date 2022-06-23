@@ -70,8 +70,23 @@ function getMonthDay(year,month){
 	}).done(function(data) {
 
 		/*成功した時の処理を書く*/
-		alert('成功！！');
-        console.log(data.length);
+		console.log('成功！！');
+        console.log(data);
+        /*hiddenのテキストボックスにdataを文字列として格納*/
+		/*let element = document.getElementById('record_days');*/
+		let element = JSON.stringify(data);
+		/*文字列になったデータをカンマ区切りの配列にする*/
+		/*let day = doucment.getElementById('record_days').value;*/
+		alert(element);
+		element = element.replace('[','');
+		element = element.replace(']','');
+		alert(element);
+		alert(element.split(","));
+		let recordDays = element.split(",");
+/*			for(let recordDay:recorDays){
+				console.log(recordDay);
+			}*/
+
     })
     /* 非同期通信が失敗したときの処理*/
      .fail(function() {
