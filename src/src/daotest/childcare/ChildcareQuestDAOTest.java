@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import dao.childcare.ChildcareQuestDAO;
 import model.childcare.ChildcareQuest;
+import model.childcare.ChildcareQuestLabel;
 
 public class ChildcareQuestDAOTest {
 
@@ -12,8 +13,9 @@ public class ChildcareQuestDAOTest {
 		//getLaborPainTest();	// ユーザーが見つかる場合のテスト
 
 
-		System.out.println("---------- updateStopLaborPainRecordのテスト ----------");
-		getChilcareQuestTest();
+		System.out.println("---------- getLabelのテスト ----------");
+		//getChilcareQuestTest();
+		getChilcareQuestTestLabelTest();
 
 	}
 
@@ -23,6 +25,16 @@ public class ChildcareQuestDAOTest {
 		ArrayList<ChildcareQuest> cq = cqDao.getChildcareQuest(2);
 		for(ChildcareQuest c: cq) {
 			System.out.println(c.getTitle());
+		}
+
+
+	}
+
+	public static void getChilcareQuestTestLabelTest() {
+		ChildcareQuestDAO cqDao = new ChildcareQuestDAO();
+		ArrayList<ChildcareQuestLabel> cq = cqDao.getChildcareQuestlabel();
+		for(ChildcareQuestLabel c: cq) {
+			System.out.println(c.getContent_label());
 		}
 
 

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,29 +18,23 @@
 		        <h1>お願いリスト</h1>
         <div id="childcare_quest">
             <div class="sort_filter">
-                <select name="sort">
+                <select  id="sort" name="sort">
                     <option value="time_limit" >締め切り早い順</option>
                     <option value="created_at">クエスト登録日順</option>
                  </select>
-                <input type="button" id="btn" value="クエスト表示"
-               >
-	            <select id="sleepy"name="number">ソート
-				  <option value="1">1</option>
-				  <option value="2">2</option>
+
+				<select name="comp_flag">完了
+				  <option value="0">未完</option>
+				  <option value="1">完了</option>
 
 				</select>
-				<select name="number">完了
-				  <option value="1">1</option>
-				  <option value="2">2</option>
+				<select name="labelLabel" varStatus="status">ラベル
+				<c:forEach var="e" items="${labelList}" >
+				<option value="${e.content_label }">${e.content_label }</option>
+				</c:forEach>
 
 				</select>
-				<select name="number">ラベル
-				  <option value="1">1</option>
-				  <option value="2">2</option>
-				  <option value="3">3</option>
-				  <option value="4">4</option>
-				  <option value="5">5</option>
-				</select>
+				<input type="button" id="btn" value="クエスト表示">
             </div>
 
             <div class="childcare_quest_table">
@@ -65,10 +60,12 @@
 </body>
 <script>
 $("#btn").on('click',async function(){
-	var value = $("#sleepy").val();
+	const sort = $('#sort').val();
+	console.log(sort);
 	$("#cq_table").empty()
 	data={
-			"process":"getQuestList"
+			"process":"getQuestList",
+			"sort":sort
 	}
      ajax(data);
 
@@ -94,7 +91,6 @@ function ajax(process){
 		timeStamp: new Date().getTime()
 	   //非同期通信が成功したときの処理
 	}).done(function(data) {
-		console.log(data.length);
 		$.each(data, function(index, value){
 			let $tr=$('<tr />',{id:index});
 			var date = new Date(value.time_limit);

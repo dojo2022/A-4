@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.TreeSet;
 
 import org.joda.time.LocalDate;
 
@@ -159,9 +160,9 @@ public ArrayList<UserCondition> select(int family_id){
 	}
 
 
-	public ArrayList<Integer> selectRecordedDay(int family_id,int year,int month) {
+	public TreeSet<Integer> selectRecordedDay(int family_id,int year,int month) {
 		Connection conn = null;
-		ArrayList<Integer> dayList = new ArrayList<Integer>();
+		TreeSet<Integer> dayList = new TreeSet<Integer>();
 			try {
 				// JDBCドライバを読み込む
 				Class.forName("org.h2.Driver");
@@ -174,7 +175,7 @@ public ArrayList<UserCondition> select(int family_id){
 				String sql;
 				PreparedStatement pStmt;
 
-				sql = "select user_condition.created_at from partner join user_condition on partner.partner_id = user_condition.partner_id"
+				sql = "select DISTINCT user_condition.created_at from partner join user_condition on partner.partner_id = user_condition.partner_id"
 						+ " WHERE partner.family_id = ? and user_condition.created_at like ?";
 				pStmt= conn.prepareStatement(sql);
 				pStmt.setInt(1,family_id);
@@ -193,7 +194,7 @@ public ArrayList<UserCondition> select(int family_id){
 				// SQL文を実行し、結果表を取得する
 				ResultSet rs = pStmt.executeQuery();
 				// 結果表をコレクションにコピーする
-				if(rs.next()) {
+				while(rs.next()) {
 					Date d=rs.getDate("created_at");
 							int day = d.getDate();
 							dayList.add(day);

@@ -36,7 +36,6 @@ function showProcess(date) {
 }
 
 function getMonthDay(year,month){
-	alert('ファンクション入ったよ');
      /*非同期処理開始*/
 	var postData={
 				"process":"getmonthday",
@@ -77,15 +76,13 @@ function getMonthDay(year,month){
 		let element = JSON.stringify(data);
 		/*文字列になったデータをカンマ区切りの配列にする*/
 		/*let day = doucment.getElementById('record_days').value;*/
-		alert(element);
 		element = element.replace('[','');
 		element = element.replace(']','');
-		alert(element);
-		alert(element.split(","));
 		let recordDays = element.split(",");
-/*			for(let recordDay:recorDays){
-				console.log(recordDay);
-			}*/
+			for(let i of recordDays){
+				console.log($('#'+i).text());
+				$('#'+i).append('<img src="./image/pen.png">');
+			}
 
     })
     /* 非同期通信が失敗したときの処理*/
@@ -132,9 +129,9 @@ function createProcess(year, month) {
                 if(year == today.getFullYear()
                   && month == (today.getMonth())
                   && count == today.getDate()){
-                    calendar += "<td class='today'>" + count + "</td>";
+                    calendar += "<td class='today' id='"+count+"'>" + count + "</td>";
                 } else {
-                    calendar += "<td class='calendar_td'>" + count + "</td>";
+                    calendar += "<td class='calendar_td' id='"+count+"'>" + count + "</td>";
                 }
             }
         }

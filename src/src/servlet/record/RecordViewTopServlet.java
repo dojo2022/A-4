@@ -1,7 +1,7 @@
 package servlet.record;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.TreeSet;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -52,7 +52,10 @@ public class RecordViewTopServlet extends HttpServlet {
 
 					//UserConditionDAOを呼び出す。
 					UserConditionDAO ucDAO = new UserConditionDAO();
-					ArrayList<Integer> dayList = ucDAO.selectRecordedDay(family_id, year, month);
+					TreeSet<Integer> dayList = ucDAO.selectRecordedDay(family_id, year, month);
+						for (int day:dayList) {
+							System.out.println(day);
+						}
 
 					ObjectMapper mapper = new ObjectMapper();
 					try {

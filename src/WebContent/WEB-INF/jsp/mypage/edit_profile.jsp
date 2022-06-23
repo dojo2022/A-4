@@ -5,9 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>famiTy ユーザー情報登録</title>
-<link rel="stylesheet" href="https://unpkg.com/sanitize.css" ></linkrel>
+<!-- <link rel="stylesheet" href="https://unpkg.com/sanitize.css" ></linkrel>
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/mypage/edit_profile.css">
-</head>
+ --></head>
 <body>
 	<div class = "container">
 		<main>
