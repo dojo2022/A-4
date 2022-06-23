@@ -16,6 +16,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import dao.childcare.ChildcareQuestDAO;
 import model.childcare.ChildcareQuest;
+import model.childcare.ChildcareQuestLabel;
 import model.user.User;
 
 /**
@@ -34,6 +35,9 @@ public class ChildcareQuestServlet extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 		String process = request.getParameter("process");
 		if(process == null) {
+			ChildcareQuestDAO cqDao = new ChildcareQuestDAO();
+			ArrayList<ChildcareQuestLabel> LabelList = cqDao.getChildcareQuestlabel();
+			request.setAttribute("labelList", LabelList);
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/childcare/childcare_quest.jsp");
 			dispatcher.forward(request, response);
 			return;
