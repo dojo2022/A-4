@@ -9,7 +9,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import dao.user.UserDAO;
 import model.user.User;
@@ -72,16 +71,11 @@ public class EditProfileServlet extends HttpServlet {
 
 	            if(uDao.updateUser(upr)){//編集できた
 	                //セッションにuserのデータを入れる。
-	            	HttpSession session = request.getSession();
-	                session.setAttribute("User",upr);
+	            	//HttpSession session = request.getSession();
+	                //session.setAttribute("User",upr);
 	                result_message = "success";
 	            } else {//編集できてない
 	                result_message = "false";
 	            }
-				// マイページにフォワード
-				RequestDispatcher dispatcher = request.getRequestDispatcher("<%= request.getContextPath() %>/jsp/mypage/mypage.jsp");
-				dispatcher.forward(request, response);
 	}
-
-
 }

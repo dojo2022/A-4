@@ -1,7 +1,6 @@
 package dao.user;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -299,7 +298,7 @@ public class UserDAO {
 				String sql;
 				PreparedStatement pStmt;
 
-	          sql = "insert into User (email, password, family_id) value (?, ?, ?)";
+	          sql = "insert into User (email, password, family_id) values (?, ?, ?)";
 				pStmt= conn.prepareStatement(sql);
 				pStmt.setString(1, email);
 				pStmt.setString(2, password);
@@ -335,7 +334,7 @@ public class UserDAO {
 		}
 
 	//プロフィール編集
-	public boolean updateUser(String name,String nickname,String post_code,String address,String tel,Date birthday,String gender,Date due_date,int user_id) {
+	public boolean updateUser(User upr) {
 		Connection conn = null;
 		boolean result = false;
 		try {
@@ -352,15 +351,15 @@ public class UserDAO {
 
 				sql = "update User (name, nickname, post_code, address, tel, birthday, gender, due_date) SET (?,?,?,?,?,?,?,?) WHERE user_id = ?";
 				pStmt= conn.prepareStatement(sql);
-				pStmt.setString(1, name);
-				pStmt.setString(2, nickname);
-				pStmt.setString(3, post_code);
-				pStmt.setString(4, address);
-				pStmt.setString(5, tel);
-				pStmt.setDate(6, birthday);
-				pStmt.setString(7, gender);
-				pStmt.setDate(8, due_date);
-				pStmt.setString(9, Integer.valueOf(user_id).toString());
+				pStmt.setString(1, upr.getName());
+				pStmt.setString(2, upr.getNickname());
+				pStmt.setString(3, upr.getPost_code());
+				pStmt.setString(4, upr.getAddress());
+				pStmt.setString(5, upr.getTel());
+				pStmt.setDate(6, upr.getBirthday());
+				pStmt.setString(7, upr.getGender());
+				pStmt.setDate(8, upr.getDue_date());
+				pStmt.setInt(9,upr.getUser_id());
 
 				// SQL文を実行する
 				if (pStmt.executeUpdate() == 1) {

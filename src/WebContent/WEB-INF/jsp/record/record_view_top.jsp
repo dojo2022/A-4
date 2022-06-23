@@ -26,6 +26,7 @@
     		<!-- カレンダー -->
     		<div id="calendar"></div>
     		<div id="test"></div>
+    		<input type="hidden" id="record_days">
 		</div>
     </main>
 </div>

@@ -35,8 +35,8 @@
                   </tr>
                   <tr>
                       <td class="auth_non">
-                    <p><b>パスワードを忘れてしまった場合は<a href="AccountReregisterServlet">こちら</a>・
-                    アカウントをお持ちでない方は<a href="AccountRegisterServlet">こちら</a></b></p>
+                    <p><b>パスワードを忘れてしまった場合は<a href="CreateAccountServlet">こちら</a>・
+                    アカウントをお持ちでない方は<a href="CreateAccountServlet">こちら</a></b></p>
                       </td>
                   </tr>
                 </table>

@@ -1,6 +1,7 @@
 package servlet.record;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -65,31 +66,31 @@ public class InputRecordServlet extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 
 		// 送信されたデータの取得
-		String data1 = request.getParameter("data1");
-		String data2 = request.getParameter("data2");
-		String data3 = request.getParameter("data3");
-		String data4 = request.getParameter("data4");
-		String data5 = request.getParameter("data5");
-		String data6 = request.getParameter("data6");
-		String data7 = request.getParameter("data7");
-		String data8 = request.getParameter("data8");
-		String data9 = request.getParameter("data9");
-		String data10 = request.getParameter("data10");
-		String data11 = request.getParameter("data11");
-		String data12 = request.getParameter("data12");
-		String data13 = request.getParameter("data13");
-		String data14 = request.getParameter("data14");
-		String data15 = request.getParameter("data15");
-		String data16 = request.getParameter("data16");
-		String data17 = request.getParameter("data17");
-		String data18 = request.getParameter("data18");
-		String data19 = request.getParameter("data19");
+		String partner_id = request.getParameter("partner_id");
+		String text = request.getParameter("text");
+		String weight = request.getParameter("weight");
+		String body_temparture = request.getParameter("body_temparture");
+		String appetite = request.getParameter("appetite");
+		String sleepiness = request.getParameter("sleepiness");
+		String humor = request.getParameter("humor");
+		String nausea = request.getParameter("nausea");
+		String stress = request.getParameter("stress");
+		String dizziness = request.getParameter("dizziness");
+		String fatigue = request.getParameter("fatigue");
+		String stiff_shoulder = request.getParameter("stiff_shoulder");
+		String headache = request.getParameter("headache");
+		String backache = request.getParameter("backache");
+		String stomach_ache = request.getParameter("stomach_ache");
+		String feeling = request.getParameter("feeling");
+		String tidying = request.getParameter("tidying");
+		String self_assertion = request.getParameter("self_assertion");
+		String poop = request.getParameter("poop");
+		String tooth_brushing = request.getParameter("tooth_brushing");
 
 
 				// 先にインスタンス化
 				UserCondition uc = new UserCondition();
 				String result_message;
-
 				// リクエストパラメータを取得する
 				request.setCharacterEncoding("UTF-8");
 				uc.setPartner_id(Integer.parseInt(request.getParameter("partner_id")));
@@ -106,7 +107,7 @@ public class InputRecordServlet extends HttpServlet {
 				uc.setStiff_shoulder(Integer.parseInt(request.getParameter("stiff_shoulder")));
 				uc.setHeadache(Integer.parseInt(request.getParameter("headache")));
 				uc.setBackache(Integer.parseInt(request.getParameter("backache")));
-				uc.setStomach_ache(Integer.parseInt(request.getParameter("stomache_ache")));
+				uc.setStomach_ache(Integer.parseInt(request.getParameter("stomach_ache")));
 				uc.setFeeling(Integer.parseInt(request.getParameter("feeling")));
 				uc.setTidying(Integer.parseInt(request.getParameter("tidying")));
 				uc.setSelf_assertion(Integer.parseInt(request.getParameter("self_assertion")));
@@ -121,10 +122,11 @@ public class InputRecordServlet extends HttpServlet {
 				}else{	// 記録失敗
 					result_message = "false";
 				}
+				PrintWriter out = response.getWriter();
+		        out.print(result_message);
+				return;
 
-				// 結果ページにフォワードする
-				RequestDispatcher dispatcher = request.getRequestDispatcher("<%= request.getContextPath() %>/jsp/record/input_record.jsp");
-				dispatcher.forward(request, response);
 			}
+
 	}
 

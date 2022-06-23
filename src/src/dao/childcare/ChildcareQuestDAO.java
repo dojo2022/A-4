@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import model.childcare.ChildcareQuest;
+import model.childcare.ChildcareQuestLabel;
 
 public class ChildcareQuestDAO {
 	public ArrayList<ChildcareQuest> getChildcareQuest(int family_id){
@@ -74,5 +75,58 @@ public class ChildcareQuestDAO {
 
 	// 結果を返す
 	return caList;
+}
+
+	public ArrayList<ChildcareQuestLabel> getChildcareQuestlabel(){
+		Connection conn = null;
+		ArrayList<ChildcareQuestLabel> labelList = new ArrayList<ChildcareQuestLabel>();
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
+
+
+				// SQL文を準備する
+				String sql;
+				PreparedStatement pStmt;
+
+				sql = "SELECT * FROM CHILDCARE_QUEST_LABEL";
+				pStmt= conn.prepareStatement(sql);
+				// SQL文を実行し、結果表を取得する
+				ResultSet rs = pStmt.executeQuery();
+				// 結果表をコレクションにコピーする
+
+				while (rs.next()) {
+					ChildcareQuestLabel cqlabel = new ChildcareQuestLabel();
+					cqlabel.setChildcare_quest_label_id(rs.getInt("childcare_quest_label_id"));
+					cqlabel.setContent_label(rs.getString("content_label"));
+					labelList.add(cqlabel);
+				}
+	}
+	catch (SQLException e) {
+		e.printStackTrace();
+		labelList = null;
+	}
+	catch (ClassNotFoundException e) {
+		e.printStackTrace();
+		labelList = null;
+	}
+	finally {
+		// データベースを切断
+		if (conn != null) {
+			try {
+				conn.close();
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+				labelList = null;
+			}
+		}
+	}
+
+	// 結果を返す
+	return labelList;
 }
 }
