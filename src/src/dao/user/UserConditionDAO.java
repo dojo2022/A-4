@@ -29,7 +29,7 @@ public class UserConditionDAO {
 				PreparedStatement pStmt;
 
 	          sql = "insert into user_condition (partner_id, weight, body_temparture, text, appetite, sleepiness, humor, nausea, stress, dizziness, fatigue, stiff_shoulder, headache, backache, stomach_ache, feeling, tidying, self_assertion, poop, tooth_brushing) "
-	          		+ "value (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?, ? ,? ,?)";
+	          		+ "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?, ? ,? ,?)";
 	          pStmt= conn.prepareStatement(sql);
 	          // SQL文を完成させる
 	          pStmt.setInt(1, uc.getPartner_id());
