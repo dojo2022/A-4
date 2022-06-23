@@ -70,7 +70,8 @@ function getMonthDay(year,month){
 	}).done(function(data) {
 
 		/*成功した時の処理を書く*/
-        console.log(data.lenght);
+		alert('成功！！');
+        console.log(data.length);
     })
     /* 非同期通信が失敗したときの処理*/
      .fail(function() {

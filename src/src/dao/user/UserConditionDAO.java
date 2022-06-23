@@ -179,7 +179,7 @@ public ArrayList<UserCondition> select(int family_id){
 				pStmt= conn.prepareStatement(sql);
 				pStmt.setInt(1,family_id);
 				pStmt.setInt(2,year);
-				pStmt.setInt(1,month);
+				pStmt.setInt(3,month);
 
 				// SQL文を実行し、結果表を取得する
 				ResultSet rs = pStmt.executeQuery();
