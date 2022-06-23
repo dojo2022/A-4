@@ -29,9 +29,8 @@ function upd(){
         return true;    //メッセージ出力
     }
 function check(){
-    if (document.uprform.value == ""){
-        //form内が入力されていない場合)
-        alert("登録されていません。移動しますか？");    //メッセージ出力
-        return true;    //動作を実行
+	function inputChange(){
+            if (window.confirm('登録されていません。移動しますか？')) {
+      }
     }
-}
+  }

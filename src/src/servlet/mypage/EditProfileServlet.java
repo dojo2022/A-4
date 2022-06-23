@@ -78,9 +78,6 @@ public class EditProfileServlet extends HttpServlet {
 	            } else {//編集できてない
 	                result_message = "false";
 	            }
-				// マイページにフォワード
-				RequestDispatcher dispatcher = request.getRequestDispatcher("<%= request.getContextPath() %>/jsp/mypage/mypage.jsp");
-				dispatcher.forward(request, response);
 	}
 
 
