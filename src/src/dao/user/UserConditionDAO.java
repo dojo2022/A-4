@@ -29,7 +29,7 @@ public class UserConditionDAO {
 				PreparedStatement pStmt;
 
 	          sql = "insert into user_condition (partner_id, weight, body_temparture, text, appetite, sleepiness, humor, nausea, stress, dizziness, fatigue, stiff_shoulder, headache, backache, stomach_ache, feeling, tidying, self_assertion, poop, tooth_brushing) "
-	          		+ "value (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?, ? ,? ,?)";
+	          		+ "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?, ? ,? ,?)";
 	          pStmt= conn.prepareStatement(sql);
 	          // SQL文を完成させる
 	          pStmt.setInt(1, uc.getPartner_id());
@@ -174,12 +174,21 @@ public ArrayList<UserCondition> select(int family_id){
 				String sql;
 				PreparedStatement pStmt;
 
-				sql = "select created_at from partner join use_condition on partner.partner_id = user_condition.partner_id"
-						+ "WHERE partner.family_id = ? and user_condition.created_at='?-?-%";
+				sql = "select user_condition.created_at from partner join user_condition on partner.partner_id = user_condition.partner_id"
+						+ " WHERE partner.family_id = ? and user_condition.created_at like ?";
 				pStmt= conn.prepareStatement(sql);
 				pStmt.setInt(1,family_id);
-				pStmt.setInt(2,year);
-				pStmt.setInt(3,month);
+
+				String year_month ;
+				if(String.valueOf(month).length()==1) {
+					year_month=year+"-0"+month;
+
+				}else {
+					year_month=year+"-"+month;
+				}
+				pStmt.setString(2,year_month+"%");
+
+
 
 				// SQL文を実行し、結果表を取得する
 				ResultSet rs = pStmt.executeQuery();

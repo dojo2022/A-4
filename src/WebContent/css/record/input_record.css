@@ -2,8 +2,15 @@
 main {
 	padding-top:50px; /*ヘッダーと被らないようにしてる*/
 }
+form.input_record {
+	display: inline-block;
+
+}
 body{
 	text-align: center;
+}
+span#today{
+	margin-top: 50px;
 }
 ul.tab-group{
   display: flex;
@@ -73,6 +80,7 @@ input.record{
 table#family-meter {
 	margin: auto;
 }
+
 tr.view0{
 	display: none;
 }
