@@ -11,7 +11,7 @@ import model.column.Column;
 
 public class ColumnDAO {
 
-	public ArrayList<Column> select(String id) {
+	public ArrayList<Column> select(String id) {       //サーブレットから渡されたデータ　getParamater→String型にしないと
 		Connection conn = null;
 		ArrayList<Column> columnList = new ArrayList<Column>();
 
@@ -23,9 +23,9 @@ public class ColumnDAO {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
 
 			// SQL文を準備する
-			String sql = "SELECT * from column WHERE column_id = ?";
+			String sql = "SELECT * FROM column WHERE genre_id = ?";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
-			pStmt.setString(1, id); //SQL文の？に値を入れる
+			pStmt.setInt(1, Integer.parseInt(id)); //SQL文の？に値を入れる     ←１…左から数えて一個目の？に入れる  Integer.parseInt(id)…int型に
 
 
 

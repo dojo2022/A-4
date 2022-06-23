@@ -100,15 +100,15 @@ function ajax(process){
 			var date = new Date(value.time_limit);
 			var flag
 			if(value.completed_flag == 0){
-				flag="未完";
+				flag="完了";
 			}else if(value.completed_flag == 1){
 				flag="削除";
 			}
 			$tr.append('<td name=title>'+value.title+"</td>")
 			.append('<td name=body>'+value.body+"</td>")
 			.append('<td name=time_limit>～'+(date.getMonth()+1)+"/"+date.getDate()+"</td>")
-			.append('<td name=title>'+value.label+"</td>")
-			.append('<td name=title>'+flag+"</td>")
+			.append('<td name=label>'+value.label+"</td>")
+			.append("<td name=flag><input type='button' value='"+flag+"'></td>")
 			let $body_tr=$('<tr />');
 			$("#cq_table").append($tr);
 

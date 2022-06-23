@@ -23,7 +23,7 @@ public class ColumnGenreDAO {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
 
 			// SQL文を準備する
-			String sql = "SELECT * from column_genre";
+			String sql = "SELECT * FROM column_genre";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 

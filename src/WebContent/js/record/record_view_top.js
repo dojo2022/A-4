@@ -36,6 +36,7 @@ function showProcess(date) {
 }
 
 function getMonthDay(year,month){
+	alert('ファンクション入ったよ');
      /*非同期処理開始*/
 	var postData={
 				"process":"getmonthday",
@@ -47,6 +48,7 @@ function getMonthDay(year,month){
 
     $.ajaxSetup({scriptCharset:'utf-8'});
 	$.ajax({
+
 
         /*どのサーブレットに送るか*/
         url: '/MaternityApp/RecordViewTopServlet',
@@ -68,7 +70,8 @@ function getMonthDay(year,month){
 	}).done(function(data) {
 
 		/*成功した時の処理を書く*/
-        alert(data);
+		alert('成功！！');
+        console.log(data.length);
     })
     /* 非同期通信が失敗したときの処理*/
      .fail(function() {
