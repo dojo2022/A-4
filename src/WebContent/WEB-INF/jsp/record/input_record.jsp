@@ -16,22 +16,31 @@
     </style>
 </head>
 <body>
-<main class="input_record">
+<main>
 
 <!-- 今日の日付 -->
-<form method="POST" action="<%= request.getContextPath() %>/src/servlet.record/InputRecordServlet">
-<strong><span id="today"></span></strong>
+<form class="input_record" method="POST" action="<%= request.getContextPath() %>/src/servlet.record/InputRecordServlet">
+<strong><span id="today"></span></strong><br>
 
 <!-- アカウント切り替え -->
 
 <c:forEach var="e" items="${PartnerList}" varStatus="status">
-<input type="hidden" id="partner_id" value="${e.partner_id}">
-<table class="tab-panel" align="left">
-<tr class="tab-group">
-	<td class="tab" id="${status.index}" onclick="tabClick()" >
-    <img src="<%= request.getContextPath() %>/image/level1.png"><br>${e.name}
-	</td>
-</tr>
+<%-- 	<div style="float:left">
+   <!--  顔の表示 -->
+	<img src="<%= request.getContextPath() %>/image/level1.png">
+	<!-- ダーリン・ハニー -->
+	${e.name}
+	</div> --%>
+ <table class="tab-panel" align="left">
+	<input type="hidden" id="partner_id" value="${e.partner_id}">
+
+
+	<tr class="tab-group">
+		<td class="tab" id="${status.index}" onclick="tabClick()" >
+	    	<img src="<%= request.getContextPath() %>/image/level1.png"><br>${e.name}
+		</td>
+	</tr>
+
 </table>
 <div class="panel" id="${status.index}">
 
@@ -634,13 +643,12 @@ console.log(postData);
 		//どのメソッドを使用するか
 		type:"POST",
 		//受け取るデータのタイプ
-		dataType:"json",
+		dataType:"text",
 		//何をサーブレットに飛ばすか（変数を記述）
 		data: postData,
 	   //非同期通信が成功したときの処理
 	}).done(function(data) {
 		alert("記録しました");
-
 	  })
 	   //非同期通信が失敗したときの処理
 	  .fail(function(data) {
