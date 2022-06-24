@@ -69,7 +69,7 @@
 							<select id="label" name="label" >
 								<option value="">ラベル</option>
 								<c:forEach var="e" items="${labelList}" >
-								<option value="${e.content_label }">${e.content_label }</option>
+								<option value="${e.label_id }">${e.content_label }</option>
 								</c:forEach>
 							</select>
 							<input type="hidden" name="count" value="1" id="count">
