@@ -5,6 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>famiTy ユーザー情報登録</title>
+
+<style>
+	{
+		outline: 1px solid #ff0000;
+	}
+</style>
 <link rel="stylesheet" href="https://unpkg.com/sanitize.css" ></linkrel>
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/mypage/edit_profile.css">
  </head>
@@ -17,27 +23,27 @@
 				<form id="user_profile_form" method="POST" name="uprform" action="EditProfileServlet">
 					<tr>
 						<td>
-							氏名<input size="30" type="text" id="name" class = "form_user1" name="name" value="${user.name}" required placeholder="氏名" onchange="inputChange();">※必須<br>
+							氏名<input size="30" type="text" id="name" class = "form_user1" name="name" value="${loginUser.name}" required placeholder="氏名" onchange="inputChange();">※必須<br>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							公開用ユーザー名<input size="30" type="text" id="nickname" class = "form_user2" name="nickname" value="${user.nickname}" required placeholder="公開用ユーザー名" onchange="inputChange();">※必須<br>
+							公開用ユーザー名<input size="30" type="text" id="nickname" class = "form_user2" name="nickname" value="${loginUser.nickname}" required placeholder="公開用ユーザー名" onchange="inputChange();">※必須<br>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							郵便番号<input size="30" type="text" id="post_code" class = "form_user3" name="post_code" value="${user.post_code}" placeholder="郵便番号" onchange="inputChange();"><br>
+							郵便番号<input size="30" type="text" id="post_code" class = "form_user3" name="post_code" value="${loginUser.post_code}" placeholder="郵便番号" onchange="inputChange();"><br>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							住所<input size="30" type="text" id="address" class = "form_user4" name="address" value="${user.address}" placeholder="住所" onchange="inputChange();"><br>
+							住所<input size="30" type="text" id="address" class = "form_user4" name="address" value="${loginUser.address}" placeholder="住所" onchange="inputChange();"><br>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							電話番号<input size="30" type="text" id="tel" class = "form_user5" name="tel" value="${user.tel}" placeholder="電話番号" onchange="inputChange();"><br>
+							電話番号<input size="30" type="text" id="tel" class = "form_user5" name="tel" value="${loginUser.tel}" placeholder="電話番号" onchange="inputChange();"><br>
 						</td>
 					</tr>
 					<tr>
