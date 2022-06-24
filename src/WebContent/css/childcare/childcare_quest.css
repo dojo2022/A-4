@@ -25,3 +25,65 @@ table tr{
 	border: solid 2px gray;
 	border-radius:10px;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    animation-name: show;
+    animation-duration: 0.5s
+  }
+
+  .modal_content {
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    margin: 10% auto;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .modal_body{
+    text-align: center;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 16px;
+  }
+
+  .close:hover,
+.close:focus {
+  color: black;
+  cursor: pointer;
+}
+#regist_btn{
+    float:right;
+    margin:0 10px 5px 0;
+}
+
+[type = "button"]:hover,
+[type = "button"]:focus
+{
+    color: black;
+    cursor: pointer;
+
+}
+
+#open_modal:hover,
+#open_modal:focus
+{
+    color: black;
+    cursor: pointer;
+
+}

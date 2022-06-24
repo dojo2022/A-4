@@ -349,7 +349,7 @@ public class UserDAO {
 			String sql;
 			PreparedStatement pStmt;
 
-				sql = "update User (name, nickname, post_code, address, tel, birthday, gender, due_date) SET (?,?,?,?,?,?,?,?) WHERE user_id = ?";
+				sql = "update User SET name = ?, nickname = ?, post_code = ?, address = ?, tel = ?, birthday = ?, gender = ?, due_date = ? WHERE user_id = ?";
 				pStmt= conn.prepareStatement(sql);
 				pStmt.setString(1, upr.getName());
 				pStmt.setString(2, upr.getNickname());
@@ -360,7 +360,6 @@ public class UserDAO {
 				pStmt.setString(7, upr.getGender());
 				pStmt.setDate(8, upr.getDue_date());
 				pStmt.setInt(9,upr.getUser_id());
-
 				// SQL文を実行する
 				if (pStmt.executeUpdate() == 1) {
 					result = true;

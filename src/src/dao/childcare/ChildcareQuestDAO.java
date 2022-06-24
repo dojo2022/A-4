@@ -11,9 +11,10 @@ import model.childcare.ChildcareQuest;
 import model.childcare.ChildcareQuestLabel;
 
 public class ChildcareQuestDAO {
-	public ArrayList<ChildcareQuest> getChildcareQuest(int family_id){
+	public ArrayList<ChildcareQuest> getChildcareQuest(int family_id ,String sort,String completed_flag,String label){
 		Connection conn = null;
 		ArrayList<ChildcareQuest> caList = new ArrayList<ChildcareQuest>();
+
 			try {
 				// JDBCドライバを読み込む
 				Class.forName("org.h2.Driver");
@@ -26,12 +27,23 @@ public class ChildcareQuestDAO {
 				String sql;
 				PreparedStatement pStmt;
 
-				sql = "SELECT * FROM CHILDCARE_QUEST as cq join childcare_quest_label as cqa "
-						+ "on cq.label = cqa.CHILDCARE_QUEST_LABEL_ID where family_id = ? order by created_date";
-				pStmt= conn.prepareStatement(sql);
+				if(sort.equals("")) {sort = "created_date";}
+				System.out.println("sort:"+sort);
+				if(completed_flag.equals("")) {completed_flag="%";}
+				System.out.println("comp_flag:"+completed_flag);
 
-				// SQL文を完成させる
+				sql = "SELECT * FROM CHILDCARE_QUEST as cq join childcare_quest_label as cqa "
+						+ "on cq.label = cqa.CHILDCARE_QUEST_LABEL_ID where family_id = ? "
+						+ "and content_label like ? and completed_flag like '"+completed_flag+"' order by "+sort;
+
+				//and completed_flag like ?
+				pStmt= conn.prepareStatement(sql);
 				pStmt.setInt(1, family_id);
+				if(label.equals("")) {label="%";}
+				pStmt.setString(2, label);
+
+
+				//pStmt.setString(3, completed_flag);
 
 
 				// SQL文を実行し、結果表を取得する

@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.user.UserDAO;
 import model.user.User;
@@ -33,7 +34,10 @@ public class EditProfileServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		User upr = new User();
+
+		HttpSession session = request.getSession();
+		User upr = (User)session.getAttribute("loginUser");
+
 		// リクエストパラメータを取得、入力値をプロパティに設定
 				request.setCharacterEncoding("UTF-8");
 				String name = request.getParameter("name");
@@ -62,7 +66,9 @@ public class EditProfileServlet extends HttpServlet {
 				Date da_due_date = java.sql.Date.valueOf(due_date);
 				upr.setDue_date (da_due_date);
 
-				int user_id;
+
+
+
 
 				String result_message;
 
@@ -77,5 +83,7 @@ public class EditProfileServlet extends HttpServlet {
 	            } else {//編集できてない
 	                result_message = "false";
 	            }
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/mypage/edit_profile.jsp");
+		dispatcher.forward(request, response);
 	}
 }

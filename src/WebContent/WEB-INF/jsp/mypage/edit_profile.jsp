@@ -5,16 +5,16 @@
 <head>
 <meta charset="UTF-8">
 <title>famiTy ユーザー情報登録</title>
-<!-- <link rel="stylesheet" href="https://unpkg.com/sanitize.css" ></linkrel>
+<link rel="stylesheet" href="https://unpkg.com/sanitize.css" ></linkrel>
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/mypage/edit_profile.css">
- --></head>
+ </head>
 <body>
 	<div class = "container">
 		<main>
 		<h2>ユーザー情報登録</h2>
 		<%@ include file="../top/common.jsp"%>
 			<div class = "form">
-				<form id="user_profile_from" method="POST" name="uprform" action="EditProfileServlet">
+				<form id="user_profile_form" method="POST" name="uprform" action="EditProfileServlet">
 					<tr>
 						<td>
 							氏名<input size="30" type="text" id="name" class = "form_user1" name="name" value="${user.name}" required placeholder="氏名" onchange="inputChange();">※必須<br>
@@ -76,7 +76,7 @@
 		</div>
 	</main>
 </div>
-<a href="/MaternityApp/MypageServlet.java"><img src="<%= request.getContextPath() %>/image/post.png" alt="マイページへ" onclick="return check();"></a>
+<a href="MypageServlet"><img src="<%= request.getContextPath() %>/image/back_botton.png" alt="マイページへ" width = 90px height = 90px onclick="return check();"></a>
 <script src="<%= request.getContextPath() %>/js/mypage/edit_profile.js"></script>
 </body>
 </html>

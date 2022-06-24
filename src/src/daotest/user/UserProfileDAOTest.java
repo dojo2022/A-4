@@ -1,66 +1,38 @@
 package daotest.user;
 
-import java.sql.Connection;
 import java.sql.Date;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+
+import dao.user.UserDAO;
+import model.user.User;
 
 public class UserProfileDAOTest {
 
 	public static void main(String[] args) {
-		System.out.println("---------- updateUserのテスト ----------");
-		//getLaborPainTest();	// ユーザーが見つかる場合のテスト
+		System.out.println("---------- getUserProfileDAOのテスト ----------");
+		getUserProfileDAOTest();
 
 	}
 
 
-	public boolean updateUser(String name, String nickname, String post_code, String address, String tel, Date birthday, String gender, Date due_date) {
-		Connection conn = null;
-		boolean result = false;
-		try {
-			// JDBCドライバを読み込む
-			Class.forName("org.h2.Driver");
+	public static void getUserProfileDAOTest() {
+		User uspro = new User();
+		UserDAO uproDao = new UserDAO();
+		uspro.setName("赤坂");
+		uspro.setNickname("あか");
+		uspro.setPost_code("543-3456");
+		uspro.setAddress("東京都杉並区");
+		uspro.setTel("345-3456-5678");
 
-			// データベースに接続する
-			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
+		Date da_birthday = java.sql.Date.valueOf("2020-02-13");
+		uspro.setBirthday(da_birthday);
 
-			// SQL文を準備する
+		uspro.setGender("その他");
 
-			String sql;
-			PreparedStatement pStmt;
+		Date da_due_date = java.sql.Date.valueOf("2020-02-17");
+		uspro.setBirthday(da_due_date);
 
-				sql = "update User (name, nickname, post_code, address, tel, birthday, gender, due_date) SET (ムバッペ,俊三,,?,?,?,?,?) WHERE user_id = ?";
-				pStmt= conn.prepareStatement(sql);
+		uspro.setUser_id(6);
 
-				// SQL文を実行する
-				if (pStmt.executeUpdate() == 1) {
-					result = true;
-				}
-			}
-			catch (SQLException e) {
-				e.printStackTrace();
-				result = false;
-			}
-			catch (ClassNotFoundException e) {
-				e.printStackTrace();
-				result = false;
-			}
-		finally {
-			// データベースを切断
-			if (conn != null) {
-				try {
-					conn.close();
-				}
-				catch (SQLException e) {
-					e.printStackTrace();
-					result = false;
-				}
-			}
-		}
-
-		// 結果を返す
-		return result;
+		boolean up = uproDao.updateUser(uspro);
 	}
-
 }

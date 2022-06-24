@@ -12,10 +12,10 @@
 <div class="container">
 	<%@ include file="../top/common.jsp"%>ヘッダー、ハンバーガーメニューのインクルード
 	<main>
-	メインコンテンツ（ここ書き換えて）
+	<input type="text" id="recordMonthDay" name="recordMonthDay">
     </main>
 </div>
 
-<script src="<%= request.getContextPath() %>/js/model.js">←ここにjavascriptのファイル指定</script>
+<script defer src="<%= request.getContextPath() %>/js/record/record_view.js"></script>
 </body>
 </html>
