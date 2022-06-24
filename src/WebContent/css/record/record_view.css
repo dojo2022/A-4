@@ -1,1 +1,88 @@
 @charset "UTF-8";
+main {
+	padding-top:900px; /*ヘッダーと被らないようにしてる*/
+}
+h2{
+	color: #666;
+}
+form.input_record {
+	display: inline-block;
+
+}
+body{
+	text-align: center;
+}
+span#today{
+	margin-top: 50px;
+}
+ul.tab-group{
+  display: flex;
+  justify-content: center;
+}
+.tab{
+  flex-grow: 1;
+  padding:5px;
+  list-style:none;
+  border:solid 1px #CCC;
+  text-align:center;
+  cursor:pointer;
+}
+.tab-panel{
+	display: flex;
+}
+.panel-group{
+  height:100px;
+  border:solid 1px #CCC;
+  border-top:none;
+  background:#eee;
+}
+.panel{
+  display:none;
+}
+#status.index{
+  background:#D2DFF3;
+  color:#FFF;
+  transition: all 0.2s ease-out;
+}
+.panel.is-show{
+  display:block;
+}
+div.panel.is-show{
+	border: 1px solid #767171;
+	width: 800px;
+	height: auto;
+	margin: auto;
+	padding-top: 20px;
+}
+input.text {
+	height: 200px;
+	width: 300px;
+	margin-bottom: 20px;
+}
+input.number {
+	height: 40px;
+	width: auto;
+	margin-bottom: 20px;
+}
+input.radio {
+	display: none;
+	margin-bottom: 20px;
+}
+.radio + .radio_image {
+	border: 3px #ffffff solid;
+	background-color: #ffffff;
+}
+.radio:checked + .radio_image {
+	background-color: #D2DFF3;
+}
+input.record{
+	text-align: right;
+	margin-bottom: 20px;
+}
+table#family-meter {
+	margin: auto;
+}
+
+tr.view0{
+	display: none;
+}

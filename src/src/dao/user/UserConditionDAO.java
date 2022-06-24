@@ -120,6 +120,7 @@ public ArrayList<UserCondition> selectOneDayRecord(int family_id, int month, int
 		while(rs.next()) {
 			UserCondition uc = new UserCondition();
 			uc.setPartner_id(rs.getInt("partner_id"));
+			uc.setName(rs.getString("name"));
 			uc.setWeight(rs.getFloat("weight"));
 			uc.setBody_temparture(rs.getFloat("body_temparture"));
 			uc.setText(rs.getString("text"));
