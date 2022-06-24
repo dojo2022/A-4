@@ -14,7 +14,7 @@
 		<h2>ユーザー情報登録</h2>
 		<%@ include file="../top/common.jsp"%>
 			<div class = "form">
-				<form id="user_profile_from" method="POST" name="uprform" action="EditProfileServlet">
+				<form id="user_profile_form" method="POST" name="uprform" action="EditProfileServlet">
 					<tr>
 						<td>
 							氏名<input size="30" type="text" id="name" class = "form_user1" name="name" value="${user.name}" required placeholder="氏名" onchange="inputChange();">※必須<br>
