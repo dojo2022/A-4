@@ -5,7 +5,11 @@ var showDate = new Date(today.getFullYear(), today.getMonth(), 1);
 
 // 初期表示
 window.onload = function () {
-    showProcess(today, calendar);
+	showDate.setMonth(showDate.getMonth());
+    var month = showDate.getMonth();
+    var year = showDate.getFullYear();
+    getMonthDay(year,month+1)
+    showProcess(showDate);
 };
 // 前の月表示
 function prev(){
@@ -37,10 +41,9 @@ function showProcess(date) {
 
 function getMonthDay(year,month){
      /*非同期処理開始*/
-	var postData={
-				"process":"getmonthday",
-				"year":year,
-				"month":month
+	var postData={"process":"getmonthday",
+				  "year":year,
+				  "month":month
 				}
     /*非同期処理開始*/
     let postdata={month:6}
@@ -81,7 +84,7 @@ function getMonthDay(year,month){
 		let recordDays = element.split(",");
 			for(let i of recordDays){
 				console.log($('#'+i).text());
-				$('#'+i).append('<img src="./image/pen.png">');
+				$('#'+i).append('<img src="./image/pen.png" width="20" height="20" style="margin-left:15px; margin-right:-40px; margin-top:-40px;">');
 			}
 
     })
@@ -98,6 +101,7 @@ function getMonthDay(year,month){
 
 // カレンダー作成
 function createProcess(year, month) {
+
     // 曜日
     var calendar = "<table><tr class='dayOfWeek'>";
     for (var i = 0; i < week.length; i++) {
@@ -145,9 +149,11 @@ function createProcess(year, month) {
             var mon = document.getElementById("header");
             console.log(showDate.getMonth() +1);
             console.log("クリックした日付は "+ e.target.innerHTML + "です");
+            window.location="/MaternityApp/RecordViewServlet";
         }else if(e.target.classList.contains("today")){
             console.log(showDate.getMonth() +1);
             console.log('クリックした日付は' + e.target.innerHTML + 'です');
+            window.location = "/MaternityApp/RecordViewServlet";
         }
     })
 
