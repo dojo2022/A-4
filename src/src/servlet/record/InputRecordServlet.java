@@ -39,19 +39,23 @@ public class InputRecordServlet extends HttpServlet {
 		//リクエストスコープにいれて
 		PartnerDAO pDao = new PartnerDAO();
 		Partner pc = new Partner();
+		int partner_id = pc.getPartner_id();
 		ArrayList<Partner> PartnerList  = pDao.selectFamilyPartner(family_id);
-
+		System.out.println(PartnerList);
 		request.setAttribute("PartnerList", PartnerList);
+
+		UserConditionDAO ucDao= new UserConditionDAO();
+		int count = ucDao.countRecord(partner_id);
+
+
+		if(count >= 1) {
+			System.out.println(count);
+			System.out.println("今日の記録は登録されています。確認は「記録閲覧」からできます。");
+		}
+		request.setAttribute("count", count);
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/record/input_record.jsp");
 		dispatcher.forward(request, response);
-
-//		if(LocalDate today == LocalDate.now()) {
-//			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/record/input_record.jsp");
-//			dispatcher.forward(request, response);
-//		}else {
-//			response.sendRedirect("/WEB-INF/jsp/record/input_record.jsp");
-//		}
 
 
 	}

@@ -6,6 +6,9 @@ form.input_record {
 	display: inline-block;
 
 }
+div.count1{
+	display: none;
+}
 body{
 	text-align: center;
 }

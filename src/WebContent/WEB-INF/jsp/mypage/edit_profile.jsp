@@ -76,7 +76,7 @@
 		</div>
 	</main>
 </div>
-<a href="/MaternityApp/MypageServlet.java"><img src="<%= request.getContextPath() %>/image/post.png" alt="マイページへ" onclick="return check();"></a>
+<a href="/MaternityApp/MypageServlet.java"><img src="<%= request.getContextPath() %>/image/back_botton.png" alt="マイページへ" width = 90px height = 90px onclick="return check();"></a>
 <script src="<%= request.getContextPath() %>/js/mypage/edit_profile.js"></script>
 </body>
 </html>
