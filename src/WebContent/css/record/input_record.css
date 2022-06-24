@@ -2,12 +2,12 @@
 main {
 	padding-top:50px; /*ヘッダーと被らないようにしてる*/
 }
+h2{
+	color: #666;
+}
 form.input_record {
 	display: inline-block;
 
-}
-div.count1{
-	display: none;
 }
 body{
 	text-align: center;
@@ -40,7 +40,7 @@ ul.tab-group{
   display:none;
 }
 #status.index{
-  background:#F00;
+  background:#D2DFF3;
   color:#FFF;
   transition: all 0.2s ease-out;
 }
@@ -68,13 +68,12 @@ input.radio {
 	display: none;
 	margin-bottom: 20px;
 }
-
 .radio + .radio_image {
 	border: 3px #ffffff solid;
 	background-color: #ffffff;
 }
 .radio:checked + .radio_image {
-	background-color: #EF5350;
+	background-color: #D2DFF3;
 }
 input.record{
 	text-align: right;
