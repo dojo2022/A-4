@@ -7,6 +7,7 @@ import java.util.Date;
 public class UserCondition implements Serializable {
 	private int user_condition_id;
 	private int partner_id;
+	private String name;
 	private float weight;
 	private float body_temparture;
 	private String text;
@@ -40,6 +41,13 @@ public class UserCondition implements Serializable {
 	}
 	public void setPartner_id(int partner_id) {
 		this.partner_id = partner_id;
+
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	public float getWeight() {
 		return weight;

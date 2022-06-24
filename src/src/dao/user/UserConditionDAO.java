@@ -6,6 +6,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.TreeSet;
 
 import org.joda.time.LocalDate;
@@ -82,9 +83,9 @@ public class UserConditionDAO {
 			return result;
  }
 
-public UserCondition selectOneRecord(int family_id, int month, int recordDay){
+public ArrayList<UserCondition> selectOneDayRecord(int family_id, int month, int recordDay){
 	Connection conn = null;
-	UserCondition ucList = new UserCondition();
+	ArrayList<UserCondition> ucList = new ArrayList<UserCondition>();
 	try {
 		// JDBCドライバを読み込む
 		Class.forName("org.h2.Driver");
@@ -98,38 +99,50 @@ public UserCondition selectOneRecord(int family_id, int month, int recordDay){
 		PreparedStatement pStmt;
 
 		sql = "select * from partner join user_condition on partner.partner_id = user_condition.partner_id"
-				+ " WHERE partner.family_id = ? and created_at = ?";
+				+ " WHERE partner.family_id = ? and user_condition.created_at like ?";
 		pStmt= conn.prepareStatement(sql);
 
 		pStmt.setInt(1,family_id);
-		LocalDate today = LocalDate.now();
-		pStmt.setString(2,today+"%");
+		String month_day ;
+		if((String.valueOf(month).length()==1)&&(String.valueOf(recordDay).length()==1)) {
+			month_day="0"+ month +"-0"+recordDay;
+		}else if((String.valueOf(month).length()!=1)&&(String.valueOf(recordDay).length()==1)) {
+			month_day=month+"-0"+recordDay;
+		}else if((String.valueOf(month).length()==1)&&(String.valueOf(recordDay).length()!=1)) {
+			month_day = "0"+month+"-"+recordDay;
+		}else {
+			month_day =month+"-"+recordDay;
+		}
+		pStmt.setString(2,"%"+ month_day+"%");
 
 		ResultSet rs = pStmt.executeQuery();
 
 		while(rs.next()) {
-			ucList.setPartner_id(rs.getInt("partner_id"));
-			ucList.setWeight(rs.getFloat("weight"));
-			ucList.setBody_temparture(rs.getFloat("body_temparture"));
-			ucList.setText(rs.getString("text"));
-			ucList.setAppetite(rs.getInt("appetite"));
-			ucList.setSleepiness(rs.getInt("sleepiness"));
-			ucList.setHumor(rs.getInt("humor"));
-			ucList.setNausea(rs.getInt("nausea"));
-			ucList.setStress(rs.getInt("stress"));
-			ucList.setDizziness(rs.getInt("dizziness"));
-			ucList.setFatigue(rs.getInt("fatigue"));
-			ucList.setStiff_shoulder(rs.getInt("stiff_shoulder"));
-			ucList.setHeadache(rs.getInt("headache"));
-			ucList.setBackache(rs.getInt("backache"));
-			ucList.setStomach_ache(rs.getInt("stomach_ache"));
-			ucList.setFeeling(rs.getInt("feeleng"));
-			ucList.setTidying(rs.getInt("tidying"));
-			ucList.setSelf_assertion(rs.getInt("self_assertion"));
-			ucList.setPoop(rs.getInt("poop"));
-			ucList.setTooth_brushing(rs.getInt("tooth_brushing"));
-			ucList.setCreated_at(rs.getDate("created_at"));
+			UserCondition uc = new UserCondition();
+			uc.setPartner_id(rs.getInt("partner_id"));
+			uc.setName(rs.getString("name"));
+			uc.setWeight(rs.getFloat("weight"));
+			uc.setBody_temparture(rs.getFloat("body_temparture"));
+			uc.setText(rs.getString("text"));
+			uc.setAppetite(rs.getInt("appetite"));
+			uc.setSleepiness(rs.getInt("sleepiness"));
+			uc.setHumor(rs.getInt("humor"));
+			uc.setNausea(rs.getInt("nausea"));
+			uc.setStress(rs.getInt("stress"));
+			uc.setDizziness(rs.getInt("dizziness"));
+			uc.setFatigue(rs.getInt("fatigue"));
+			uc.setStiff_shoulder(rs.getInt("stiff_shoulder"));
+			uc.setHeadache(rs.getInt("headache"));
+			uc.setBackache(rs.getInt("backache"));
+			uc.setStomach_ache(rs.getInt("stomach_ache"));
+			uc.setFeeling(rs.getInt("feeling"));
+			uc.setTidying(rs.getInt("tidying"));
+			uc.setSelf_assertion(rs.getInt("self_assertion"));
+			uc.setPoop(rs.getInt("poop"));
+			uc.setTooth_brushing(rs.getInt("tooth_brushing"));
+			uc.setCreated_at(rs.getDate("created_at"));
 
+			ucList.add(uc);
 		}
 	}
 	catch (SQLException e) {

@@ -15,7 +15,7 @@
 
 <!-- 今日の日付 -->
 <form class="input_record" method="POST" action="<%= request.getContextPath() %>/src/servlet.record/InputRecordServlet">
-<strong><span id="today"></span></strong><br>
+<h2><strong><span id="today"></span></strong></h2><br>
 
 <!-- アカウント切り替え -->
 
