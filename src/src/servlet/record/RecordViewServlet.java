@@ -37,12 +37,14 @@ public class RecordViewServlet extends HttpServlet {
 
 		int month = Integer.parseInt(request.getParameter("month"));
 		int recordDay = Integer.parseInt(request.getParameter("recordDay"));
+		System.out.println(month);
+		System.out.println(recordDay);
 
 		UserConditionDAO ucDAO = new UserConditionDAO();
-		UserCondition ucRecord = ucDAO.select
-
-		/*ArrayList<UserCondition> ucList = ucDAO.select(family_id);
-		request.setAttribute("ucList", ucList);*/
+		ArrayList<UserCondition> ucList = ucDAO.selectOneDayRecord(family_id, month, recordDay);
+		request.setAttribute("ucList", ucList);
+		System.out.println(ucList.size());
+		System.out.println(ucList.get(0).getPartner_id());
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/record/record_view.jsp");
 		dispatcher.forward(request, response);
@@ -52,8 +54,7 @@ public class RecordViewServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+
 	}
 
 }

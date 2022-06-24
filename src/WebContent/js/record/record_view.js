@@ -15,7 +15,7 @@
              console.log(month);
              console.log(recordDay);
 
-             let element = document.getElementById('recordMonthDay');
+             let element = document.getElementById('today');
              element.value = month+'/'+recordDay
 
  }
