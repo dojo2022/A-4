@@ -10,9 +10,11 @@
 <body>
 
 <c:forEach var="e" items="${list}" >
-<div class="genre"><a href="ColumnArticleListServlet?column_id=${e.column_id}">${e.title}</a></div>
+<div class="genre"><a href="ColumnArticleServlet?column_id=${e.column_id}">${e.title}</a></div>
 
 </c:forEach>
+
+<a href="column_top.jsp"><img src="back_botton.png" width="100px" height="100px"></a>
 
 </body>
 </html>
