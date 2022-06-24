@@ -2,7 +2,6 @@
 'use strict';
 
 
-<!-- 日付 -->
 function recalc() {
 	  let dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'];
 	//現在の日付のオブジェクトを作り、定数「now」に保存
@@ -18,7 +17,6 @@ function recalc() {
 	}
 	recalc();
 
-<!-- アカウント切り替え -->
 // 選んだタブをアクティブにする
 document.getElementById('0').classList.add('is-active');
 let index=0;
@@ -40,24 +38,12 @@ function tabClick(){
 		const arrayTabs = Array.prototype.slice.call(tabs);
 		index = arrayTabs.indexOf(this);
 		document.getElementsByClassName('panel')[index].classList.add('is-show');
-
-
-	function todayRecord(){
-		var num = document.getElementsByClassName('today').value;
-		if (num <= 1){
-			alert("今日の記録は登録されています。確認は「記録閲覧」からできます。");
-		}else{
-			alert("");
-		}
-	}
 	};
 
 }
 
 
 
-
-<!-- ラジオボタンの値をゲット！  -->
 $('input:radio[name="meter1"]').change(function() {
 	const appatite = $('input:radio[name="meter1"]:checked').val();
 });
@@ -107,7 +93,7 @@ $('input:radio[name="meter16"]').change(function() {
 	const tooth_brushing = $('input:radio[name="meter16"]:checked').val();
 });
 
-<!-- Post Ajax -->
+
 function goAjax(){
 	var num = document.getElementById('today').value;
 	if (num == 0){

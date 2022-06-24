@@ -31,14 +31,14 @@
 
 	<tr class="tab-group">
 		<td class="tab" id="${status.index}" onclick="tabClick()" >
-	    	<img src="<%= request.getContextPath() %>/image/user_icon.png"><br>${e.name}
-			<input type="hidden" class="today" id="today${status.index}"  value="${e.today_data}" onclick="todayRecord()">
+	    	<img src="<%= request.getContextPath() %>/image/level1.png"><br>${e.name}
 		</td>
 	</tr>
 
 </table>
 
 <div class="panel" id="${status.index}">
+<div class="${e.today_data}" id="today${status.index}" ></div>
 
 
 
@@ -52,6 +52,7 @@
 	<label>体重(kg)</label><input type = "number" class="number" id="weight" name = "weight" min = "0" max = "200" step = "0.1" value = "60">
 	<label>体温(℃)</label><input type = "number" class="number" id="body_temparture" name = "body_temparture" min = "30" max = "50" step = "0.1" value = "36">
 </div>
+
 <!-- 家族メーター -->
 <table id="family-meter">
 	<tr id="appetite" class="view${e.appetite}">
