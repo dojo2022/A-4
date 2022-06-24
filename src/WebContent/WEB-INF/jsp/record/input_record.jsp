@@ -9,11 +9,6 @@
 <title>famiTy 記録入力</title>
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/record/input_record.css">
 <%@ include file="../top/common.jsp"%>
-<style>
-    *{
-        outline: 1px solid #FF0000;
-    }
-    </style>
 </head>
 <body>
 <main>
@@ -32,7 +27,7 @@
 	${e.name}
 	</div> --%>
  <table class="tab-panel" align="left">
-	<input type="hidden" id="partner_id" value="${e.partner_id}">
+	<input type="hidden" class="partner_id" id="partner_id${status.index}" value="${e.partner_id}">
 
 
 	<tr class="tab-group">
@@ -42,7 +37,9 @@
 	</tr>
 
 </table>
+
 <div class="panel" id="${status.index}">
+<input type="hidden" id="today"  value="${count}" onclick="todayRecord()">
 
 
 <!-- 状態文 -->
@@ -483,6 +480,7 @@
 </div>
 </div>
 </div>
+</div>
 </c:forEach>
 </form>
 </main>
@@ -512,26 +510,37 @@ function recalc() {
 <!-- アカウント切り替え -->
 // 選んだタブをアクティブにする
 document.getElementById('0').classList.add('is-active');
+let index=0;
 function tabClick(){
 	// タブに対してクリックイベントを適用
 	const tabs = document.getElementsByClassName('tab');
 	for(let i = 0; i < tabs.length; i++) {
-	tabs[i].addEventListener('click', tabSwitch, false);
-}
+		tabs[i].addEventListener('click', tabSwitch, false);
+	}
 
-document.getElementById('0').classList.add('is-show')
+	document.getElementById('0').classList.add('is-show')
 	// タブをクリックすると実行する関数
 	function tabSwitch(){
 	// タブのclassの値を変更
 	document.getElementsByClassName('is-active')[0].classList.remove('is-active');
-	this.classList.add('is-active');
+		this.classList.add('is-active');
 	// コンテンツのclassの値を変更
 	document.getElementsByClassName('is-show')[0].classList.remove('is-show');
-	const arrayTabs = Array.prototype.slice.call(tabs);
-	const index = arrayTabs.indexOf(this);
-	document.getElementsByClassName('panel')[index].classList.add('is-show');
+		const arrayTabs = Array.prototype.slice.call(tabs);
+		index = arrayTabs.indexOf(this);
+		document.getElementsByClassName('panel')[index].classList.add('is-show');
 	};
 }
+
+var num = document.getElementById('today').value;
+function todayRecord(){
+	if (num <= 1){
+		alert("今日の記録は登録されています。確認は「記録閲覧」からできます。");
+	}else{
+		alert("");
+	}
+}
+
 
 
 <!-- ラジオボタンの値をゲット！  -->
@@ -586,9 +595,10 @@ $('input:radio[name="meter16"]').change(function() {
 
 <!-- Post Ajax -->
 function goAjax(){
-	alert("functionはいったよ！");
+	var num = document.getElementById('today').value;
+	if (num == 0){
 	//入力値を取得してくる
-	let recordData1 = document.getElementById('partner_id').value;
+	let recordData1 = document.getElementById('partner_id'+index).value;
 	let recordData2 = document.getElementById('text').value;
 	let recordData3 = document.getElementById('weight').value;
 	let recordData4 = document.getElementById('body_temparture').value;
@@ -655,6 +665,10 @@ console.log(postData);
 		//失敗とアラートを出す
 		alert("記録できませんでした"+data);
 	  });
+	}else{
+		alert("今日の記録は登録されています。確認は「記録閲覧」からできます。");
+		location.href = '/MaternityApp/RecordViewTopServlet';
+	}
 }
 
 </script>

@@ -146,14 +146,14 @@ function createProcess(year, month) {
 
     document.addEventListener("click", function(e) {
         if(e.target.classList.contains("calendar_td")) {
-            var mon = document.getElementById("header");
             console.log(showDate.getMonth() +1);
-            console.log("クリックした日付は "+ e.target.innerHTML + "です");
-            window.location="/MaternityApp/RecordViewServlet";
+            console.log("クリックした日付は "+ e.target.textContent + "です");
+            window.location = "/MaternityApp/RecordViewServlet?month="+(showDate.getMonth()+1)+"&"+"recordDay="+e.target.textContent+"";
+
         }else if(e.target.classList.contains("today")){
             console.log(showDate.getMonth() +1);
             console.log('クリックした日付は' + e.target.innerHTML + 'です');
-            window.location = "/MaternityApp/RecordViewServlet";
+            window.location = "/MaternityApp/RecordViewServlet?month="+(showDate.getMonth()+1)+"&"+"recordDay="+e.target.textContent+"";
         }
     })
 

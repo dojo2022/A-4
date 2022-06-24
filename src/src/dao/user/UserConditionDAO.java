@@ -6,7 +6,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.TreeSet;
 
 import org.joda.time.LocalDate;
@@ -83,9 +82,9 @@ public class UserConditionDAO {
 			return result;
  }
 
-public ArrayList<UserCondition> select(int family_id){
+public UserCondition selectOneRecord(int family_id, int month, int recordDay){
 	Connection conn = null;
-	ArrayList<UserCondition> ucList = new ArrayList<UserCondition>();
+	UserCondition ucList = new UserCondition();
 	try {
 		// JDBCドライバを読み込む
 		Class.forName("org.h2.Driver");
@@ -109,29 +108,28 @@ public ArrayList<UserCondition> select(int family_id){
 		ResultSet rs = pStmt.executeQuery();
 
 		while(rs.next()) {
-			UserCondition card = new UserCondition();
-			card.setPartner_id(rs.getInt("partner_id"));
-			card.setWeight(rs.getFloat("weight"));
-			card.setBody_temparture(rs.getFloat("body_temparture"));
-			card.setText(rs.getString("text"));
-			card.setAppetite(rs.getInt("appetite"));
-			card.setSleepiness(rs.getInt("sleepiness"));
-			card.setHumor(rs.getInt("humor"));
-			card.setNausea(rs.getInt("nausea"));
-			card.setStress(rs.getInt("stress"));
-			card.setDizziness(rs.getInt("dizziness"));
-			card.setFatigue(rs.getInt("fatigue"));
-			card.setStiff_shoulder(rs.getInt("stiff_shoulder"));
-			card.setHeadache(rs.getInt("headache"));
-			card.setBackache(rs.getInt("backache"));
-			card.setStomach_ache(rs.getInt("stomach_ache"));
-			card.setFeeling(rs.getInt("feeleng"));
-			card.setTidying(rs.getInt("tidying"));
-			card.setSelf_assertion(rs.getInt("self_assertion"));
-			card.setPoop(rs.getInt("poop"));
-			card.setTooth_brushing(rs.getInt("tooth_brushing"));
-			card.setCreated_at(rs.getDate("created_at"));
-			ucList.add(card);
+			ucList.setPartner_id(rs.getInt("partner_id"));
+			ucList.setWeight(rs.getFloat("weight"));
+			ucList.setBody_temparture(rs.getFloat("body_temparture"));
+			ucList.setText(rs.getString("text"));
+			ucList.setAppetite(rs.getInt("appetite"));
+			ucList.setSleepiness(rs.getInt("sleepiness"));
+			ucList.setHumor(rs.getInt("humor"));
+			ucList.setNausea(rs.getInt("nausea"));
+			ucList.setStress(rs.getInt("stress"));
+			ucList.setDizziness(rs.getInt("dizziness"));
+			ucList.setFatigue(rs.getInt("fatigue"));
+			ucList.setStiff_shoulder(rs.getInt("stiff_shoulder"));
+			ucList.setHeadache(rs.getInt("headache"));
+			ucList.setBackache(rs.getInt("backache"));
+			ucList.setStomach_ache(rs.getInt("stomach_ache"));
+			ucList.setFeeling(rs.getInt("feeleng"));
+			ucList.setTidying(rs.getInt("tidying"));
+			ucList.setSelf_assertion(rs.getInt("self_assertion"));
+			ucList.setPoop(rs.getInt("poop"));
+			ucList.setTooth_brushing(rs.getInt("tooth_brushing"));
+			ucList.setCreated_at(rs.getDate("created_at"));
+
 		}
 	}
 	catch (SQLException e) {
