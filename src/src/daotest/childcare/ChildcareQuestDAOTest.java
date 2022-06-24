@@ -14,15 +14,15 @@ public class ChildcareQuestDAOTest {
 
 
 		System.out.println("---------- getLabelのテスト ----------");
-		//getChilcareQuestTest();
-		getChilcareQuestTestLabelTest();
+		getChilcareQuestTest();
+		//getChilcareQuestTestLabelTest();
 
 	}
 
 
 	public static void getChilcareQuestTest() {
 		ChildcareQuestDAO cqDao = new ChildcareQuestDAO();
-		ArrayList<ChildcareQuest> cq = cqDao.getChildcareQuest(2);
+		ArrayList<ChildcareQuest> cq = cqDao.getChildcareQuest(2,"time_limit","%","家事");
 		for(ChildcareQuest c: cq) {
 			System.out.println(c.getTitle());
 		}

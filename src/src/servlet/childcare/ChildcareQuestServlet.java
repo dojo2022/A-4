@@ -43,10 +43,16 @@ public class ChildcareQuestServlet extends HttpServlet {
 			return;
 		}
 		if(process.equals("getQuestList")) {
+			String sort = request.getParameter("sort");
+			String comp_flag = request.getParameter("completed_flag") ;
+			String label = request.getParameter("label");
+
+
+
 			ChildcareQuestDAO cqDao = new ChildcareQuestDAO();
 			HttpSession session = request.getSession();
 			User user = (User)session.getAttribute("loginUser");
-			ArrayList<ChildcareQuest> cqList = cqDao.getChildcareQuest(2);
+			ArrayList<ChildcareQuest> cqList = cqDao.getChildcareQuest(2,sort,comp_flag,label);
 			ObjectMapper mapper = new ObjectMapper();
 			try {
 	            //JavaオブジェクトからJSONに変換
