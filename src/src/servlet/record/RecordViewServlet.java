@@ -34,10 +34,15 @@ public class RecordViewServlet extends HttpServlet {
 
 		User user = (User)session.getAttribute("loginUser");
 		int family_id = user.getFamily_id();
-		/*UserCondition uc = new UserCondition();*/
+
+		int month = Integer.parseInt(request.getParameter("month"));
+		int recordDay = Integer.parseInt(request.getParameter("recordDay"));
+
 		UserConditionDAO ucDAO = new UserConditionDAO();
-		ArrayList<UserCondition> ucList = ucDAO.select(family_id);
-		request.setAttribute("ucList", ucList);
+		UserCondition ucRecord = ucDAO.select
+
+		/*ArrayList<UserCondition> ucList = ucDAO.select(family_id);
+		request.setAttribute("ucList", ucList);*/
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/record/record_view.jsp");
 		dispatcher.forward(request, response);
