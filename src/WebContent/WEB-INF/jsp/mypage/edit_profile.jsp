@@ -5,9 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>famiTy ユーザー情報登録</title>
-<!-- <link rel="stylesheet" href="https://unpkg.com/sanitize.css" ></linkrel>
+<link rel="stylesheet" href="https://unpkg.com/sanitize.css" ></linkrel>
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/mypage/edit_profile.css">
- --></head>
+ </head>
 <body>
 	<div class = "container">
 		<main>
@@ -76,7 +76,7 @@
 		</div>
 	</main>
 </div>
-<a href="/MaternityApp/MypageServlet.java"><img src="<%= request.getContextPath() %>/image/back_botton.png" alt="マイページへ" width = 90px height = 90px onclick="return check();"></a>
+<a href="MypageServlet"><img src="<%= request.getContextPath() %>/image/back_botton.png" alt="マイページへ" width = 90px height = 90px onclick="return check();"></a>
 <script src="<%= request.getContextPath() %>/js/mypage/edit_profile.js"></script>
 </body>
 </html>
