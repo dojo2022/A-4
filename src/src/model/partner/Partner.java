@@ -27,6 +27,8 @@ public class Partner implements Serializable {
 	private Date created_at;
 	private Date updated_at;
 
+	private boolean today_data;
+
 
 	public int getPartner_id() {
 		return partner_id;
@@ -159,6 +161,12 @@ public class Partner implements Serializable {
 	}
 	public void setUpdated_at(Date updated_at) {
 		this.updated_at = updated_at;
+	}
+	public boolean isToday_data() {
+		return today_data;
+	}
+	public void setToday_data(boolean today_data) {
+		this.today_data = today_data;
 	}
 
 
