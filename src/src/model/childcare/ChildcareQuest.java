@@ -9,6 +9,7 @@ public class ChildcareQuest implements Serializable {
 	private String title;
 	private String body;
 	private Date time_limit;
+	private int label_id;
 	private String label;
 	private int completed_flag;
 	private Date created_at;
