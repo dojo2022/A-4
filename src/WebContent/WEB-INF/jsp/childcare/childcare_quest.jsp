@@ -147,7 +147,7 @@ function getChildcareQuest(){
 			.append("<td name=flag><input type='button' id='flag_is_"+value.completed_flag+"' value='"+flag+"'></td>")
 			.append("<td name='show_detail' id='show_detail'>詳細を表示する▼</td>")
 			let $body_tr=$('<tr />',{class:"cqbody"});
-			$body_tr.append('<td name=body colspan="5">'+value.body+"</td>");
+			$body_tr.append("<td name=body colspan='5' style='padding: 0px;'><div style='height: 22px; padding: 1px;'>"+value.body+"</div></td>");
 			$("#cq_table").append($tr).append($body_tr);
 
 			})
@@ -301,7 +301,9 @@ $(document).on("click","#flag_is_1",function(){
 
 });
 $(document).on("click","#show_detail",function(){
+	$(this).parent().next().children('div').toggle('slow');
 	$(this).parent().next().toggle('slow');
+
 });
 </script>
 </html>
