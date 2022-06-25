@@ -119,28 +119,28 @@ public ArrayList<UserCondition> selectOneDayRecord(int family_id, int month, int
 
 		while(rs.next()) {
 			UserCondition uc = new UserCondition();
-			uc.setPartner_id(rs.getInt("partner_id"));
-			uc.setName(rs.getString("name"));
-			uc.setWeight(rs.getFloat("weight"));
-			uc.setBody_temparture(rs.getFloat("body_temparture"));
-			uc.setText(rs.getString("text"));
-			uc.setAppetite(rs.getInt("appetite"));
-			uc.setSleepiness(rs.getInt("sleepiness"));
-			uc.setHumor(rs.getInt("humor"));
-			uc.setNausea(rs.getInt("nausea"));
-			uc.setStress(rs.getInt("stress"));
-			uc.setDizziness(rs.getInt("dizziness"));
-			uc.setFatigue(rs.getInt("fatigue"));
-			uc.setStiff_shoulder(rs.getInt("stiff_shoulder"));
-			uc.setHeadache(rs.getInt("headache"));
-			uc.setBackache(rs.getInt("backache"));
-			uc.setStomach_ache(rs.getInt("stomach_ache"));
-			uc.setFeeling(rs.getInt("feeling"));
-			uc.setTidying(rs.getInt("tidying"));
-			uc.setSelf_assertion(rs.getInt("self_assertion"));
-			uc.setPoop(rs.getInt("poop"));
-			uc.setTooth_brushing(rs.getInt("tooth_brushing"));
-			uc.setCreated_at(rs.getDate("created_at"));
+			uc.setPartner_id(rs.getInt("user_condition.partner_id"));
+			uc.setName(rs.getString("partner.name"));
+			uc.setWeight(rs.getFloat("user_condition.weight"));
+			uc.setBody_temparture(rs.getFloat("user_condition.body_temparture"));
+			uc.setText(rs.getString("user_condition.text"));
+			uc.setAppetite(rs.getInt("user_condition.appetite"));
+			uc.setSleepiness(rs.getInt("user_condition.sleepiness"));
+			uc.setHumor(rs.getInt("user_condition.humor"));
+			uc.setNausea(rs.getInt("user_condition.nausea"));
+			uc.setStress(rs.getInt("user_condition.stress"));
+			uc.setDizziness(rs.getInt("user_condition.dizziness"));
+			uc.setFatigue(rs.getInt("user_condition.fatigue"));
+			uc.setStiff_shoulder(rs.getInt("user_condition.stiff_shoulder"));
+			uc.setHeadache(rs.getInt("user_condition.headache"));
+			uc.setBackache(rs.getInt("user_condition.backache"));
+			uc.setStomach_ache(rs.getInt("user_condition.stomach_ache"));
+			uc.setFeeling(rs.getInt("user_condition.feeling"));
+			uc.setTidying(rs.getInt("user_condition.tidying"));
+			uc.setSelf_assertion(rs.getInt("user_condition.self_assertion"));
+			uc.setPoop(rs.getInt("user_condition.poop"));
+			uc.setTooth_brushing(rs.getInt("user_condition.tooth_brushing"));
+			uc.setCreated_at(rs.getDate("user_condition.created_at"));
 
 			ucList.add(uc);
 		}
