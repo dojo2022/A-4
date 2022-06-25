@@ -46,6 +46,14 @@ public class ChildcareQuest implements Serializable {
 	public void setTime_limit(Date time_limit) {
 		this.time_limit = time_limit;
 	}
+
+
+	public int getLabel_id() {
+		return label_id;
+	}
+	public void setLabel_id(int label_id) {
+		this.label_id = label_id;
+	}
 	public String getLabel() {
 		return label;
 	}

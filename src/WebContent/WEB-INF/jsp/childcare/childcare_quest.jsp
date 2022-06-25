@@ -21,13 +21,14 @@
                 <select  id="sort" name="sort">
                 <option value="">並び替え</option>
                     <option value="time_limit" >締め切り早い順</option>
-                    <option value="created_date">クエスト登録日順</option>
+                    <option value="created_date desc">クエスト登録日順</option>
                  </select>
 
 				<select id="comp_flag" name="comp_flag">
 				  <option value="">フィルター</option>
 				  <option value="0">未完</option>
 				  <option value="1">完了</option>
+				  <option value="">すべて</option>
 
 				</select>
 				<select id="label" name="label" >
@@ -35,22 +36,14 @@
 				<c:forEach var="e" items="${labelList}" >
 				<option value="${e.content_label }">${e.content_label }</option>
 				</c:forEach>
+				<option value="">すべて</option>
 
 				</select>
-				<input type="button" id="btn" value="クエスト表示">
             </div>
 
             <div class="childcare_quest_table">
 				<table >
-				<thead>
-				<tr>
-				<th style="width:15vw">タイトル</th>
-				<th style="width:15vw">本文</th>
-				<th style="width:15vw">期限</th>
-				<th style="width:15vw">ラベル</th>
-				<th style="width:15vw">ステータス</th>
-				</tr>
-				</thead>
+
 				<tbody id="cq_table">
 				</tbody>
 				</table>
@@ -58,22 +51,25 @@
         </div>
         		<div>
 			<button id="open_modal" name="open_modal_btn">クエスト登録</button>
-			<form id="quest_form" method="POST" action="<%= request.getContextPath() %>/ChildcareQuestServlet">
+			<form id="quest_form" name ="quest_form" method="POST" action="<%= request.getContextPath() %>/ChildcareQuestServlet">
 				<div id="resist_modal" class="modal">
 					 <div class="modal_content">
 						 <span class="close">X</span>
 						 <div class="modal_body">
-							タイトル：<input type = "text" name="declaration"><br>
-							詳細：<textarea  name="tag"></textarea><br>
-							期限<input type="date">
+						 <h3>クエスト登録</h3>
+							タイトル：<textarea  name="title"></textarea><br>
+							詳細：<textarea  name="body"></textarea><br>
+							<p>いつまで？<p>
+							<input type="date" name="time_limit">
 							<select id="label" name="label" >
-								<option value="">ラベル</option>
+								<option value="9">ラベル</option>
 								<c:forEach var="e" items="${labelList}" >
-								<option value="${e.label_id }">${e.content_label }</option>
+								<option value="${e.childcare_quest_label_id}">${e.content_label }</option>
 								</c:forEach>
+
 							</select>
-							<input type="hidden" name="count" value="1" id="count">
-							<input type="button" id="regist_btn" value="新規登録" name="bt"><br>
+							<input type="hidden" name="family_id" value="${loginUser.family_id }" id="family_id">
+							<input type="button" id="regist_btn" value="登録" name="bt"><br>
 						</div>
 					</div>
 				</div>
@@ -85,7 +81,28 @@
 
 </body>
 <script>
-$("#btn").on('click',async function(){
+
+$("#sort").on("change",function(){
+	getChildcareQuest();
+})
+
+$("#comp_flag").on("change",function(){
+	getChildcareQuest();
+})
+$("#label").on("change",function(){
+	getChildcareQuest();
+})
+
+$(window).on("load",function(){
+
+	getChildcareQuest();
+
+});
+
+
+
+function getChildcareQuest(){
+
 	const sort = $('#sort').val();
 	const comp_flag = $('#comp_flag').val();
 	const label = $('#label').val()
@@ -97,14 +114,7 @@ $("#btn").on('click',async function(){
 			"completed_flag":comp_flag,
 			"label":label
 	}
-     ajax(data);
 
-
-})
-
-
-
-function ajax(process){
     $.ajaxSetup({scriptCharset:'utf-8'});
 	$.ajax({
 		//どのサーブレットに送るか
@@ -115,7 +125,7 @@ function ajax(process){
 		//受け取るデータのタイプ
 		dataType:"json",
 		//何をサーブレットに飛ばすか（変数を記述）
-		data: process,
+		data: data,
 		//この下の２行はとりあえず書いてる（書かなくても大丈夫？）
 		processDate:false,
 		timeStamp: new Date().getTime()
@@ -126,17 +136,19 @@ function ajax(process){
 			var date = new Date(value.time_limit);
 			var flag
 			if(value.completed_flag == 0){
-				flag="完了";
+				flag="達成！";
 			}else if(value.completed_flag == 1){
 				flag="削除";
 			}
-			$tr.append('<td name=title>'+value.title+"</td>")
-			.append('<td name=body>'+value.body+"</td>")
+			$tr.append("<td name=id id='quest_id' hidden>"+value.childcare_quest_id+"</td>")
+			.append('<td name=title>'+value.title+"</td>")
 			.append('<td name=time_limit>～'+(date.getMonth()+1)+"/"+date.getDate()+"</td>")
-			.append('<td name=label>'+value.label+"</td>")
-			.append("<td name=flag><input type='button' value='"+flag+"'></td>")
-			let $body_tr=$('<tr />');
-			$("#cq_table").append($tr);
+			.append("<td name='label' class='id"+value.label_id+"'>"+value.label+"</td>")
+			.append("<td name=flag><input type='button' id='flag_is_"+value.completed_flag+"' value='"+flag+"'></td>")
+			.append("<td name='show_detail' id='show_detail'>詳細を表示する▼</td>")
+			let $body_tr=$('<tr />',{class:"cqbody"});
+			$body_tr.append('<td name=body colspan="5">'+value.body+"</td>");
+			$("#cq_table").append($tr).append($body_tr);
 
 			})
         return(data);
@@ -186,43 +198,35 @@ window.onclick = function (event)  {
 
 $("#regist_btn").on('click',function(e){
 	e.preventDefault();
-var form=$("#quest_form");
+	$form=$("#quest_form");
+	$form.append($("<input />",{
+		type:'hidden',
+		name:'process',
+		value:'regist cq'
+	}));
 
 	$.ajaxSetup({scriptCharset:'utf-8'});
 	$.ajax({
 		//どのサーブレットに送るか
 		//ajaxSampleのところは自分のプロジェクト名に変更する必要あり。
-		url: '/MaternityApp/ChildcareQuestServlet',
+		url: $form.attr('action'),
 		//どのメソッドを使用するか
 		type:"POST",
 		//受け取るデータのタイプ
 		dataType:"text",
 		//何をサーブレットに飛ばすか（変数を記述）
-		data: process,
+		data: $form.serialize(),
 		//この下の２行はとりあえず書いてる（書かなくても大丈夫？）
 		processDate:false,
 		timeStamp: new Date().getTime()
 	   //非同期通信が成功したときの処理
 	}).done(function(data) {
-		$.each(data, function(index, value){
-			let $tr=$('<tr />',{id:index});
-			var date = new Date(value.time_limit);
-			var flag
-			if(value.completed_flag == 0){
-				flag="完了";
-			}else if(value.completed_flag == 1){
-				flag="削除";
-			}
-			$tr.append('<td name=title>'+value.title+"</td>")
-			.append('<td name=body>'+value.body+"</td>")
-			.append('<td name=time_limit>～'+(date.getMonth()+1)+"/"+date.getDate()+"</td>")
-			.append('<td name=label>'+value.label+"</td>")
-			.append("<td name=flag><input type='button' value='"+flag+"'></td>")
-			let $body_tr=$('<tr />');
-			$("#cq_table").append($tr);
 
-			})
-	    return(data);
+	    alert("クエストを登録しました！");
+	    modal.style.display = 'none';
+	    document.quest_form.reset();
+	    getChildcareQuest();
+
 	  })
 	   //非同期通信が失敗したときの処理
 	  .fail(function() {
@@ -233,5 +237,71 @@ var form=$("#quest_form");
 
 
 })
+
+
+$(document).on("click","#flag_is_0",function(){
+	let cqid = $(this).parents("tr").find("#quest_id").text();
+	var postData={
+			"process":"accomplish cq",
+			"quest_id":cqid
+	}
+	$form=$("#quest_form");
+
+	$.ajaxSetup({scriptCharset:'utf-8'});
+	$.ajax({
+		url: $form.attr('action'),
+		type:"POST",
+		dataType:"text",
+		data:postData,
+		processDate:false,
+		timeStamp: new Date().getTime()
+	}).done(function(data) {
+
+	    alert("クエストを達成しました！");
+
+	    getChildcareQuest();
+
+	  })
+	   //非同期通信が失敗したときの処理
+	  .fail(function() {
+		//失敗とアラートを出す
+		alert("失敗！");
+	  });
+
+});
+
+$(document).on("click","#flag_is_1",function(){
+	let cqid = $(this).parents("tr").find("#quest_id").text();
+	var postData={
+			"process":"delete cq",
+			"quest_id":cqid
+	}
+	$form=$("#quest_form");
+
+	$.ajaxSetup({scriptCharset:'utf-8'});
+	$.ajax({
+		url: $form.attr('action'),
+		type:"POST",
+		dataType:"text",
+		data:postData,
+		processDate:false,
+		timeStamp: new Date().getTime()
+	}).done(function(data) {
+
+	    alert("クエストを削除しました！");
+
+	    getChildcareQuest();
+
+	  })
+	   //非同期通信が失敗したときの処理
+	  .fail(function() {
+		//失敗とアラートを出す
+		alert("失敗！");
+	  });
+
+});
+$(document).on("click","#show_detail",function(){
+	$(this).parent().next().toggle('slow');
+});
 </script>
 </html>

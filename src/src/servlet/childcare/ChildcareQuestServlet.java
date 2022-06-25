@@ -1,6 +1,8 @@
 package servlet.childcare;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Date;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -52,7 +54,7 @@ public class ChildcareQuestServlet extends HttpServlet {
 			ChildcareQuestDAO cqDao = new ChildcareQuestDAO();
 			HttpSession session = request.getSession();
 			User user = (User)session.getAttribute("loginUser");
-			ArrayList<ChildcareQuest> cqList = cqDao.getChildcareQuest(2,sort,comp_flag,label);
+			ArrayList<ChildcareQuest> cqList = cqDao.getChildcareQuest(user.getFamily_id(),sort,comp_flag,label);
 			ObjectMapper mapper = new ObjectMapper();
 			try {
 	            //JavaオブジェクトからJSONに変換
@@ -73,8 +75,56 @@ public class ChildcareQuestServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+
+
+
+		response.setContentType("application/json");
+		response.setHeader("Cache-Control", "nocache");
+		response.setCharacterEncoding("utf-8");
+		ChildcareQuestDAO cqDao = new ChildcareQuestDAO();
+		ChildcareQuest cq = new ChildcareQuest();
+		String message;
+		String process = request.getParameter("process");
+		if(process.equals("accomplish cq")) {
+			int cqid=Integer.parseInt(request.getParameter("quest_id"));
+			if(cqDao.accomplishChildcareQuest(cqid)) {
+				message="succsess";
+			}else {
+				message="false";
+			}
+		}else if(process.equals("delete cq")){
+			int cqid=Integer.parseInt(request.getParameter("quest_id"));
+			if(cqDao.deleteChildcareQuest(cqid)) {
+				message="succsess";
+			}else {
+				message="false";
+			}
+		}else {
+
+
+			cq.setFamily_id(Integer.parseInt(request.getParameter("family_id")));
+			cq.setTitle(request.getParameter("title"));
+			cq.setBody(request.getParameter("body"));
+			cq.setTime_limit(Date.valueOf(request.getParameter("time_limit")));
+			String label = request.getParameter("label");
+
+			if(!(label.equals(""))) {
+				cq.setLabel_id(Integer.parseInt(label));
+			}
+
+
+			if(cqDao.createChildcareQuestlabel(cq)) {
+				message= "succsess";
+			}else {
+				message ="false";
+			}
+
+			PrintWriter out = response.getWriter();
+			out.print(message);
+
+	        return;
+
+		}
 	}
 
 }

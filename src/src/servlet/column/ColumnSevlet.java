@@ -16,7 +16,7 @@ import model.column.ColumnGenre;
 /**
  * Servlet implementation class ColumnSevlet
  */
-@WebServlet("/ColumnSevlet")
+@WebServlet("/ColumnServlet")
 public class ColumnSevlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

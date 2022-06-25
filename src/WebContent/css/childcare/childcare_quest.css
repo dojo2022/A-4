@@ -11,21 +11,71 @@ main {
 	margin:0 auto;
 	text-align:right;
 }
+
+
 .childcare_quest_table{
+
+	height:68vh;
+	overflow:auto;
+	width:75vw;
+	margin:0 auto;
+
 }
-
-
 table {
 	margin: 0 auto;
-
 	border:dotted 2px gray;
+	border-radius:20px;
 }
 
 table tr{
 	border: solid 2px gray;
-	border-radius:10px;
+	border-radius:20px;
+	position:relative;
+}
+table td{
+	height:100px;
+	width:15vw;
+	font:bold 1rem sans-serif;
+}
+table [name="title"]{
+	width:30vw;
+}
+table [name="label"]{
+	position:absolute;
+	top:0;
+	left:0;
+	height:20px;
+	border-radius:3px;
+}
+table .id1{
+	background-color:orange;
+}
+table .id2{
+	background-color:green;
+}
+table .id3{
+	background-color:red;
+}
+table .id4{
+	background-color:pink;
+}
+table .id5{
+	background-color:DeepSkyBlue;
+}
+table .id6{
+	background-color:purple;
+}
+table .id7{
+	background-color:greenyellow;
 }
 
+.cqbody{
+	display:none;
+	transition: ease .4s;
+}
+[name="body"]{
+	margin:0 100px;
+}
 .modal {
     display: none;
     position: fixed;
@@ -48,7 +98,8 @@ table tr{
     background-color: #fff;
     margin: 10% auto;
     border: 1px solid #888;
-    width: 80%;
+    width: 40%;
+    height:300px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
@@ -60,6 +111,7 @@ table tr{
     color: #aaa;
     float: right;
     font-size: 16px;
+    border:ridge 2px black;
   }
 
   .close:hover,
@@ -79,7 +131,10 @@ table tr{
     cursor: pointer;
 
 }
-
+#open_modal{
+	float:right;
+	margin-right:100px;
+}
 #open_modal:hover,
 #open_modal:focus
 {

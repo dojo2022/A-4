@@ -45,7 +45,6 @@ public class LaborPainServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		//outの中に持ってきたデータを連結したものを入れる
 		//勝手にJSPに渡り、dataという名前で使用することができる
-		System.out.println("today_labor_count");
 		out.print(today_labor_count);
 
 		}else if(request.getParameter("process").equals("inLabor")) {
@@ -54,7 +53,6 @@ public class LaborPainServlet extends HttpServlet {
 				PrintWriter out = response.getWriter();
 				//outの中に持ってきたデータを連結したものを入れる
 				//勝手にJSPに渡り、dataという名前で使用することができる
-				System.out.println("inLabor");
 				out.print(inLabor);
 		}else if(request.getParameter("process").equals("createLabor")) {
 			LaborPain lp = lpDao.getLastLabor(user.getUser_id());
@@ -71,7 +69,6 @@ public class LaborPainServlet extends HttpServlet {
 			PrintWriter out = response.getWriter();
 			//outの中に持ってきたデータを連結したものを入れる
 			//勝手にJSPに渡り、dataという名前で使用することができる
-			System.out.println("createLabor");
 			out.print(flag);
 		}else if(request.getParameter("process").equals("stopLabor")) {
 
@@ -80,7 +77,6 @@ public class LaborPainServlet extends HttpServlet {
 			PrintWriter out = response.getWriter();
 			//outの中に持ってきたデータを連結したものを入れる
 			//勝手にJSPに渡り、dataという名前で使用することができる
-			System.out.println("stopLabor");
 			out.print(flag);
 	}
         return;

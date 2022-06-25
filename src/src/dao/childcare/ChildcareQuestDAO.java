@@ -28,10 +28,7 @@ public class ChildcareQuestDAO {
 				PreparedStatement pStmt;
 
 				if(sort.equals("")) {sort = "created_date";}
-				System.out.println("sort:"+sort);
 				if(completed_flag.equals("")) {completed_flag="%";}
-				System.out.println("comp_flag:"+completed_flag);
-
 				sql = "SELECT * FROM CHILDCARE_QUEST as cq join childcare_quest_label as cqa "
 						+ "on cq.label = cqa.CHILDCARE_QUEST_LABEL_ID where family_id = ? "
 						+ "and content_label like ? and completed_flag like '"+completed_flag+"' order by "+sort;
@@ -57,6 +54,7 @@ public class ChildcareQuestDAO {
 					ca.setTitle(rs.getString("title"));
 					ca.setBody(rs.getString("body"));
 					ca.setTime_limit(rs.getDate("time_limit"));
+					ca.setLabel_id(rs.getInt("label"));
 					ca.setLabel(rs.getString("content_label"));
 					ca.setCompleted_flag(rs.getInt("completed_flag"));
 					ca.setCreated_at(rs.getDate("created_date"));
@@ -141,4 +139,160 @@ public class ChildcareQuestDAO {
 	// 結果を返す
 	return labelList;
 }
+
+	public boolean createChildcareQuestlabel(ChildcareQuest cq){
+		Connection conn = null;
+		boolean flag =false;
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
+
+
+				// SQL文を準備する
+				String sql;
+				PreparedStatement pStmt;
+
+				sql = "insert into CHILDCARE_quest (family_id,title,body,time_limit,label) values (?,?,?,?,?)";
+				pStmt= conn.prepareStatement(sql);
+				pStmt.setInt(1,cq.getFamily_id());
+				pStmt.setString(2, cq.getTitle());
+				pStmt.setString(3, cq.getBody());
+				pStmt.setDate(4, cq.getTime_limit());
+				pStmt.setInt(5, cq.getLabel_id());
+				// SQL文を実行し、結果表を取得する
+				int rs = pStmt.executeUpdate();
+				// 結果表をコレクションにコピーする
+				if(rs != 0) {
+					flag=true;
+				}
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+				flag=false;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				flag=false;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						flag=false;
+					}
+				}
+			}
+
+			// 結果を返す
+			return flag;
+		}
+
+	public boolean accomplishChildcareQuest(int cqid){
+		Connection conn = null;
+		boolean flag =false;
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
+
+
+				// SQL文を準備する
+				String sql;
+				PreparedStatement pStmt;
+
+				sql = "update CHILDCARE_QUEST set completed_flag = 1 where childcare_quest_id = ?";
+				pStmt= conn.prepareStatement(sql);
+				pStmt.setInt(1,cqid);
+
+				// SQL文を実行し、結果表を取得する
+				int rs = pStmt.executeUpdate();
+				// 結果表をコレクションにコピーする
+				if(rs != 0) {
+					flag=true;
+				}
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+				flag=false;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				flag=false;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						flag=false;
+					}
+				}
+			}
+
+			// 結果を返す
+			return flag;
+		}
+
+	public boolean deleteChildcareQuest(int cqid){
+		Connection conn = null;
+		boolean flag =false;
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
+
+
+				// SQL文を準備する
+				String sql;
+				PreparedStatement pStmt;
+
+				sql = "delete CHILDCARE_QUEST where childcare_quest_id = ?";
+				pStmt= conn.prepareStatement(sql);
+				pStmt.setInt(1,cqid);
+
+				// SQL文を実行し、結果表を取得する
+				int rs = pStmt.executeUpdate();
+				// 結果表をコレクションにコピーする
+				if(rs != 0) {
+					flag=true;
+				}
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+				flag=false;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				flag=false;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						flag=false;
+					}
+				}
+			}
+
+			// 結果を返す
+			return flag;
+		}
 }
