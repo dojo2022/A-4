@@ -95,8 +95,6 @@ $('input:radio[name="meter16"]').change(function() {
 
 
 function goAjax(){
-	var num = document.getElementById('today').value;
-	if (num == 0){
 	//入力値を取得してくる
 	let recordData1 = document.getElementById('partner_id'+index).value;
 	let recordData2 = document.getElementById('text').value;
@@ -165,8 +163,4 @@ console.log(postData);
 		//失敗とアラートを出す
 		alert("記録できませんでした"+data);
 	  });
-	}else{
-		alert("今日の記録は登録されています。確認は「記録閲覧」からできます。");
-		location.href = '/MaternityApp/RecordViewTopServlet';
-	}
 }
