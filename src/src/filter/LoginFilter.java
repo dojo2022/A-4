@@ -1,34 +1,69 @@
 package filter;
+
 import java.io.IOException;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
+import model.user.User;
+
+/**
+ * Servlet Filter implementation class LoginFilter
+ */
+@WebFilter("/*")
 public class LoginFilter implements Filter {
 
-  @Override
-  public void destroy() {
+    /**
+     * Default constructor.
+     */
+    public LoginFilter() {
+        // TODO Auto-generated constructor stub
+    }
 
-  }
+	/**
+	 * @see Filter#destroy()
+	 */
+	public void destroy() {
+		// TODO Auto-generated method stub
+	}
 
-  @Override
-  public void doFilter(
-    ServletRequest req,
-    ServletResponse resp,
-    FilterChain filterChain)
-    throws IOException, ServletException {
+	/**
+	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
+	 */
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		// TODO Auto-generated method stub
+		// place your code here
+		HttpSession session = ((HttpServletRequest)request).getSession();
+		String path = ((HttpServletRequest) request).getRequestURI();
+		if(path.contains("Login")) {
+			chain.doFilter(request, response);
+		}else {
+			User user = (User)session.getAttribute("loginUser");
+			if(user == null) {
+				request.setAttribute("msg", "セッションが切れましたログインしなおしてください");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/top/login.jsp");
+				dispatcher.forward(request, response);
+				//((HttpServletResponse)response).sendRedirect("/MaternityApp/LoginServlet");
+			}else {
+			// pass the request along the filter chain
+			chain.doFilter(request, response);
+			}
+		}
+	}
 
-    filterChain.doFilter(req, resp);
-  }
-
-  @Override
-  public void init(FilterConfig filterConfig)
-  throws ServletException {
-
-  }
+	/**
+	 * @see Filter#init(FilterConfig)
+	 */
+	public void init(FilterConfig fConfig) throws ServletException {
+		// TODO Auto-generated method stub
+	}
 
 }
