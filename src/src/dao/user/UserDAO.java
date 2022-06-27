@@ -389,4 +389,56 @@ public class UserDAO {
 		// 結果を返す
 		return result;
 	}
+	public boolean isExist(String email) {
+		Connection conn = null;
+		boolean result = false;
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
+
+				// SQL文を準備する
+
+				String sql;
+				PreparedStatement pStmt;
+
+	          sql = "select count(*) from User where email = ?";
+				pStmt= conn.prepareStatement(sql);
+				pStmt.setString(1, email);
+
+				ResultSet rs = pStmt.executeQuery();
+				rs.next();
+		          if (rs.getInt("count(*)") == 1) {
+						result = true;
+					}
+
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+				result = false;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				result = false;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						result = false;
+					}
+				}
+			}
+
+			return result;
+		}
+
+
+
 }
