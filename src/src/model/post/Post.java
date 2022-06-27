@@ -1,18 +1,19 @@
 package model.post;
 
 import java.io.Serializable;
-
-import org.joda.time.DateTime;
+import java.sql.Date;
 
 public class Post implements Serializable {
 	private int post_id;
 	private int user_id;
+	private String nickname;
 	private String title;
 	private String body;
 	private int heart;
 	private int useful;
 	private int week;
-	private DateTime created_at;
+	private String gender;
+	private Date created_at;
 
 
 	public int getPost_id() {
@@ -26,6 +27,12 @@ public class Post implements Serializable {
 	}
 	public void setUser_id(int user_id) {
 		this.user_id = user_id;
+	}
+	public String getNickname() {
+		return nickname;
+	}
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
 	public String getTitle() {
 		return title;
@@ -57,10 +64,16 @@ public class Post implements Serializable {
 	public void setWeek(int week) {
 		this.week = week;
 	}
-	public DateTime getCreated_at() {
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public Date getCreated_at() {
 		return created_at;
 	}
-	public void setCreated_at(DateTime created_at) {
+	public void setCreated_at(Date created_at) {
 		this.created_at = created_at;
 	}
 
