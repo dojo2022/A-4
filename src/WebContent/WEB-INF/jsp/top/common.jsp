@@ -14,7 +14,7 @@
     <header class="header">
         <div class="header__inner">
             <h1 class="header__title header-title">
-                <img src="<%= request.getContextPath() %>/image/text_logo.jpg" alt="ロゴ">
+                <img src="<%= request.getContextPath() %>/image/text_logo.jpg" alt="ロゴ" class="text_logo">
             </h1>
             <nav class="header__nav nav" id="js-nav">
             <ul class="nav__items nav-items">
