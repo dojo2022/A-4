@@ -1,1 +1,33 @@
 @charset "UTF-8";
+.partner-record{
+	width:90vw;
+}
+.partner-group{
+    display: flex;
+    justify-content: center;
+  }
+  .partner{
+    flex-grow: 1;
+    padding:5px;
+    list-style:none;
+    border:solid 1px #CCC;
+    text-align:center;
+    cursor:pointer;
+  }
+  .record-group{
+    height:100px;
+    border:solid 1px #CCC;
+    border-top:none;
+    background:#eee;
+  }
+  .record{
+    display:none;
+  }
+  .partner.is-active{
+    background:#F00;
+    color:#FFF;
+    transition: all 0.2s ease-out;
+  }
+  .record.is-show{
+    display:block;
+  }

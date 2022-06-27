@@ -106,7 +106,6 @@ function getChildcareQuest(){
 	const sort = $('#sort').val();
 	const comp_flag = $('#comp_flag').val();
 	const label = $('#label').val()
-	console.log(sort+":"+comp_flag+":"+label);
 	$("#cq_table").empty()
 	data={
 			"process":"getQuestList",
