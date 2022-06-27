@@ -55,7 +55,8 @@ public class LaborPainServlet extends HttpServlet {
 				//勝手にJSPに渡り、dataという名前で使用することができる
 				out.print(inLabor);
 		}else if(request.getParameter("process").equals("createLabor")) {
-			LaborPain lp = lpDao.getLastLabor(user.getUser_id());
+			LaborPain lp = new LaborPain();
+			lpDao.getLastLabor(user.getUser_id());
 			Timestamp last_labor = lp.getStop_time();
 			Timestamp now = new Timestamp(System.currentTimeMillis());
 			lp.setStart_time(now);

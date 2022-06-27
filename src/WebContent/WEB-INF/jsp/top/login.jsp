@@ -13,7 +13,7 @@
 <div class="container">
 	<main>
         <div class="form">
-            <h1><img src="<%= request.getContextPath() %>/image/logo.png" alt="ロゴ"></h1>
+            <h1><img src="<%= request.getContextPath() %>/image/login_logo.png" alt="ロゴ"></h1>
             <p class="error_msg" style="color:red">${msg}<p>
             <form id="login_form" method="POST" action="LoginServlet">
                 <table>
