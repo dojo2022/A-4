@@ -24,7 +24,7 @@ function day() {
   }
 }
 function upd(){
-		document.getElementById('user_profile_from').submit();
+		document.getElementById('user_profile_form').submit();
         alert("登録しました");
         return true;    //メッセージ出力
     }
