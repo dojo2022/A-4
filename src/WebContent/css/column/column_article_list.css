@@ -1,1 +1,10 @@
 @charset "UTF-8";
+
+body{
+      background-color: #FCEEBC;
+}
+.title{
+	border-bottom: dotted 3px #5B93D1;
+	margin: 30px 20px 30px 40px;
+	font-size:17px
+	}

@@ -97,6 +97,7 @@ public class ColumnDAO {
 				column.setColumn_id(rs.getInt("column_id"));
 				column.setTitle(rs.getString("title"));
 				column.setBody(rs.getString("body"));
+				column.setGenre_id(rs.getInt("genre_id"));
 
 			}
 

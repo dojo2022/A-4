@@ -34,7 +34,7 @@ public class ColumnSevlet extends HttpServlet {
 
 		//取得した一覧データ↑をリクエストスコープに格納する "list"という名前でlistという変数を格納
 		request.setAttribute("list", list);
-		System.out.println("ColumnServlet");
+		System.out.println("ColumnSevlet");
 
 		//jspへ処理を依頼する（フォワード）
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/column/column_top.jsp");
