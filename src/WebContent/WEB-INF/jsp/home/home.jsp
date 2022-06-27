@@ -8,7 +8,8 @@
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/home/home.css" >
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script defer src="<%= request.getContextPath() %>/js/home/home.js"></script>
-<title>ページのタイトル</title>
+<title>famiTy ホーム</title>
+<link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
 </head>
 <body>
 <div class="container">

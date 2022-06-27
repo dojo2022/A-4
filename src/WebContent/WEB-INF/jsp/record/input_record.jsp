@@ -8,6 +8,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <title>famiTy 記録入力</title>
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/record/input_record.css">
+<link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
 <%@ include file="../top/common.jsp"%>
 </head>
 <body>

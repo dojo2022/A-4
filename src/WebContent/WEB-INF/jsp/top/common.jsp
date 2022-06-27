@@ -14,9 +14,7 @@
     <header class="header">
         <div class="header__inner">
             <h1 class="header__title header-title">
-                <a href="#">
-                    famiTy(ロゴ)
-                  </a>
+                <img src="<%= request.getContextPath() %>/image/text_logo.jpg" alt="ロゴ">
             </h1>
             <nav class="header__nav nav" id="js-nav">
             <ul class="nav__items nav-items">

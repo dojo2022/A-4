@@ -8,12 +8,14 @@
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/top/login.css" >
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <title>famity ログイン</title>
+
+<link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
 </head>
 <body>
 <div class="container">
 	<main>
         <div class="form">
-            <h1><img src="<%= request.getContextPath() %>/image/login_logo.png" alt="ロゴ"></h1>
+            <h1><img src="<%= request.getContextPath() %>/image/login_logo.jpg" alt="ロゴ"></h1>
             <p class="error_msg" style="color:red">${msg}<p>
             <form id="login_form" method="POST" action="LoginServlet">
                 <table>
