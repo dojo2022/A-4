@@ -1,4 +1,8 @@
 @charset "UTF-8";
+
+body {
+  background-color: #F7F48B;
+}
 main {
 	margin-top: -100px;
 

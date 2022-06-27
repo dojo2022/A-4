@@ -11,21 +11,21 @@
 <title>famiTy ホーム</title>
 <link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
 </head>
-<body>
+<body bgcolor="#F7F48B">
 <div class="container">
 	<%@ include file="../top/common.jsp"%>
 	<main>
         <h1>ホーム</h1>
         <div class="countdown_weeks">
             <table>
-                <tr>
+                <tr bgcolor="#DCD79F">
                     <td><h3>出産予定日まで${remain_day}日</h3></td>
                     <td><h3>現在${now_weeks}週目</h3></td>
                 </tr>
             </table>
         </div>
         <div class="labor">
-            <input type="button" id="labor_btn" name="labor_pain" >
+            <input type="button" id="labor_btn" name="labor_pain" bgcolor="#D2DFF3">
             <span id="today_labor_count"></span>
         </div>
         <div class="report">

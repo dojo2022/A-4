@@ -1,10 +1,13 @@
 @charset "UTF-8";
+
+
+body {
+  background-color: #F7F48B;
+}
 main {
 	padding-top:50px; /*ヘッダーと被らないようにしてる*/
 }
-h2{
-	color: #666;
-}
+
 form.input_record {
 	display: inline-block;
 

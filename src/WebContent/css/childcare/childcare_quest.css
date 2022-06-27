@@ -1,7 +1,13 @@
 @charset "UTF-8";
+body{
+	background-color: #F7F48B;
+}
 main {
 
 	padding-top:50px;
+}
+h2{
+	text-align: center;
 }
 #childcare_quest{
 	text-align:center;
@@ -48,7 +54,7 @@ table [name="label"]{
 	border-radius:3px;
 }
 table .id1{
-	background-color:orange;
+	background-color: orange;
 }
 table .id2{
 	background-color:green;

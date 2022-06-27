@@ -1,5 +1,13 @@
 @charset "UTF-8";
-
+dd{
+	color:red;
+}
+head {
+	color:red;
+}
+body {
+  background-color: #F7F48B;
+}
 main {
     padding-top:50px;
     text-align: center;
@@ -13,7 +21,8 @@ main {
 }
 .countdown_weeks td{
     width: 300px;
-    border:solid gray;
+    background-color: #DCD79F;
+    border:solid #DCD79F;
     border-radius: 10px;
 }
 
@@ -32,7 +41,7 @@ main {
     font-size: 2em;
     padding:0 20px;
     border-radius: 70px;
-    background-color: palevioletred;
+    background-color: #D2DFF3;
 }
 .labor span{
     position: relative;

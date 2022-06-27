@@ -11,11 +11,11 @@
 <script defer src="<%= request.getContextPath() %>/js/home/home.js"></script>
 <title>famity 育児クエスト</title>
 </head>
-<body>
+<body bgcolor="#F7F48B">
 <div class="container">
 	<%@ include file="../top/common.jsp"%>
 	<main>
-		        <h1>育児クエスト</h1>
+		        <h2>育児クエスト</h2>
         <div id="childcare_quest">
             <div class="sort_filter">
                 <select  id="sort" name="sort">

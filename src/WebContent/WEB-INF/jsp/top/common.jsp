@@ -43,7 +43,6 @@
         </div>
     </header>
 
-
 </body>
  <script src="<%= request.getContextPath() %>/js/top/common.js"></script>
 
