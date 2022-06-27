@@ -123,4 +123,68 @@ public class PostDAO {
 		return result;
 
 	}
+
+	public ArrayList<Post> getSearchPost(String searchtext){
+		Connection conn = null;
+		ArrayList<Post> pList = new ArrayList<Post>();
+
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+
+			// データベースに接続する
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
+
+
+			// SQL文を準備する
+			String sql;
+			PreparedStatement pStmt;
+
+			sql="SELECT * FROM post join user on post.user_id=user.user_id WHERE post.title like ? or post.body like ?";
+			pStmt= conn.prepareStatement(sql);
+			pStmt.setString(1, "%" + searchtext + "%");
+			pStmt.setString(2, "%" + searchtext + "%");
+
+			ResultSet rs = pStmt.executeQuery();
+
+			while (rs.next()) {
+				Post p = new Post();
+				p.setPost_id(rs.getInt("post.post_id"));
+				p.setUser_id(rs.getInt("post.user_id"));
+				p.setNickname(rs.getString("user.nickname"));
+				p.setTitle(rs.getString("post.title"));
+				p.setBody(rs.getString("post.body"));
+				p.setHeart(rs.getInt("post.heart"));
+				p.setUseful(rs.getInt("post.useful"));
+				p.setWeek(rs.getInt("post.week"));
+				p.setGender(rs.getString("user.gender"));
+				p.setCreated_at(rs.getDate("created_at"));
+
+				pList.add(p);
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+			pList = null;
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			pList = null;
+		}
+		finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+					pList = null;
+				}
+			}
+		}
+
+		// 結果を返す
+		return pList;
+	}
 }

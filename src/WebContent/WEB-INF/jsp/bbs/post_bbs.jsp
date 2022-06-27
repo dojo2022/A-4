@@ -4,35 +4,40 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/sanitize.css" >
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/bbs/post_bbs.css" >
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <title>famiTy 掲示板投稿</title>
 </head>
 <body>
 <div class="container">
-	<%@ include file="../top/common.jsp"%>ヘッダー、ハンバーガーメニューのインクルード
-	<main>
+	<%@ include file="../top/common.jsp"%>
+	<main style="margin-top:50px;">
 		<div class="post_bbs">
 			<form action="/MaternityApp/PostBbsServlet" method="POST">
 				Title<br>
-				<input type="text" class="title" id="title" name="title"><br>
+				<input type="text" required="required" class="form-control" id="title" name="title"><br>
 				本文<br>
-				<textarea class="body" id="body" name="body" rows="4" cols="40"></textarea><br>
-
-				<input type="submit" id="submit" value="投稿する" onclick="goAjax()">
+				<textarea required class="form-control"  id="body" name="body" rows="10"></textarea><br>
+				<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+					<input type="button" id="button" class="btn btn-danger"  value="投稿する" onclick="goAjax()" >
+				</div>
 			</form>
 		</div>
-		<a href="/MaternityApp/RecordViewTopServlet"><img src="./image/back_botton.png" width="50px" height="50px"></a>
+		<a href="/MaternityApp/BbsServlet"><img src="./image/back_botton.png" width="50px" height="50px"></a>
     </main>
-</div>
 
+</div>
 
 </body>
 
+
 <script>
+function goAjax(){
 /* 打ち込んだ情報の取得 */
-let titlel = document.getElementById('title').value;
+let title = document.getElementById('title').value;
 let body = document.getElementById('body').value;
 let postData = {title:title,
 				body:body}
@@ -64,8 +69,9 @@ $.ajax({
 	/*成功した時の処理を書く*/
     if (data=='success'){
         alert('登録に成功しました。');
+        window.location.href = '/MaternityApp/BbsServlet';
     }else{
-    	alert('登録に失敗しました')}
+    	alert('登録に失敗しました');
     }
 })
  /* 非同期通信が失敗したときの処理*/
