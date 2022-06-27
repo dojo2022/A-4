@@ -11,7 +11,7 @@
 <script defer src="<%= request.getContextPath() %>/js/home/home.js"></script>
 <title>famity 育児クエスト</title>
 </head>
-<body bgcolor="#F7F48B">
+<body >
 <div class="container">
 	<%@ include file="../top/common.jsp"%>
 	<main>

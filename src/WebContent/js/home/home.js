@@ -57,7 +57,6 @@ function getTodayLaborCount(){
 		timeStamp: new Date().getTime()
 	   //非同期通信が成功したときの処理
 	}).done(function(data) {
-		console.log(data);
 		$('#today_labor_count').text(data+'回');
 	  })
 	   //非同期通信が失敗したときの処理

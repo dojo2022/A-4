@@ -55,16 +55,21 @@ public class LaborPainServlet extends HttpServlet {
 				//勝手にJSPに渡り、dataという名前で使用することができる
 				out.print(inLabor);
 		}else if(request.getParameter("process").equals("createLabor")) {
-			LaborPain lp = new LaborPain();
-			lpDao.getLastLabor(user.getUser_id());
-			Timestamp last_labor = lp.getStop_time();
+			LaborPain lp=lpDao.getLastLabor(user.getUser_id());
 			Timestamp now = new Timestamp(System.currentTimeMillis());
-			lp.setStart_time(now);
-			if(last_labor != null) {
-				long interval = now.getTime()-last_labor.getTime();
-				Time interval_t = new Time(interval);
-				lp.setLabor_interval(interval_t);
+
+			if(lp==null) {
+				lp=new LaborPain();
+				lp.setUser_id(user.getUser_id());
+			}else {
+				Timestamp last_labor = lp.getStop_time();
+				if(last_labor != null) {
+					long interval = now.getTime()-last_labor.getTime();
+					Time interval_t = new Time(interval);
+					lp.setLabor_interval(interval_t);
+				}
 			}
+			lp.setStart_time(now);
 			boolean flag =lpDao.createLaborPainRecord(lp);
 			//JSPに返却する値を作成する。値はoutの中に格納する
 			PrintWriter out = response.getWriter();
