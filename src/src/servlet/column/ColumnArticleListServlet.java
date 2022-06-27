@@ -16,7 +16,7 @@ import model.column.Column;
 /**
  * Servlet implementation class ColumnArticleListServlet
  */
-@WebServlet("/ColumnArticleListServlet")
+@WebServlet("/ColumnArticleListServlet")//←なんでも指定できる
 public class ColumnArticleListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

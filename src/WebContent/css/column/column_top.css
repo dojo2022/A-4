@@ -1,13 +1,33 @@
 @charset "UTF-8";
+
+body{
+      background-color: #F7F5B5;
+}
+
+.genreitiran{
+  font-size:25px;
+  border-bottom: dotted 3px #5B93D1;
+  margin: 30px 20px 30px 40px;
+}
+
+span{
+	height :10px;
+}
 .genre{
-		border: solid 1px yellow;
+		border: solid 1px #DCD79F;
 		padding: 10px;
-		padding-left:30px;
-		background-color: pink;
+		background-color: #D2DFF3;
 		margin:10px;
-		width:40%;
-		margin-left:30%;
+		width:55%;
+		margin:10px auto;
+		border-radius: 5px;
 	}
 .genre a{
 		text-decoration: none;
+	}
+
+.siro{
+	width:80%;
+	margin:0 auto;
+	background-color:#FFF;
 	}

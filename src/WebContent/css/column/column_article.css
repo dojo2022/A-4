@@ -1,1 +1,17 @@
 @charset "UTF-8";
+
+body{
+      background-color: #FCEEBC;
+}
+
+.scroller{
+	border:solid #D2DFF3;
+	height:170px;
+	overflow-y:scroll;
+}
+
+.title{
+	margin: 30px 20px 30px 40px;
+	color: #5B93D1;
+	font-size:25px;
+}

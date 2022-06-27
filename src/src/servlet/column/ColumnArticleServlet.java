@@ -31,7 +31,7 @@ public class ColumnArticleServlet extends HttpServlet {
 			//daoをインスタンス化する
 			ColumnDAO cDAO = new ColumnDAO();
 
-			//！28行目でパラメータから取ってきて用意したcolumn_idを、      コラム型のarticle（ここで定義？）に格納する。　　　インスタンス化したdaoにコラムのを取得するように命令を出す（ちゃんと受け取る）一つでいい　cDAO　タイトルもbodyも取ってくる
+			//！28行目でパラメータからcolumn_idを渡して、selectArticleが実行されこで定義？　　に格納する。するように命令を出す（ちゃんと受け取る）一つでいい　cDAO　タイトルもbodyも取ってくる
 			Column article = cDAO.selectArticle(column_id);
 
 			//取得した一覧データ↑をリクエストスコープに格納する
