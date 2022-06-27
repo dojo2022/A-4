@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import dao.post.PostDAO;
 import model.post.Post;
 
@@ -35,8 +38,35 @@ public class BbsServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/bbs/bbs_top.jsp");
-		dispatcher.forward(request, response);
+		response.setContentType("application/json");
+		response.setHeader("Cache-Control", "nocache");
+		response.setCharacterEncoding("utf-8");
+		String process = request.getParameter("process");
+		String searchtext = request.getParameter("searchtext");
+
+		if(process == null) {
+			PostDAO pDAO = new PostDAO();
+			ArrayList<Post> pList = pDAO.getPostList();
+			request.setAttribute("pList", pList);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/bbs/bbs_top.jsp");
+			dispatcher.forward(request, response);
+			return;
+		}
+		else if(process.equals("search")) {
+			PostDAO pDAO = new PostDAO();
+			ArrayList<Post> pList = pDAO.getSearchPost(searchtext);
+
+			ObjectMapper mapper = new ObjectMapper();
+			try {
+	            //JavaオブジェクトからJSONに変換
+	            String testJson = mapper.writeValueAsString(pList);
+	            System.out.println(pList);
+	            //JSONの出力
+	            response.getWriter().write(testJson);
+	        } catch (JsonProcessingException e) {
+	            e.printStackTrace();
+	        }
+		}
 	}
 
 }
