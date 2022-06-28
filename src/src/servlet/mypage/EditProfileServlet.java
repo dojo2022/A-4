@@ -84,7 +84,6 @@ public class EditProfileServlet extends HttpServlet {
 	                result_message = "false";
 	            }
 	            System.out.println(result_message);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/mypage/edit_profile.jsp");
-		dispatcher.forward(request, response);
+	            response.sendRedirect("/MaternityApp/HomeServlet");
 	}
 }

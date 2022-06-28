@@ -6,7 +6,9 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://unpkg.com/sanitize.css" >
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/home/home.css" >
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script defer src="<%= request.getContextPath() %>/js/home/home.js"></script>
 <title>famiTy ホーム</title>
 <link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
@@ -25,37 +27,37 @@
             </table>
         </div>
         <div class="labor">
-            <input type="button" id="labor_btn" name="labor_pain" bgcolor="#D2DFF3">
+            <input class="btn btn-danger" type="button" id="labor_btn" name="labor_pain" bgcolor="#D2DFF3">
             <span id="today_labor_count"></span>
         </div>
-        <div class="report">
-            <div class="report_info mother">
-                <div class="mother_img">
-                    <img src="<%= request.getContextPath() %>${mother_report.image}" alt="ママの画像">
-                </div>
-                <div class="report_text">
-                    <h3 class="report_title">
-                        ${mother_report.title }
-                    </h3>
-                    <p>
-                        ${mother_report.body }
-                    </p>
-                </div>
-            </div>
-            <div class="report_info baby">
-                <div class="baby_img">
-                    <img src="<%= request.getContextPath() %>${baby_report.image}" alt="赤ちゃんの画像">
-                </div>
-                <div class="report_text">
-                    <h3 class="report_title">
-                        ${baby_report.title }
-                    </h3>
-                    <p>
-                        ${baby_report.body }
-                    </p>
-                </div>
-            </div>
-        </div>
+
+        <div class="card mb-3 " >
+		  <div class="row g-0">
+		    <div class="col-md-4">
+		      <img src="<%= request.getContextPath() %>${mother_report.image}" alt="" style="width:100%">
+		    </div>
+		    <div class="col-md-8">
+		      <div class="card-body">
+		        <h3 class="card-title">${mother_report.title }</h3>
+		        <p class="card-text">${mother_report.body}</p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<div class="card mb-3 " >
+		  <div class="row g-0">
+		    <div class="col-md-4">
+		      <img src="<%= request.getContextPath() %>${baby_report.image}" alt="" style="width:100%">
+		    </div>
+		    <div class="col-md-8">
+		      <div class="card-body">
+		        <h3 class="card-title">${baby_report.title }</h3>
+		        <p class="card-text">${mother_report.body}</p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
 
     </main>
 </div>

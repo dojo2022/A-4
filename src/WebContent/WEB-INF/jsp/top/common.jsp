@@ -22,7 +22,7 @@
             <ul class="nav__items nav-items">
                 <li class="nav-items__item"><img src="<%= request.getContextPath() %>/image/home.png" alt="ロゴ画像"><a href="HomeServlet">ホーム</a></li>
                 <li class="nav-items__item"><img src="<%= request.getContextPath() %>/image/input_record.png" alt="ロゴ画像"><a href="InputRecordServlet">記録をつける</a></li>
-                <li class="nav-items__item"><img src="<%= request.getContextPath() %>/image/view_record.png" alt="ロゴ画像"><a href="RecordViewTopServlet">記録閲覧</a></li>
+                <li class="nav-items__item"><img src="<%= request.getContextPath() %>/image/view_record.png" alt="ロゴ画像"><a href="RecordViewTopServlet">記録を見る</a></li>
                 <li class="nav-items__item"><img src="<%= request.getContextPath() %>/image/childcare_quest.png" alt="ロゴ画像"><a href="ChildcareQuestServlet">育児クエスト</a></li>
                 <li class="nav-items__item"><img src="<%= request.getContextPath() %>/image/hurima.png" alt="ロゴ画像"><a href="HurimaServlet">フリマ</a></li>
                 <li class="nav-items__item"><img src="<%= request.getContextPath() %>/image/column.png" alt="ロゴ画像"><a href="ColumnServlet">コラム</a></li>
