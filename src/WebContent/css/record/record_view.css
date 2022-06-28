@@ -87,3 +87,6 @@ table#family-meter {
 tr.view0{
 	display: none;
 }
+.radio:checked + .radio_image {
+	background-color: #00ff00;
+}
