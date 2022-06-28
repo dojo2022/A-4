@@ -11,7 +11,7 @@
 <link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
 <%@ include file="../top/common.jsp"%>
 </head>
-<body bgcolor="#F7F48B">
+<body>
 <main>
 
 <!-- 今日の日付 -->
