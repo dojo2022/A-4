@@ -18,7 +18,7 @@ import model.user.User;
 /**
  * Servlet Filter implementation class LoginFilter
  */
-@WebFilter("/aaaa")
+@WebFilter("/*")
 public class LoginFilter implements Filter {
 
     /**

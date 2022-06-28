@@ -7,6 +7,7 @@ main {
 	padding-top:50px;
 }
 h2{
+	padding-top:50px;
 	text-align: center;
 }
 #childcare_quest{
@@ -79,7 +80,7 @@ table .id7{
 	display:none;
 	transition: ease .4s;
 }
-[name="body"]{
+td [name="body"]{
 	margin:0 100px;
 }
 .modal {
@@ -139,6 +140,7 @@ table .id7{
 }
 #open_modal{
 	float:right;
+	margin-top:20px;
 	margin-right:100px;
 }
 #open_modal:hover,

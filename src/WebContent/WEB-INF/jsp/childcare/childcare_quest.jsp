@@ -7,8 +7,10 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://unpkg.com/sanitize.css" >
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/childcare/childcare_quest.css" >
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script defer src="<%= request.getContextPath() %>/js/home/home.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <title>famity 育児クエスト</title>
 <link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
 </head>
@@ -51,7 +53,7 @@
             </div>
         </div>
         		<div>
-			<button id="open_modal" name="open_modal_btn">クエスト登録</button>
+			<button class = "btn btn-primary" id="open_modal" name="open_modal_btn">クエスト登録</button>
 			<form id="quest_form" name ="quest_form" method="POST" action="<%= request.getContextPath() %>/ChildcareQuestServlet">
 				<div id="resist_modal" class="modal">
 					 <div class="modal_content">
@@ -70,7 +72,7 @@
 
 							</select>
 							<input type="hidden" name="family_id" value="${loginUser.family_id }" id="family_id">
-							<input type="button" id="regist_btn" value="登録" name="bt"><br>
+							<input class="btn btn-secondary" type="button" id="regist_btn" value="登録" name="bt"><br>
 						</div>
 					</div>
 				</div>
@@ -141,11 +143,19 @@ function getChildcareQuest(){
 				flag="削除";
 			}
 			$tr.append("<td name=id id='quest_id' hidden>"+value.childcare_quest_id+"</td>")
-			.append('<td name=title>'+value.title+"</td>")
-			.append('<td name=time_limit>～'+(date.getMonth()+1)+"/"+date.getDate()+"</td>")
-			.append("<td name='label' class='id"+value.label_id+"'>"+value.label+"</td>")
-			.append("<td name=flag><input type='button' id='flag_is_"+value.completed_flag+"' value='"+flag+"'></td>")
-			.append("<td name='show_detail' id='show_detail'>詳細を表示する▼</td>")
+			if(value.completed_flag==0){
+				$tr.append('<td name=title>'+value.title+"</td>");
+			}else{
+				$tr.append('<td name=title><s>'+value.title+"</s></td>");
+			}
+			$tr.append('<td name=time_limit>～'+(date.getMonth()+1)+"/"+date.getDate()+"</td>")
+			$tr.append("<td name='label' class='id"+value.label_id+"'>"+value.label+"</td>");
+			if(value.completed_flag==0){
+				$tr.append("<td name=flag><input class='btn btn-warning' type='button' id='flag_is_"+value.completed_flag+"' value='"+flag+"'></td>");
+			}else{
+				$tr.append("<td name=flag><input class='btn btn-secondary'type='button' id='flag_is_"+value.completed_flag+"' value='"+flag+"'></td>");
+			}
+			$tr.append("<td name='show_detail' id='show_detail'>詳細を表示する▼</td>")
 			let $body_tr=$('<tr />',{class:"cqbody"});
 			$body_tr.append("<td name=body colspan='5' style='padding: 0px;'><div style='height: 22px; padding: 1px;'>"+value.body+"</div></td>");
 			$("#cq_table").append($tr).append($body_tr);
