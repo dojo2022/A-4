@@ -14,7 +14,7 @@
 <div class = "container">
     <main>
         <div class = "form">
-            <h1>ロゴ</h1>
+            <h1><img src="<%= request.getContextPath() %>/image/login_logo.jpg" alt="ロゴ"></h1>
             <form id="create_account_from" method="POST" action="CreateAccountServlet">
                 <table>
                     <tr>
