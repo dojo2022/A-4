@@ -10,6 +10,12 @@
 
 	text-align: center;
 }
+label{
+	margin-right:10px;
+}
+.name{
+	margin-right:10px;
+}
 form table{
     margin: 0 auto;
     text-align: center;
@@ -21,12 +27,47 @@ form input {
     height: 30px;
 }
 
+.form_user1{
+	margin-left:60px;
+}
+
+.form_user3{
+	margin-left:15px;
+}
+
+.postcode{
+	margin-right:58px;
+	margin-left:-46px;
+}
+
+.address{
+	margin-right:103px;
+	margin-left:-45px;
+}
+
+.tell{
+	margin-right:70px;
+	margin-left:-46px;
+}
+
+.barth{
+	margin-right:62px;
+	margin-left:-180px;
+}
+.gender{
+	margin-right:102px;
+	margin-left:-228px;
+}
+.due{
+	margin-right:55px;
+	margin-left:-135px;
+}
 .user_profile_button{
 	width:10em;
-	height: 30px;
+	height: 45px;
 	appearance: none;
 	border: 0;
-	border-radius: 30px;
+	border-radius: 45px;
 	background: #413F42;
 	color: #fff;
 	font-size: 16px;
