@@ -5,12 +5,12 @@ import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.user.User;
@@ -46,10 +46,9 @@ public class LoginFilter implements Filter {
 		User user = (User)session.getAttribute("loginUser");
 		if((!path.contains("Login"))&(user == null) ) {
 			request.setAttribute("msg", "セッションが切れましたログインしなおしてください");
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/top/login.jsp");
-			dispatcher.forward(request, response);
-
-			//((HttpServletResponse)response).sendRedirect("/MaternityApp/LoginServlet");
+//			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/top/login.jsp");
+//			dispatcher.forward(request, response);
+			((HttpServletResponse)response).sendRedirect("/MaternityApp/LoginServlet");
 		}else {
 			chain.doFilter(request, response);
 		}

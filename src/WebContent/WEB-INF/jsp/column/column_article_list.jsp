@@ -15,7 +15,7 @@
 <div class="title"><a href="ColumnArticleServlet?column_id=${e.column_id}">${e.title}</a></div>
 </c:forEach>
 
-<a href="ColumnSevlet"><img src="image/back_botton.png" width="90px" height="90px"></a>
+<a href="ColumnServlet"><img src="image/back_botton.png" width="90px" height="90px"></a>
 
 </body>
 </html>

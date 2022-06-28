@@ -47,7 +47,6 @@
 
     </main>
 </div>
-<script src="<%= request.getContextPath() %>/js/top/login.js"></script>
 </body>
 <script >
 	$("#login_btn").on('click',async function(e){
