@@ -74,11 +74,13 @@ input.radio {
 	background-color: #ffffff;
 }
 .radio:checked + .radio_image {
-	background-color: #D2DFF3;
+	background-color: #4CAF50;
 }
 input.record{
 	text-align: right;
 	margin-bottom: 20px;
+	height: 40px;
+	width: 60px;
 }
 table#family-meter {
 	margin: auto;

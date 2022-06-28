@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <title>famiTy 記録入力</title>
+
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/record/input_record.css">
 <link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
 <%@ include file="../top/common.jsp"%>
@@ -21,12 +22,7 @@
 <!-- アカウント切り替え -->
 
 <c:forEach var="e" items="${PartnerList}" varStatus="status">
-<%-- 	<div style="float:left">
-   <!--  顔の表示 -->
-	<img src="<%= request.getContextPath() %>/image/level1.png">
-	<!-- ダーリン・ハニー -->
-	${e.name}
-	</div> --%>
+
  <table class="tab-panel" align="left">
 	<input type="hidden" class="partner_id" id="partner_id${status.index}" value="${e.partner_id}">
 
@@ -477,7 +473,7 @@
 <div id="test"></div>
 <!-- 記録ボタン -->
 <div>
-	<input type = "button" id="submit" name = "submit" value = "記録する"  onclick="goAjax()" class="record" >
+	<input type = "button" class="record" id="submit" name = "submit" value = "記録する"  onclick="goAjax()">
 </div>
 </div>
 </div>
