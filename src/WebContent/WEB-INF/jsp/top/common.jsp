@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="https://unpkg.com/sanitize.css" >
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/top/common.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
 </head>
 
 <body>

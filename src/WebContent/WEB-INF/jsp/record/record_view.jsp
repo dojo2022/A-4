@@ -9,6 +9,8 @@
 <title>famiTy 記録詳細画面</title>
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/record/record_view.css">
 <%@ include file="../top/common.jsp"%>
+
+<link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
 </head>
 <body>
 

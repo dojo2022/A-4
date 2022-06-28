@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/model.css" >
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/record/record_view_top.css" >
 <title>famiTy 記録閲覧</title>
+
+<link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
 </head>
 <body>
 <div class="container">

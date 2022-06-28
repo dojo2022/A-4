@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/bbs/bbs_top.css" >
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <title>famiTy 掲示板</title>
+<link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
 </head>
 <body>
 <%@ include file="../top/common.jsp"%>

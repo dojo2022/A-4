@@ -7,6 +7,7 @@
 <title>famiTy パートナー登録</title>
 <%@ include file="../top/common.jsp"%>
 
+<link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
 </head>
 <body style="text-align:center">
     <main>

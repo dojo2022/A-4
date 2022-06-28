@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/bbs/bbs.css" >
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <title>famiTy 掲示板本文</title>
+<link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
 </head>
 <body>
 <div class="container">
