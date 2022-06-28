@@ -66,7 +66,7 @@
 								</div></td>
 							 <td><div class="form-check form-switch">
 									  <input class="humor form-check-input" type="checkbox" value="1" name="humor" <c:if test="${p.humor ==1}" >checked</c:if>>
-									  <label  for="humor">機嫌</label>
+									  <label  for="humor"></label>
 								</div></td>
 							<td><div class="form-check form-switch">
 									  <input class="nausea form-check-input" type="checkbox" value="1" name="nausea" <c:if test="${p.nausea ==1}" >checked</c:if>>
