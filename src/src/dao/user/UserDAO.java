@@ -220,6 +220,56 @@ public class UserDAO {
 	}
 
 
+	public boolean logout(User user) {
+		Connection conn = null;
+		boolean flag = true;
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+
+			// データベースに接続する
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6Data/dojo6Data", "sa", "");
+
+			// SQL文を準備する
+
+			String sql;
+			PreparedStatement pStmt;
+
+				sql = "update user set logout_time = now() where user_id = ? ";
+				pStmt= conn.prepareStatement(sql);
+				pStmt.setInt(1,user.getUser_id());
+			// SQL文を実行し、結果表を取得する
+			int rs = pStmt.executeUpdate();
+			if(rs == 1) {
+				flag=true;
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+			flag = false;
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			flag = false;
+		}
+		finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+					flag = false;
+				}
+			}
+		}
+
+		return flag;
+
+	}
+
+
 
 //メールアドレスがすでにあるかチェック
 	public Boolean existCheck(String email){

@@ -46,7 +46,7 @@ public class LoginServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 			return;
 		}
-		System.out.println("email:"+user.getEmail()+" name:"+user.getName());
+		System.out.println("ログイン:"+user.getName());
 		HttpSession session = request.getSession();
 		session.setAttribute("loginUser", user);
 		if(user.getLogout_time()==null) {
