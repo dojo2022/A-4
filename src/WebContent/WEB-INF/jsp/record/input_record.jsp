@@ -33,7 +33,7 @@
 
 	<tr class="tab-group">
 		<td class="tab" id="${status.index}" onclick="tabClick()" >
-	    	<img src="<%= request.getContextPath() %>/image/family_icon.png"><br>${e.name}
+	    	<img src="<%= request.getContextPath() %>/image/family_icon.png" width="100"><br>${e.name}
 		</td>
 	</tr>
 
