@@ -7,7 +7,16 @@ body{
       padding-top:50px; /*ヘッダーと被らないようにしてる*/
 }
 .title{
-	border-bottom: dotted 3px #5B93D1;
-	margin: 30px 20px 30px 40px;
-	font-size:17px
+	border: solid 1px #DCD79F;
+		padding: 10px;
+		background-color: #D2DFF3;
+		margin:10px;
+		width:70%;
+		margin:5px auto;
+		border-radius: 5px;
 	}
+.genreitiran{
+  font-size:25px;
+  margin: 20px 20px 0 40px;
+  color:black;
+}

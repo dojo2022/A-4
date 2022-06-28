@@ -25,7 +25,6 @@ public class ColumnSevlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
 		//daoをインスタンス化する
 		ColumnGenreDAO cDAO = new ColumnGenreDAO();
 
