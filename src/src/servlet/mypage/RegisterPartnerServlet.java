@@ -9,9 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.user.UserDAO;
-import mail.Mail;
 import model.user.User;
 
 /**
@@ -27,6 +27,13 @@ public class RegisterPartnerServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+ 		HttpSession session = request.getSession();
+		User user = (User)session.getAttribute("loginUser");
+		int family_id = user.getFamily_id();
+		request.setAttribute("family_id", family_id);
+		System.out.print(family_id);
+
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/mypage/regist_partner.jsp");
 		dispatcher.forward(request, response);
 	}
@@ -40,12 +47,15 @@ public class RegisterPartnerServlet extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 
 		// user beansとUserをインスタンス化
-		User user = new User();
 		UserDAO uDao = new UserDAO();
 
+		HttpSession session = request.getSession();
+		User user = (User)session.getAttribute("loginUser");
+		int family_id = user.getFamily_id();
+		System.out.println(family_id);
 
 		String email = request.getParameter("email");
-		int family_id = user.getFamily_id();
+        String result_message;
 
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
@@ -54,38 +64,22 @@ public class RegisterPartnerServlet extends HttpServlet {
 
         // ①メールがあるかチェック、trueででなければ招待メールを送る
 		if(result != true) {
-			Mail mail = new Mail();
-			mail.setSendTo(email);
-			mail.setTitle("famiTy新規アカウント登録");
-			mail.setMessage("下記のURLをクリックして新規アカウント登録を行ってください。\n http://localhost:8080/src/CreateAccountServlet");
-			if(mail.sendMail()) {
-				out.print("success");
-	            return;
-			}else {
-	            out.print("fail");
-	            return;
-			}
-			// ②メールがある場合。trueであれば存在するため招待した人のfamily_idに上書きする
+            result_message = "exist";
+		// ②メールがある場合。trueであれば存在するため招待した人のfamily_idに上書きする
 		}else {
-	        Boolean update = uDao.registPartner(family_id, email);
-	        if(update == true) {
-	        	Mail mail = new Mail();
-	        	mail.setSendTo(email);
-				mail.setTitle("famiTyパートナー連携");
-				mail.setMessage("パートナーの連携が完了しました。下記のURLをクリックして詳細設定してください。\n http://localhost:8080/src/MypageServlet");
-				if(mail.sendMail()) {
-					out.print("success");
-		            return;
-				}else {
-		            out.print("fail");
-		            return;
-				}
+	       if(uDao.registPartner(family_id, email)) {
+	    	    result_message = "success";
+	    	} else {//登録できない。
+	    	    result_message = "false";
+	    	}
 
-		}
+	    }
+	    	out.print(result_message);
 
 	}
 }
-}
+
+
 
 
 
