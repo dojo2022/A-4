@@ -16,7 +16,7 @@
 <%@ include file="../top/common.jsp"%>
 <main style="margin-top:50px;">
 	<div class="container">
-		<h1>掲示板</h1>
+		<h2>掲示板</h2>
 		<div class ="bbs">
 			<div class="search">
 				<form action="/MatnernityApp/BbsServlet" method="POST">

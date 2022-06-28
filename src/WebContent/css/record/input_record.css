@@ -74,7 +74,7 @@ input.radio {
 	background-color: #ffffff;
 }
 .radio:checked + .radio_image {
-	background-color: #4CAF50;
+	background-color: #00FF00;
 }
 input.record{
 	text-align: right;
