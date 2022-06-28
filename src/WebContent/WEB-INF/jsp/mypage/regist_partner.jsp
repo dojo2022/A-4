@@ -7,8 +7,9 @@
 <title>famiTy パートナー登録</title>
 <%@ include file="../top/common.jsp"%>
 
+<link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
 </head>
-<body>
+<body style="text-align:center">
     <main>
 		<div id="overlay">
 		  <div class="cv-spinner">
@@ -18,20 +19,26 @@
         <div class="form">
             <h2>パートナー登録</h2>
             <form id="search_account_form" method="POST" action="ReregistPartnerServlet">
-                <table>
+                <table align="center" >
                   <tr>
                     <td>
-                      <label>招待するパートナーのメールアドレスを入力してください。<br>
+                      <label>連携するパートナーのメールアドレスを入力してください。<br>
                       <input type="text" name="email" placeholder="ex) mail@gmail.com" required>
                       </label>
                     </td>
+                   </tr>
+                   <tr>
                     <td colspan="2">
-                      <input type="button" id="btn" value="送信">
+                      <input type="button" id="btn" value="パートナー登録">
                       <span id="error_message"></span>
                     <td>
                   </tr>
                 </table>
-                <p>パートナーが登録されていない場合、アカウント作成ページが送られます。</p>
+                <br>
+                <br>
+                <p>パートナーがアカウント登録されていない場合、パートナー登録はできません。<br>
+                	パートナーの新規アカウント登録を行ってから、再度実行してください。</p>
+                <input type="hidden" name="family_id" value="${family_id}">
               </form>
         </div>
     </main>
@@ -42,7 +49,8 @@
 
 $("#btn").on('click',function(e){
 	data={
-			email:$('#search_account_form [name=email]').val()
+			email:$('#search_account_form [name=email]').val(),
+			family_id:$('#search_account_form [name=family_id]').val()
 	}
 	sendMail(data);
 
@@ -62,12 +70,10 @@ function sendMail(data){
 	).done(function(data,status) {
 		$("#overlay").fadeOut(300);
 		// 正常
-		if(data=="noEmail"){
-			alert("招待メールが送信されました。");
-		}else if(data=="success"){
-			alert("アカウント作成メールが送信されました");
+		if(data=="success"){
+			alert("パートナー登録しました。");
 		}else{
-			alert("送信できませんでした。");
+			alert("アカウントが存在しません。パートナーの新規アカウント登録をしてください。");
 		}
 	}).fail(function(xhr, status, error) {
 		$("#overlay").fadeOut(300);

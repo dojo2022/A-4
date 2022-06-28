@@ -13,6 +13,8 @@
 </style>
 <link rel="stylesheet" href="https://unpkg.com/sanitize.css" ></linkrel>
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/mypage/edit_profile.css">
+
+<link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
  </head>
 <body>
 	<div class = "container">
