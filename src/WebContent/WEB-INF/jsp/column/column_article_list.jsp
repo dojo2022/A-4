@@ -14,11 +14,14 @@
 
 <body>
 
+<h2><span></span></h2>
+
 <c:forEach var="e" items="${list}" >
 <div class="title"><a href="ColumnArticleServlet?column_id=${e.column_id}">${e.title}</a></div>
 </c:forEach>
 
-<a href="ColumnServlet"><img src="image/back_botton.png" width="90px" height="90px"></a>
+<a href="ColumnServlet"><img src="image/back_botton.png" width="50px" height="50px" style="margin-left:100px;"></a>
+
 
 </body>
 </html>
