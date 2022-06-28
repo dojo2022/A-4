@@ -34,7 +34,7 @@ public class EditProfileServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		System.out.println("入ったよ");
 		HttpSession session = request.getSession();
 		User upr = (User)session.getAttribute("loginUser");
 
@@ -83,6 +83,7 @@ public class EditProfileServlet extends HttpServlet {
 	            } else {//編集できてない
 	                result_message = "false";
 	            }
+	            System.out.println(result_message);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/mypage/edit_profile.jsp");
 		dispatcher.forward(request, response);
 	}

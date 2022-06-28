@@ -77,7 +77,7 @@
 					</tr>
 					<tr>
 						<td>
-							<input class="user_profile_button" type="submit" name="selectprofile" value="登録" >
+							<input class="user_profile_button" type="submit" name="selectprofile" value="登録" onclick="return upd();">
 						</td>
 					</tr>
 			</form>

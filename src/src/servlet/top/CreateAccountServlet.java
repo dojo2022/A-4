@@ -60,9 +60,12 @@ public class CreateAccountServlet extends HttpServlet {
 
 		            //次にuserテーブルに新規追加
 		            if(uDao.createAccount(email, password, family_id)){//登録できた
-		                //セッションにuserのデータを入れる。
+		            	User u = uDao.login(email, password);
+		            	user.setUser_id(u.getUser_id());
+
+		            	//セッションにuserのデータを入れる。
 		            	HttpSession session = request.getSession();
-		                session.setAttribute("User",user);
+		                session.setAttribute("loginUser",user);
 		                result_message = "success";
 		            } else {//登録できない。
 		                result_message = "false";
