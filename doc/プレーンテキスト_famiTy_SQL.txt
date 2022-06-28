@@ -1,0 +1,183 @@
+
+create table family(
+ family_id int auto_increment not null primary key,
+ created_at datetime default current_timestamp not null
+);
+
+
+create table partner_attribute(
+ partner_attribute_id int auto_increment not null primary key,
+ partner_attribute_name varchar(20),
+ image varchar(100)
+);
+
+
+create table childcare_quest_label(
+ childcare_quest_label_id int auto_increment not null primary key,
+ content_label varchar(100)
+);
+
+
+create table column_genre(
+ column_genre_id int auto_increment not null primary key,
+ name varchar(30),
+ image varchar(100)
+);
+
+
+create table user(
+ user_id int auto_increment not null primary key,
+ email varchar(60) not null,
+ password varchar(100) not null,
+ name varchar(80),
+ nickname varchar(40),
+ post_code varchar(10),
+ address varchar(100),
+ birthday date,
+ gender varchar(10),
+ tel varchar(20),
+ family_id int,
+ due_date date,
+ created_at datetime default current_timestamp not null,
+ updated_at datetime default current_timestamp on update current_timestamp not null,
+ login_time datetime default current_timestamp on update current_timestamp not null,
+ logout_time datetime
+);
+
+create table partner(
+ partner_id int auto_increment not null primary key,
+ family_id int,
+ name varchar(40),
+ attribute int,
+ appetite int default 0,
+ sleepiness int default 0,
+ humor int default 0,
+ nausea int default 0,
+ stress int default 0,
+ dizziness int default 0,
+ fatigue int default 0,
+ stiff_shoulder int default 0,
+ headache int default 0,
+ backache int default 0,
+ stomach_ache int default 0,
+ feeling int default 0,
+ tidying int default 0,
+ self_assertion int default 0,
+ poop int default 0,
+ tooth_brushing int default 0,
+ created_at datetime default current_timestamp not null,
+ updated_at datetime default current_timestamp on update current_timestamp not null,
+ foreign key (attribute) references partner_attribute(partner_attribute_id)
+ on delete set null on update cascade
+);
+
+
+create table user_condition(
+ user_condition_id int auto_increment not null primary key,
+ partner_id int not null,
+ weight float,
+ body_temparture float,
+ text varchar(1000),
+ appetite int,
+ sleepiness int,
+ humor int,
+ nausea int,
+ stress int,
+ dizziness int,
+ fatigue int,
+ stiff_shoulder int,
+ headache int,
+ backache int,
+ stomach_ache int,
+ feeling int,
+ tidying int,
+ self_assertion int,
+ poop int,
+ tooth_brushing int,
+ created_at datetime default current_timestamp not null,
+ updated_at datetime default current_timestamp on update current_timestamp not null
+ );
+
+
+create table childcare_quest(
+ childcare_quest_id int auto_increment not null primary key,
+ family_id int not null,
+ title varchar(20) not null,
+ body varchar(500),
+ time_limit date not null,
+ label int,
+ completed_flag int default 0 not null,
+ created_date datetime default current_timestamp not null,
+ updatede_date datetime,
+ foreign key (family_id) references family(family_id)
+ on delete set null on update cascade,
+ foreign key (completed_flag) references childcare_quest_label(childcare_quest_label_id)
+ on delete set null on update cascade
+);
+
+
+create table column(
+ column_id int auto_increment not null primary key,
+ title varchar(30),
+ body varchar(5000),
+ genre_id int,
+ foreign key (genre_id) references column_genre(column_genre_id)
+ on delete set null on update cascade
+);
+
+create table weekly_report(
+ weekly_report_id int auto_increment not null primary key,
+ week int,
+ person varchar(20),
+ title varchar(30),
+ body varchar(5000),
+ image varchar(100)
+);
+
+
+create table post(
+ post_id int auto_increment not null primary key,
+ user_id int,
+ title varchar(30),
+ body varchar(3000),
+ heart int,
+ useful int,
+ week int,
+ created_at datetime default current_timestamp,
+ foreign key (user_id) references user(user_id) 
+ on delete set null on update cascade
+);
+
+
+create table labor_pain(
+ labor_pain_id int auto_increment not null primary key,
+ user_id int,
+ start_time datetime default current_timestamp,
+ stop_time datetime,
+ labor_interval time,
+ foreign key (user_id) references user(user_id) on delete set null on update cascade
+);
+ 
+
+create table product(
+ product_id int auto_increment not null primary key,
+ name varchar(30),
+ description varchar(2000),
+ price int,
+ image varchar(100),
+ status varchar(20),
+ listing_user_id int,
+ purchase_user_id int,
+ listing_date datetime default current_timestamp not null,
+ purchase_date datetime,
+ foreign key (listing_user_id) references user(user_id) on delete set null on update cascade,
+ foreign key (purchase_user_id) references user(user_id) on delete set null on update cascade
+);
+  
+
+create table user_icon(
+ image_id int not null,
+ person varchar(20),
+ image varchar(100)
+);
+ 
