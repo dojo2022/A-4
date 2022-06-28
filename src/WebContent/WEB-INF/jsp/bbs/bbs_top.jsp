@@ -38,7 +38,7 @@
 				</select>
 			</div>
 
-			<div id="p_table" style="width:1100px; height:300px; overflow-y:scroll; overflow-x:hidden;">
+			<div id="p_table" style="width:1300px; height:400px; overflow-y:scroll; overflow-x:hidden;">
 				<c:forEach var="e" items="${pList}" varStatus="status" >
 					<table class ="table table-borderless" id ="table" border="1">
 						<tr>
