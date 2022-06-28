@@ -44,21 +44,6 @@ public class LoginFilter implements Filter {
 		HttpSession session = ((HttpServletRequest)request).getSession();
 		String path = ((HttpServletRequest) request).getRequestURI();
 		User user = (User)session.getAttribute("loginUser");
-//		if(path.contains("Login")) {
-//			chain.doFilter(request, response);
-//		}else {
-//
-//			if(user == null) {
-//				request.setAttribute("msg", "セッションが切れましたログインしなおしてください");
-//				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/top/login.jsp");
-//				dispatcher.forward(request, response);
-//				//((HttpServletResponse)response).sendRedirect("/MaternityApp/LoginServlet");
-//			}else {
-//			// pass the request along the filter chain
-//			chain.doFilter(request, response);
-//			}
-//		}
-
 		if((!path.contains("Login"))&(user == null) ) {
 			request.setAttribute("msg", "セッションが切れましたログインしなおしてください");
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/top/login.jsp");
