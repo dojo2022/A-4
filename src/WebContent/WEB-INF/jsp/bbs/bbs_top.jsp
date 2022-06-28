@@ -29,7 +29,7 @@
 			</div> -->
 
 			<div class="sort_filter">
-				<select id="sort_filter" name="sort_filter" style="margin-left:930px;">
+				<select id="sort_filter" name="sort_filter" style="margin-left:965px;">
 					<option value="">すべて</option>
 					<option value="heart">わかる順</option>
 					<option value="useful">ためになった順</option>
@@ -38,7 +38,7 @@
 				</select>
 			</div>
 
-			<div id="p_table" style="width:1300px; height:400px; overflow-y:scroll; overflow-x:hidden;">
+			<div id="p_table" style="width:1130px; height:400px; overflow-y:scroll; overflow-x:hidden;">
 				<c:forEach var="e" items="${pList}" varStatus="status" >
 					<table class ="table table-borderless" id ="table" border="1">
 						<tr>
