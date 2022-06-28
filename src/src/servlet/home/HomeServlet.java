@@ -26,6 +26,14 @@ public class HomeServlet extends HttpServlet {
 
 		HttpSession session = request.getSession();
 		User user = (User)session.getAttribute("loginUser");
+
+		if(user == null ) {
+			request.setAttribute("msg", "セッションが切れましたログインしなおしてください");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/top/login.jsp");
+			dispatcher.forward(request, response);
+//			((HttpServletResponse)response).sendRedirect("/MaternityApp/LoginServlet");
+			return ;
+		}
 		Date due_date=user.getDue_date();
 		Date now_date = new Date();
 		int remain_day =(int) ((due_date.getTime()-now_date.getTime())/(1000*60*60*24));
