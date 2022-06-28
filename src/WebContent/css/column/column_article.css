@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
+
 body{
-      background-color: #FCEEBC;
+      background-color: #FFFFFF;
+      padding-top:50px; /*ヘッダーと被らないようにしてる*/
 }
 
 .scroller{

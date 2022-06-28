@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://unpkg.com/sanitize.css" >
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/column/column_article.css" >
-
+<%@ include file="../top/common.jsp"%>
 </head>
 <body>
 <%-- DBから取ってきたタイトルを表示する --%>

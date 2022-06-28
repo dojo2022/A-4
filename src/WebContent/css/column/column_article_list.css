@@ -1,7 +1,10 @@
 @charset "UTF-8";
 
+
+
 body{
-      background-color: #FCEEBC;
+      background-color: #FFFFFF;
+      padding-top:50px; /*ヘッダーと被らないようにしてる*/
 }
 .title{
 	border-bottom: dotted 3px #5B93D1;
