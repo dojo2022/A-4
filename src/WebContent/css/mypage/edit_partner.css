@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .partner-record{
-
+padding-top:100px;
 }
 .partner-group{
     display: flex;
@@ -35,3 +35,7 @@
   .record.is-show{
     display:block;
   }
+
+.regist_btn{
+	margin-top:30px;
+}

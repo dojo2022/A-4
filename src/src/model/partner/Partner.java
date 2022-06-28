@@ -7,6 +7,7 @@ public class Partner implements Serializable {
 	private int partner_id;
 	private int family_id;
 	private String name;
+	private int attribute_id;
 	private String attribute;
 	private int appetite;
 	private int sleepiness;
@@ -47,6 +48,13 @@ public class Partner implements Serializable {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public int getAttribute_id() {
+		return attribute_id;
+	}
+	public void setAttribute_id(int attribute_id) {
+		this.attribute_id = attribute_id;
 	}
 	public String getAttribute() {
 		return attribute;
