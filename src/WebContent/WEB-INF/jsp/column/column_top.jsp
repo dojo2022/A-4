@@ -22,10 +22,12 @@
 <span>
 <br>
 </span>
+<div class="scoll">
 <c:forEach var="e" items="${list}" > <%-- list=column.genreというテーブルが入ったarraylist（サーブレットで決めた）　　forEach回るごとに一個づつeに入る--%>
-<div class="genre"><a href="ColumnArticleListServlet?column_genre_id=${e.column_genre_id}">${e.column_genre_id},${e.name}</a></div>
+<div class="genre"><a href="ColumnArticleListServlet?column_genre_id=${e.column_genre_id}&name=${e.name}">${e.column_genre_id},${e.name}</a></div>
 </c:forEach>
 </div>
+</div>>
 
 </body>
 
