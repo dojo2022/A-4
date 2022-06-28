@@ -44,7 +44,7 @@ public class LoginFilter implements Filter {
 		HttpSession session = ((HttpServletRequest)request).getSession();
 		String path = ((HttpServletRequest) request).getRequestURI();
 		User user = (User)session.getAttribute("loginUser");
-		if((!path.contains("Login"))&(user == null) ) {
+		if((!(path.contains("Login")||path.contains("CreateAccount")))&(user == null) ) {
 			request.setAttribute("msg", "セッションが切れましたログインしなおしてください");
 //			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/top/login.jsp");
 //			dispatcher.forward(request, response);
