@@ -1,9 +1,7 @@
 @charset "UTF-8";
 
 
-body {
-  background-color: #F7F48B;
-}
+
 main {
 	padding-top:50px; /*ヘッダーと被らないようにしてる*/
 }
@@ -43,7 +41,7 @@ ul.tab-group{
   display:none;
 }
 #status.index{
-  background:#D2DFF3;
+  background: #F7F48B;
   color:#FFF;
   transition: all 0.2s ease-out;
 }

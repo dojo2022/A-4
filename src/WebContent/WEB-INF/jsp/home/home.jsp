@@ -11,7 +11,7 @@
 <title>famiTy ホーム</title>
 <link rel="icon" href="<%= request.getContextPath() %>/image/back_botton.png">
 </head>
-<body bgcolor="#F7F48B">
+<body>
 <div class="container">
 	<%@ include file="../top/common.jsp"%>
 	<main>

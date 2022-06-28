@@ -17,7 +17,6 @@
 		</div>
         <div class="form">
             <h2>パートナー登録</h2>
-            <p class="error_msg">${SendMailMsg}<p>
             <form id="search_account_form" method="POST" action="ReregistPartnerServlet">
                 <table>
                   <tr>
@@ -55,7 +54,7 @@ function sendMail(data){
 	    });
 	$.ajax({
 		type:'post',
-		url: '/MaternityApp/RegistPartnerServlet',
+		url: '/MaternityApp/RegisterPartnerServlet',
 		dataType:"text",
 		data:data
 	},
@@ -63,9 +62,9 @@ function sendMail(data){
 	).done(function(data,status) {
 		$("#overlay").fadeOut(300);
 		// 正常
-		if(data=="success"){
+		if(data=="noEmail"){
 			alert("招待メールが送信されました。");
-		}else if(data=="noEmail"){
+		}else if(data=="success"){
 			alert("アカウント作成メールが送信されました");
 		}else{
 			alert("送信できませんでした。");
