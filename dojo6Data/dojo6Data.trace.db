@@ -1,0 +1,3248 @@
+2022-05-20 11:52:25 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: 不明なデータ型: "VARCHR"
+Unknown data type: "VARCHR"; SQL statement:
+CREATE TABLE Bc (
+  number CHAR(4) PRIMARY KEY,
+  zipcode VARCHAR (20) ,
+  address VARCHAR(40) NOT NULL,
+  company VARCHAR(40) NOT NULL,
+  dep VARCHAR (20) NOT NULL,
+  post VARCHAR (20),
+  name VARCHAR(20) NOT NULL,
+  phonetic VARCHR(20) NOT NULL,
+  tel VARCHAR (20) NOT NULL,
+  mail VARCHAR(20) NOT NULL,
+  memo VARCHAR(300),
+) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-05-20 11:53:11 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: 不明なデータ型: "VARCHR"
+Unknown data type: "VARCHR"; SQL statement:
+CREATE TABLE Bc (
+  number CHAR(4) PRIMARY KEY,
+  zipcode VARCHAR (20) ,
+  address VARCHAR(40) NOT NULL,
+  company VARCHAR(40) NOT NULL,
+  dep VARCHAR (20) NOT NULL,
+  post VARCHAR (20),
+  name VARCHAR(20) NOT NULL,
+  phonetic VARCHR(20) NOT NULL,
+  tel VARCHAR (20) NOT NULL,
+  mail VARCHAR(20) NOT NULL,
+  memo VARCHAR(100),
+) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-05-20 11:55:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: 不明なデータ型: "VARCHR"
+Unknown data type: "VARCHR"; SQL statement:
+CREATE TABLE Bc (
+  number CHAR(4) PRIMARY KEY,
+  zipcode VARCHAR(20) ,
+  address VARCHAR(40) NOT NULL,
+  company VARCHAR(40) NOT NULL,
+  dep VARCHAR (20) NOT NULL,
+  post VARCHAR (20),
+  name VARCHAR(20) NOT NULL,
+  phonetic VARCHR(20) NOT NULL,
+  tel VARCHAR (20) NOT NULL,
+  mail VARCHAR(20) NOT NULL,
+  memo VARCHAR(300),
+) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-05-20 11:55:14 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE BC (
+  NUMBER CHAR(4) PRIMARY KEY,
+  ZIPCODE VARCHAR(20) ,
+  ADDRESS VARCHAR(40) NOT NULL,
+  COMPANY VARCHAR(40) NOT NULL,
+  DEP VARCHAR (20) NOT NULL,
+  POST VARCHAR (20),
+  NAME VARCHAR(20) NOT NULL,
+  PHONETIC VARCHAR(20) NOT NULL,
+  TEL VARCHAR (20) NOT NULL,
+  MAIL VARCHAR(20) NOT NULL,
+  MEMO VARCHAR(300),
+)[*]"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE BC (
+  NUMBER CHAR(4) PRIMARY KEY,
+  ZIPCODE VARCHAR(20) ,
+  ADDRESS VARCHAR(40) NOT NULL,
+  COMPANY VARCHAR(40) NOT NULL,
+  DEP VARCHAR (20) NOT NULL,
+  POST VARCHAR (20),
+  NAME VARCHAR(20) NOT NULL,
+  PHONETIC VARCHAR(20) NOT NULL,
+  TEL VARCHAR (20) NOT NULL,
+  MAIL VARCHAR(20) NOT NULL,
+  MEMO VARCHAR(300),
+)[*]"; expected "identifier"; SQL statement:
+CREATE TABLE Bc (
+  number CHAR(4) PRIMARY KEY,
+  zipcode VARCHAR(20) ,
+  address VARCHAR(40) NOT NULL,
+  company VARCHAR(40) NOT NULL,
+  dep VARCHAR (20) NOT NULL,
+  post VARCHAR (20),
+  name VARCHAR(20) NOT NULL,
+  phonetic VARCHAR(20) NOT NULL,
+  tel VARCHAR (20) NOT NULL,
+  mail VARCHAR(20) NOT NULL,
+  memo VARCHAR(300),
+) [42001-200]
+2022-05-20 11:56:48 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE BC (
+  NUMBER CHAR(4) PRIMARY KEY,
+  ZIPCODE VARCHAR(20) ,
+  ADDRESS VARCHAR(40) NOT NULL,
+  COMPANY VARCHAR(40) NOT NULL,
+  DEP VARCHAR (20) NOT NULL,
+  POST VARCHAR (20),
+  NAME VARCHAR(20) NOT NULL,
+  PHONETIC VARCHAR(20) NOT NULL,
+  TEL VARCHAR (20) NOT NULL,
+  MAIL VARCHAR(20) NOT NULL,
+  MEMO VARCHAR(100),
+)[*]"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE BC (
+  NUMBER CHAR(4) PRIMARY KEY,
+  ZIPCODE VARCHAR(20) ,
+  ADDRESS VARCHAR(40) NOT NULL,
+  COMPANY VARCHAR(40) NOT NULL,
+  DEP VARCHAR (20) NOT NULL,
+  POST VARCHAR (20),
+  NAME VARCHAR(20) NOT NULL,
+  PHONETIC VARCHAR(20) NOT NULL,
+  TEL VARCHAR (20) NOT NULL,
+  MAIL VARCHAR(20) NOT NULL,
+  MEMO VARCHAR(100),
+)[*]"; expected "identifier"; SQL statement:
+CREATE TABLE Bc (
+  number CHAR(4) PRIMARY KEY,
+  zipcode VARCHAR(20) ,
+  address VARCHAR(40) NOT NULL,
+  company VARCHAR(40) NOT NULL,
+  dep VARCHAR (20) NOT NULL,
+  post VARCHAR (20),
+  name VARCHAR(20) NOT NULL,
+  phonetic VARCHAR(20) NOT NULL,
+  tel VARCHAR (20) NOT NULL,
+  mail VARCHAR(20) NOT NULL,
+  memo VARCHAR(100),
+) [42001-200]
+2022-05-20 11:57:45 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: 不明なデータ型: "VARCHR"
+Unknown data type: "VARCHR"; SQL statement:
+CREATE TABLE Bc (
+  number CHAR(4) PRIMARY KEY,
+  zipcode VARCHAR(20) ,
+  address VARCHAR(40) NOT NULL,
+  company VARCHAR(40) NOT NULL,
+  dep VARCHAR(20) NOT NULL,
+  post VARCHAR(20),
+  name VARCHAR(20) NOT NULL,
+  phonetic VARCHR(20) NOT NULL,
+  tel VARCHAR(20) NOT NULL,
+  mail VARCHAR(20) NOT NULL,
+  memo VARCHAR(100),
+) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-05-20 11:57:53 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE BC (
+  NUMBER CHAR(4) PRIMARY KEY,
+  ZIPCODE VARCHAR(20) ,
+  ADDRESS VARCHAR(40) NOT NULL,
+  COMPANY VARCHAR(40) NOT NULL,
+  DEP VARCHAR(20) NOT NULL,
+  POST VARCHAR(20),
+  NAME VARCHAR(20) NOT NULL,
+  PHONETIC VARCHAR(20) NOT NULL,
+  TEL VARCHAR(20) NOT NULL,
+  MAIL VARCHAR(20) NOT NULL,
+  MEMO VARCHAR(100),
+)[*]"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE BC (
+  NUMBER CHAR(4) PRIMARY KEY,
+  ZIPCODE VARCHAR(20) ,
+  ADDRESS VARCHAR(40) NOT NULL,
+  COMPANY VARCHAR(40) NOT NULL,
+  DEP VARCHAR(20) NOT NULL,
+  POST VARCHAR(20),
+  NAME VARCHAR(20) NOT NULL,
+  PHONETIC VARCHAR(20) NOT NULL,
+  TEL VARCHAR(20) NOT NULL,
+  MAIL VARCHAR(20) NOT NULL,
+  MEMO VARCHAR(100),
+)[*]"; expected "identifier"; SQL statement:
+CREATE TABLE Bc (
+  number CHAR(4) PRIMARY KEY,
+  zipcode VARCHAR(20) ,
+  address VARCHAR(40) NOT NULL,
+  company VARCHAR(40) NOT NULL,
+  dep VARCHAR(20) NOT NULL,
+  post VARCHAR(20),
+  name VARCHAR(20) NOT NULL,
+  phonetic VARCHAR(20) NOT NULL,
+  tel VARCHAR(20) NOT NULL,
+  mail VARCHAR(20) NOT NULL,
+  memo VARCHAR(100),
+) [42001-200]
+2022-05-20 11:59:55 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: 列 "MAIL VARCHAR(20)" の値が長過ぎます: "'nerima-jouhou@city.nerima.tokyo.jp' (34)"
+Value too long for column "MAIL VARCHAR(20)": "'nerima-jouhou@city.nerima.tokyo.jp' (34)"; SQL statement:
+INSERT INTO BC (number, zipcode, address, company, dep, post, name, phonetic, tel, mail, memo ) VALUES ('0001', '176-8501','東京都練馬区豊玉北6-12-1', '練馬区役所', '区長室', '区長', '前川燿男', 'まえかわあきお', '0339931111', 'nerima-jouhou@city.nerima.tokyo.jp', '二期目') [22001-200]
+2022-05-20 14:43:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "number" が見つかりません
+Column "number" not found [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3188)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3287)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:314)
+	at dao.BcDAO.select(BcDAO.java:65)
+	at test.BcDAOTest.main(BcDAOTest.java:13)
+2022-05-20 14:44:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "number" が見つかりません
+Column "number" not found [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3188)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3287)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:314)
+	at dao.BcDAO.select(BcDAO.java:65)
+	at test.BcDAOTest.main(BcDAOTest.java:13)
+2022-05-20 14:48:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "number" が見つかりません
+Column "number" not found [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3188)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3287)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:314)
+	at dao.BcDAO.select(BcDAO.java:65)
+	at test.BcDAOTest.main(BcDAOTest.java:13)
+2022-05-25 14:15:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: 列 """NUMBER"" CHAR(4) NOT NULL" の値が長過ぎます: "STRINGDECODE('\u81ea\u52d5\u3067\u5272\u308a\u5f53\u3066\u307e\u3059') (9)"
+Value too long for column """NUMBER"" CHAR(4) NOT NULL": "STRINGDECODE('\u81ea\u52d5\u3067\u5272\u308a\u5f53\u3066\u307e\u3059') (9)"; SQL statement:
+insert into BC (number, zipcode, address, company, dep, post, name, phonetic, tel, mail, memo ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [22001-199]
+2022-05-25 14:16:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: 列 """NUMBER"" CHAR(4) NOT NULL" の値が長過ぎます: "STRINGDECODE('\u81ea\u52d5\u3067\u5272\u308a\u5f53\u3066\u307e\u3059') (9)"
+Value too long for column """NUMBER"" CHAR(4) NOT NULL": "STRINGDECODE('\u81ea\u52d5\u3067\u5272\u308a\u5f53\u3066\u307e\u3059') (9)"; SQL statement:
+insert into BC (number, zipcode, address, company, dep, post, name, phonetic, tel, mail, memo ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [22001-199]
+2022-05-25 14:24:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "ALTER TABLE BC CHANGE[*] NUBER  INT AUTO_INCREMENT"; 期待されるステートメント "., ADD, SET, RENAME, DROP, ALTER"
+Syntax error in SQL statement "ALTER TABLE BC CHANGE[*] NUBER  INT AUTO_INCREMENT"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE BC CHANGE NUBER  INT AUTO_INCREMENT [42001-200]
+2022-05-25 15:00:31 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "ALTER TABLE  CHANGE NUMBER[*] INT AUTO_INCREMENT"; 期待されるステートメント "., ADD, SET, RENAME, DROP, ALTER"
+Syntax error in SQL statement "ALTER TABLE  CHANGE NUMBER[*] INT AUTO_INCREMENT"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE  CHANGE NUMBER INT AUTO_INCREMENT [42001-200]
+2022-05-25 15:07:35 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "ALTER TABLE  CHANGE NUMBER[*] NUMBER INT AUTO_INCREMENT"; 期待されるステートメント "., ADD, SET, RENAME, DROP, ALTER"
+Syntax error in SQL statement "ALTER TABLE  CHANGE NUMBER[*] NUMBER INT AUTO_INCREMENT"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE  CHANGE NUMBER NUMBER INT AUTO_INCREMENT [42001-200]
+2022-05-25 15:07:43 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "ALTER TABLE  CHANGE NUMBER[*] INT AUTO_INCREMENT"; 期待されるステートメント "., ADD, SET, RENAME, DROP, ALTER"
+Syntax error in SQL statement "ALTER TABLE  CHANGE NUMBER[*] INT AUTO_INCREMENT"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE  CHANGE NUMBER INT AUTO_INCREMENT [42001-200]
+2022-05-25 15:08:32 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "ALTER TABLE  CHANGE NUMBER[*] CHAR(4) AUTO_INCREMENT"; 期待されるステートメント "., ADD, SET, RENAME, DROP, ALTER"
+Syntax error in SQL statement "ALTER TABLE  CHANGE NUMBER[*] CHAR(4) AUTO_INCREMENT"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE  CHANGE NUMBER CHAR(4) AUTO_INCREMENT [42001-200]
+2022-05-25 15:08:33 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "ALTER TABLE  CHANGE NUMBER[*] CHAR(4) AUTO_INCREMENT"; 期待されるステートメント "., ADD, SET, RENAME, DROP, ALTER"
+Syntax error in SQL statement "ALTER TABLE  CHANGE NUMBER[*] CHAR(4) AUTO_INCREMENT"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE  CHANGE NUMBER CHAR(4) AUTO_INCREMENT [42001-200]
+2022-05-25 15:08:47 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "ALTER TABLE  CHANGE NUMBER[*] CHAR AUTO_INCREMENT"; 期待されるステートメント "., ADD, SET, RENAME, DROP, ALTER"
+Syntax error in SQL statement "ALTER TABLE  CHANGE NUMBER[*] CHAR AUTO_INCREMENT"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE  CHANGE NUMBER CHAR AUTO_INCREMENT [42001-200]
+2022-05-25 15:13:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "ALTER TABLE BC CHANGE[*] NUMBER INT AUTO_INCREMENT"; 期待されるステートメント "., ADD, SET, RENAME, DROP, ALTER"
+Syntax error in SQL statement "ALTER TABLE BC CHANGE[*] NUMBER INT AUTO_INCREMENT"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE Bc CHANGE NUMBER INT AUTO_INCREMENT [42001-200]
+2022-05-25 15:14:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: 不明なデータ型: "AUTO_INCREMENT"
+Unknown data type: "AUTO_INCREMENT"; SQL statement:
+ALTER TABLE bc ALTER COLUMN number AUTO_INCREMENT [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseAlterTableAlterColumnType(Parser.java:8065)
+	at org.h2.command.Parser.parseAlterTableAlter(Parser.java:7811)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:7698)
+	at org.h2.command.Parser.parseAlter(Parser.java:6983)
+	at org.h2.command.Parser.parsePrepared(Parser.java:887)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-05-25 15:19:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: データ変換中にエラーが発生しました "STRINGDECODE('\u81ea\u52d5\u3067\u5272\u308a\u5f53\u3066\u307e\u3059') (BC: ""NUMBER"" INT DEFAULT (NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_2FB3D2F9_E7CE_48F4_B6F1_828A4CCF448D"") NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_2FB3D2F9_E7CE_48F4_B6F1_828A4CCF448D"")"
+Data conversion error converting "STRINGDECODE('\u81ea\u52d5\u3067\u5272\u308a\u5f53\u3066\u307e\u3059') (BC: ""NUMBER"" INT DEFAULT (NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_2FB3D2F9_E7CE_48F4_B6F1_828A4CCF448D"") NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_2FB3D2F9_E7CE_48F4_B6F1_828A4CCF448D"")"; SQL statement:
+insert into BC (number, zipcode, address, company, dep, post, name, phonetic, tel, mail, memo ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11) [22018-199]
+2022-05-25 15:25:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: データ変換中にエラーが発生しました "STRINGDECODE('\u81ea\u52d5\u3067\u5272\u308a\u5f53\u3066\u307e\u3059') (BC: ""NUMBER"" INT DEFAULT (NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_2FB3D2F9_E7CE_48F4_B6F1_828A4CCF448D"") NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_2FB3D2F9_E7CE_48F4_B6F1_828A4CCF448D"")"
+Data conversion error converting "STRINGDECODE('\u81ea\u52d5\u3067\u5272\u308a\u5f53\u3066\u307e\u3059') (BC: ""NUMBER"" INT DEFAULT (NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_2FB3D2F9_E7CE_48F4_B6F1_828A4CCF448D"") NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_2FB3D2F9_E7CE_48F4_B6F1_828A4CCF448D"")"; SQL statement:
+insert into BC (number, zipcode, address, company, dep, post, name, phonetic, tel, mail, memo ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11) [22018-199]
+2022-05-29 00:41:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "BC" が見つかりません
+Table "BC" not found; SQL statement:
+INSERT INTO BC (number, zipcode, address, company, dep, post, name, phonetic, tel, mail, memo ) 
+VALUES ('0001', '176-8501','東京都練馬区豊玉北6-12-1', '練馬区役所', '区長室', '区長', '前川燿男', 'まえかわあきお', '0339931111', 'nerima-jouhou@city.nerima.tokyo.jp', '二期目') [42102-200]
+2022-05-29 00:41:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "BC" が見つかりません
+Table "BC" not found; SQL statement:
+INSERT INTO BC (number, zipcode, address, company, dep, post, name, phonetic, tel, mail, memo ) 
+VALUES ('0002', '163-8001','東京都新宿区西新宿2-8-1', '東京都庁', '知事室', '東京都知事', '小池百合子', 'こいけゆりこ', '0353211111', 'S0014601@section.metro.tokyo.jp ', '') [42102-200]
+2022-05-29 00:41:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "BC" が見つかりません
+Table "BC" not found; SQL statement:
+INSERT INTO BC (number, zipcode, address, company, dep, post, name, phonetic, tel, mail, memo ) 
+VALUES ('0003', '173-8501','東京都板橋区板橋2-66-1', '板橋区役所', '区長室', '区長', '坂本健', 'さかもとたけし', '0339641111', 'itabashi-jouhou@city.itabashi.tokyo.jp', '四期目') [42102-200]
+2022-05-29 00:41:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "BC" が見つかりません
+Table "BC" not found; SQL statement:
+INSERT INTO BC (number, zipcode, address, company, dep, post, name, phonetic, tel, mail, memo ) 
+VALUES ('0004', '166-8570','東京都杉並区阿佐ヶ谷1-15-1', '杉並区役所', '区長室', '区長', '田中良', 'たなかりょう', '0333122111', 'suginami-jouhou@city.suginami.tokyo.jp', '明治大卒') [42102-200]
+2022-05-29 00:41:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "BC" が見つかりません
+Table "BC" not found; SQL statement:
+INSERT INTO BC (number, zipcode, address, company, dep, post, name, phonetic, tel, mail, memo ) 
+VALUES ('0005', '164-8501','東京都中野区中野4-8-1', '中野区役所', '区長室', '区長', '酒井直人', 'さかいなおと', '0333891111', 'nakano-jouhou@city.nakano.tokyo.jp', '') [42102-200]
+2022-05-30 11:38:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "BC" が見つかりません
+Table "BC" not found; SQL statement:
+insert into BC (zipcode, address, company, dep, post, name, phonetic, tel, mail, memo ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [42102-199]
+2022-06-16 10:40:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL	VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE
+　GENDER[*] VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT,
+　DUE_DATE DATE,
+　CREATED_AT DATETIME,
+　UPDATED_AT DATETIME,
+　LOGIN_TIME DATETIME,
+　LOGOUT_TIME DATETIME
+)"; 期待されるステートメント "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL	VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE
+　GENDER[*] VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT,
+　DUE_DATE DATE,
+　CREATED_AT DATETIME,
+　UPDATED_AT DATETIME,
+　LOGIN_TIME DATETIME,
+　LOGOUT_TIME DATETIME
+)"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+create table user(
+　user_id int auto_increment primary key,
+　email	varchar(60) not null,
+　password varchar(100) not null,
+　name varchar(80),
+　nickname varchar(40),
+　post_code varchar(10),
+　address varchar(100),
+　birthday date
+　gender varchar(10),
+　tel varchar(20),
+　family_id int,
+　due_date date,
+　created_at datetime,
+　updated_at datetime,
+　login_time datetime,
+　logout_time datetime
+) [42001-200]
+2022-06-16 10:43:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL	VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE
+　GENDER[*] VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT,
+　FOREIGN KEY (FAMILY_ID) REFERENCES FAMILY(FAMILY_ID)
+)"; 期待されるステートメント "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL	VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE
+　GENDER[*] VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT,
+　FOREIGN KEY (FAMILY_ID) REFERENCES FAMILY(FAMILY_ID)
+)"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+create table user(
+　user_id int auto_increment primary key,
+　email	varchar(60) not null,
+　password varchar(100) not null,
+　name varchar(80),
+　nickname varchar(40),
+　post_code varchar(10),
+　address varchar(100),
+　birthday date
+　gender varchar(10),
+　tel varchar(20),
+　family_id int,
+　FOREIGN KEY (family_id) REFERENCES family(family_id)
+) [42001-200]
+2022-06-16 10:46:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL	VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE
+　GENDER[*] VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT,
+　FOREIGN KEY (FAMILY_ID) REFERENCES FAMILY(FAMILY_ID)
+)"; 期待されるステートメント "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL	VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE
+　GENDER[*] VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT,
+　FOREIGN KEY (FAMILY_ID) REFERENCES FAMILY(FAMILY_ID)
+)"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+create table user(
+　user_id int auto_increment primary key,
+　email	varchar(60) not null,
+　password varchar(100) not null,
+　name varchar(80),
+　nickname varchar(40),
+　post_code varchar(10),
+　address varchar(100),
+　birthday date
+　gender varchar(10),
+　tel varchar(20),
+　family_id int,
+　FOREIGN KEY (family_id) REFERENCES family(family_id)
+) [42001-200]
+2022-06-16 10:47:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL	VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE
+　GENDER[*] VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT FK REFERENCE FAMILY (FAMILY_ID) 
+)"; 期待されるステートメント "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL	VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE
+　GENDER[*] VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT FK REFERENCE FAMILY (FAMILY_ID) 
+)"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+create table user(
+　user_id int auto_increment primary key,
+　email	varchar(60) not null,
+　password varchar(100) not null,
+　name varchar(80),
+　nickname varchar(40),
+　post_code varchar(10),
+　address varchar(100),
+　birthday date
+　gender varchar(10),
+　tel varchar(20),
+　family_id int FK reference family (family_id) 
+) [42001-200]
+2022-06-16 10:47:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL	VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE
+　GENDER[*] VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT,
+   FOREIGN KEY FAMILY_ID REFERENCE FAMILY (FAMILY_ID) 
+)"; 期待されるステートメント "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL	VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE
+　GENDER[*] VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT,
+   FOREIGN KEY FAMILY_ID REFERENCE FAMILY (FAMILY_ID) 
+)"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+create table user(
+　user_id int auto_increment primary key,
+　email	varchar(60) not null,
+　password varchar(100) not null,
+　name varchar(80),
+　nickname varchar(40),
+　post_code varchar(10),
+　address varchar(100),
+　birthday date
+　gender varchar(10),
+　tel varchar(20),
+　family_id int,
+   foreign key family_id reference family (family_id) 
+) [42001-200]
+2022-06-16 10:48:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE
+　GENDER[*] VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT,
+   FOREIGN KEY FAMILY_ID REFERENCE FAMILY (FAMILY_ID) 
+)"; 期待されるステートメント "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE
+　GENDER[*] VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT,
+   FOREIGN KEY FAMILY_ID REFERENCE FAMILY (FAMILY_ID) 
+)"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+create table user(
+　user_id int auto_increment primary key,
+　email varchar(60) not null,
+　password varchar(100) not null,
+　name varchar(80),
+　nickname varchar(40),
+　post_code varchar(10),
+　address varchar(100),
+　birthday date
+　gender varchar(10),
+　tel varchar(20),
+　family_id int,
+   foreign key family_id reference family (family_id) 
+) [42001-200]
+2022-06-16 10:48:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE,
+　GENDER VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT,
+   FOREIGN KEY FAMILY_ID[*] REFERENCE FAMILY (FAMILY_ID) 
+)"; 期待されるステートメント "("
+Syntax error in SQL statement "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE,
+　GENDER VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT,
+   FOREIGN KEY FAMILY_ID[*] REFERENCE FAMILY (FAMILY_ID) 
+)"; expected "("; SQL statement:
+create table user(
+　user_id int auto_increment primary key,
+　email varchar(60) not null,
+　password varchar(100) not null,
+　name varchar(80),
+　nickname varchar(40),
+　post_code varchar(10),
+　address varchar(100),
+　birthday date,
+　gender varchar(10),
+　tel varchar(20),
+　family_id int,
+   foreign key family_id reference family (family_id) 
+) [42001-200]
+2022-06-16 10:49:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE,
+　GENDER VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT,
+   FOREIGN KEY FAMILY_ID[*] REFERENCES FAMILY (FAMILY_ID) 
+)"; 期待されるステートメント "("
+Syntax error in SQL statement "CREATE TABLE USER(
+　USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+　EMAIL VARCHAR(60) NOT NULL,
+　PASSWORD VARCHAR(100) NOT NULL,
+　NAME VARCHAR(80),
+　NICKNAME VARCHAR(40),
+　POST_CODE VARCHAR(10),
+　ADDRESS VARCHAR(100),
+　BIRTHDAY DATE,
+　GENDER VARCHAR(10),
+　TEL VARCHAR(20),
+　FAMILY_ID INT,
+   FOREIGN KEY FAMILY_ID[*] REFERENCES FAMILY (FAMILY_ID) 
+)"; expected "("; SQL statement:
+create table user(
+　user_id int auto_increment primary key,
+　email varchar(60) not null,
+　password varchar(100) not null,
+　name varchar(80),
+　nickname varchar(40),
+　post_code varchar(10),
+　address varchar(100),
+　birthday date,
+　gender varchar(10),
+　tel varchar(20),
+　family_id int,
+   foreign key family_id references family (family_id) 
+) [42001-200]
+2022-06-16 10:50:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+ EMAIL VARCHAR(60) NOT NULL,
+ PASSWORD VARCHAR(100) NOT NULL,
+ NAME VARCHAR(80),
+ NICKNAME VARCHAR(40),
+ POST_CODE VARCHAR(10),
+ ADDRESS VARCHAR(100),
+ GENDER VARCHAR(10),
+ TEL VARCHAR(20),
+ FAMILY_ID INT,
+ FOREIGN KEY FAMILY_ID[*] REFERENCES FAMILY (FAMILY_ID) 
+)"; 期待されるステートメント "("
+Syntax error in SQL statement "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+ EMAIL VARCHAR(60) NOT NULL,
+ PASSWORD VARCHAR(100) NOT NULL,
+ NAME VARCHAR(80),
+ NICKNAME VARCHAR(40),
+ POST_CODE VARCHAR(10),
+ ADDRESS VARCHAR(100),
+ GENDER VARCHAR(10),
+ TEL VARCHAR(20),
+ FAMILY_ID INT,
+ FOREIGN KEY FAMILY_ID[*] REFERENCES FAMILY (FAMILY_ID) 
+)"; expected "("; SQL statement:
+create table user(
+ user_id int auto_increment primary key,
+ email varchar(60) not null,
+ password varchar(100) not null,
+ name varchar(80),
+ nickname varchar(40),
+ post_code varchar(10),
+ address varchar(100),
+ gender varchar(10),
+ tel varchar(20),
+ family_id int,
+ foreign key family_id references family (family_id) 
+) [42001-200]
+2022-06-16 10:50:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+ EMAIL VARCHAR(60) NOT NULL,
+ PASSWORD VARCHAR(100) NOT NULL,
+ NAME VARCHAR(80),
+ TEL VARCHAR(20),
+ FAMILY_ID INT,
+ FOREIGN KEY FAMILY_ID[*] REFERENCES FAMILY (FAMILY_ID) 
+)"; 期待されるステートメント "("
+Syntax error in SQL statement "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+ EMAIL VARCHAR(60) NOT NULL,
+ PASSWORD VARCHAR(100) NOT NULL,
+ NAME VARCHAR(80),
+ TEL VARCHAR(20),
+ FAMILY_ID INT,
+ FOREIGN KEY FAMILY_ID[*] REFERENCES FAMILY (FAMILY_ID) 
+)"; expected "("; SQL statement:
+create table user(
+ user_id int auto_increment primary key,
+ email varchar(60) not null,
+ password varchar(100) not null,
+ name varchar(80),
+ tel varchar(20),
+ family_id int,
+ foreign key family_id references family (family_id) 
+) [42001-200]
+2022-06-16 10:52:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+ EMAIL VARCHAR(60) NOT NULL,
+ PASSWORD VARCHAR(100) NOT NULL,
+ NAME VARCHAR(80),
+ TEL VARCHAR(20),
+ FAMILY_ID INT,
+ FOREIGN KEY FAMILY_ID[*] REFERENCES FAMILY(FAMILY_ID) 
+)"; 期待されるステートメント "("
+Syntax error in SQL statement "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+ EMAIL VARCHAR(60) NOT NULL,
+ PASSWORD VARCHAR(100) NOT NULL,
+ NAME VARCHAR(80),
+ TEL VARCHAR(20),
+ FAMILY_ID INT,
+ FOREIGN KEY FAMILY_ID[*] REFERENCES FAMILY(FAMILY_ID) 
+)"; expected "("; SQL statement:
+create table user(
+ user_id int auto_increment primary key,
+ email varchar(60) not null,
+ password varchar(100) not null,
+ name varchar(80),
+ tel varchar(20),
+ family_id int,
+ foreign key family_id references family(family_id) 
+) [42001-200]
+2022-06-16 10:52:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+ EMAIL VARCHAR(60) NOT NULL,
+ PASSWORD VARCHAR(100) NOT NULL,
+ NAME VARCHAR(80),
+ FAMILY_ID INT,
+ FOREIGN KEY FAMILY_ID[*] REFERENCES FAMILY(FAMILY_ID) 
+)"; 期待されるステートメント "("
+Syntax error in SQL statement "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+ EMAIL VARCHAR(60) NOT NULL,
+ PASSWORD VARCHAR(100) NOT NULL,
+ NAME VARCHAR(80),
+ FAMILY_ID INT,
+ FOREIGN KEY FAMILY_ID[*] REFERENCES FAMILY(FAMILY_ID) 
+)"; expected "("; SQL statement:
+create table user(
+ user_id int auto_increment primary key,
+ email varchar(60) not null,
+ password varchar(100) not null,
+ name varchar(80),
+ family_id int,
+ foreign key family_id references family(family_id) 
+) [42001-200]
+2022-06-16 10:53:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+ NAME VARCHAR(80),
+ FAMILY_ID INT,
+ FOREIGN KEY FAMILY_ID[*] REFERENCES FAMILY(FAMILY_ID) 
+)"; 期待されるステートメント "("
+Syntax error in SQL statement "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+ NAME VARCHAR(80),
+ FAMILY_ID INT,
+ FOREIGN KEY FAMILY_ID[*] REFERENCES FAMILY(FAMILY_ID) 
+)"; expected "("; SQL statement:
+create table user(
+ user_id int auto_increment primary key,
+ name varchar(80),
+ family_id int,
+ foreign key family_id references family(family_id) 
+) [42001-200]
+2022-06-16 10:53:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+ NAME VARCHAR(80),
+ FAMILY_ID INT,
+ FOREIGN KEY FAMILY_ID[*] REFERENCES FAMILY(FAMILY_ID)
+)"; 期待されるステートメント "("
+Syntax error in SQL statement "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+ NAME VARCHAR(80),
+ FAMILY_ID INT,
+ FOREIGN KEY FAMILY_ID[*] REFERENCES FAMILY(FAMILY_ID)
+)"; expected "("; SQL statement:
+create table user(
+ user_id int auto_increment primary key,
+ name varchar(80),
+ family_id int,
+ foreign key family_id references family(family_id)
+) [42001-200]
+2022-06-16 10:56:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: 不明なデータ型: "AUTO_INCREMENT"
+Unknown data type: "AUTO_INCREMENT"; SQL statement:
+create table user(
+ user_id AUTO_INCREMENT PRIMARY KEY,
+ name varchar(20),
+ family_id int,
+ foreign key(family_id) preference family(family_id)
+) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 10:57:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+ NAME VARCHAR(20),
+ FAMILY_ID INT,
+ FOREIGN KEY(FAMILY_ID) PREFERENCE[*] FAMILY(FAMILY_ID)
+)"; 期待されるステートメント "INDEX, REFERENCES"
+Syntax error in SQL statement "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+ NAME VARCHAR(20),
+ FAMILY_ID INT,
+ FOREIGN KEY(FAMILY_ID) PREFERENCE[*] FAMILY(FAMILY_ID)
+)"; expected "INDEX, REFERENCES"; SQL statement:
+create table user(
+ user_id int AUTO_INCREMENT PRIMARY KEY,
+ name varchar(20),
+ family_id int,
+ foreign key(family_id) preference family(family_id)
+) [42001-200]
+2022-06-16 10:58:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT FAMILY[*] FROM CREATED_AT(NOW)"; 期待されるステートメント "INTO"
+Syntax error in SQL statement "INSERT FAMILY[*] FROM CREATED_AT(NOW)"; expected "INTO"; SQL statement:
+insert family from created_at(now) [42001-200]
+2022-06-16 11:33:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INNER[*] JOIN FAMILY ON USER.FAMILY_ID = FAMILY.FAMILY_ID"
+Syntax error in SQL statement "INNER[*] JOIN FAMILY ON USER.FAMILY_ID = FAMILY.FAMILY_ID"; SQL statement:
+INNER JOIN family ON user.family_id = family.family_id [42000-200]
+2022-06-16 11:33:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列名 "FAMILY_ID" があいまいです
+Ambiguous column name "FAMILY_ID"; SQL statement:
+select name from family INNER JOIN family ON user.family_id = family.family_id [90059-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:129)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:107)
+	at org.h2.expression.condition.Comparison.mapColumns(Comparison.java:506)
+	at org.h2.table.TableFilter$MapColumnsVisitor.accept(TableFilter.java:1380)
+	at org.h2.table.TableFilter.visit(TableFilter.java:1323)
+	at org.h2.table.TableFilter.addJoin(TableFilter.java:703)
+	at org.h2.command.Parser.addJoin(Parser.java:2513)
+	at org.h2.command.Parser.readJoin(Parser.java:2415)
+	at org.h2.command.Parser.parseJoinTableFilter(Parser.java:2839)
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2828)
+	at org.h2.command.Parser.parseSelect(Parser.java:2959)
+	at org.h2.command.Parser.parseQuerySub(Parser.java:2817)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2649)
+	at org.h2.command.Parser.parseQuery(Parser.java:2620)
+	at org.h2.command.Parser.parsePrepared(Parser.java:868)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 11:43:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABELE[*] TEST(
+ TEST_ID INT AUTO_INCREMENT PRIMARY KEY,
+ TODAY DATE,
+ FOOD VARCHAR(10),
+ YESTERDAY DATETIME
+)"; 期待されるステートメント "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, SYNONYM, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"
+Syntax error in SQL statement "CREATE TABELE[*] TEST(
+ TEST_ID INT AUTO_INCREMENT PRIMARY KEY,
+ TODAY DATE,
+ FOOD VARCHAR(10),
+ YESTERDAY DATETIME
+)"; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, SYNONYM, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+create tabele test(
+ test_id int auto_increment primary key,
+ today date,
+ food varchar(10),
+ yesterday datetime
+) [42001-200]
+2022-06-16 11:44:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABELE[*] TEST(
+ TEST_ID INT AUTO_INCREMENT PRIMARY KEY,
+ TODAY DATE,
+ YESTERDAY DATETIME
+)"; 期待されるステートメント "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, SYNONYM, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"
+Syntax error in SQL statement "CREATE TABELE[*] TEST(
+ TEST_ID INT AUTO_INCREMENT PRIMARY KEY,
+ TODAY DATE,
+ YESTERDAY DATETIME
+)"; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, SYNONYM, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+create tabele test(
+ test_id int auto_increment primary key,
+ today date,
+ yesterday datetime
+) [42001-200]
+2022-06-16 11:44:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABELE[*] TEST(
+ TEST_ID INT AUTO_INCREMENT PRIMARY KEY,
+ TODAY DATE
+)"; 期待されるステートメント "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, SYNONYM, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"
+Syntax error in SQL statement "CREATE TABELE[*] TEST(
+ TEST_ID INT AUTO_INCREMENT PRIMARY KEY,
+ TODAY DATE
+)"; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, SYNONYM, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+create tabele test(
+ test_id int auto_increment primary key,
+ today date
+) [42001-200]
+2022-06-16 11:49:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 関数 "GETDATE" が見つかりません
+Function "GETDATE" not found; SQL statement:
+insert into test(today, yesterday)
+values(getdate(), getdatetime()) [90022-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:3565)
+	at org.h2.command.Parser.readFunction(Parser.java:3770)
+	at org.h2.command.Parser.readTerm(Parser.java:4305)
+	at org.h2.command.Parser.readFactor(Parser.java:3343)
+	at org.h2.command.Parser.readSum(Parser.java:3330)
+	at org.h2.command.Parser.readConcat(Parser.java:3305)
+	at org.h2.command.Parser.readCondition(Parser.java:3108)
+	at org.h2.command.Parser.readExpression(Parser.java:3059)
+	at org.h2.command.Parser.parseValuesForCommand(Parser.java:1877)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1817)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 11:50:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 関数 "GETDATE" が見つかりません
+Function "GETDATE" not found; SQL statement:
+insert into test(today, yesterday)
+values(getdate(), getdate()) [90022-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:3565)
+	at org.h2.command.Parser.readFunction(Parser.java:3770)
+	at org.h2.command.Parser.readTerm(Parser.java:4305)
+	at org.h2.command.Parser.readFactor(Parser.java:3343)
+	at org.h2.command.Parser.readSum(Parser.java:3330)
+	at org.h2.command.Parser.readConcat(Parser.java:3305)
+	at org.h2.command.Parser.readCondition(Parser.java:3108)
+	at org.h2.command.Parser.readExpression(Parser.java:3059)
+	at org.h2.command.Parser.parseValuesForCommand(Parser.java:1877)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1817)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 11:56:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: "CONSTRAINT_27E" が依存しているため、"FAMILY" をドロップすることはできません
+Cannot drop "FAMILY" because "CONSTRAINT_27E" depends on it; SQL statement:
+drop table family [90107-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:98)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:124)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 13:42:40 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO SAMPLE(NAME)
+VALUES ('リチャード')[*]；"
+Syntax error in SQL statement "INSERT INTO SAMPLE(NAME)
+VALUES ('リチャード')[*]；"; SQL statement:
+insert into sample(name)
+values ('リチャード')； [42000-200]
+2022-06-16 13:46:34 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE SAMPLE2(
+ ID INT,
+ NAME VARCHAR(20),
+ TODAY DATETIME CURRENT_TIMESTAMP[*],
+ FOREIGN KEY (ID) REFERENCES SAMPLE(ID) ON UPDATE CASCADE
+)"; 期待されるステートメント "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE SAMPLE2(
+ ID INT,
+ NAME VARCHAR(20),
+ TODAY DATETIME CURRENT_TIMESTAMP[*],
+ FOREIGN KEY (ID) REFERENCES SAMPLE(ID) ON UPDATE CASCADE
+)"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+create table sample2(
+ id int,
+ name varchar(20),
+ today datetime current_timestamp,
+ foreign key (id) references sample(id) on update cascade
+) [42001-200]
+2022-06-16 13:47:32 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE SAMPLE2(
+ ID INT,
+ NAME VARCHAR(20),
+ TODAY DATETIME CURRENT_TIME[*],
+ FOREIGN KEY (ID) REFERENCES SAMPLE(ID) ON UPDATE CASCADE
+)"; 期待されるステートメント "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE SAMPLE2(
+ ID INT,
+ NAME VARCHAR(20),
+ TODAY DATETIME CURRENT_TIME[*],
+ FOREIGN KEY (ID) REFERENCES SAMPLE(ID) ON UPDATE CASCADE
+)"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+create table sample2(
+ id int,
+ name varchar(20),
+ today datetime current_time,
+ foreign key (id) references sample(id) on update cascade
+) [42001-200]
+2022-06-16 13:47:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE SAMPLE2(
+ ID INT,
+ NAME VARCHAR(20),
+ TODAY DATETIME CURRENT_DATE[*],
+ FOREIGN KEY (ID) REFERENCES SAMPLE(ID) ON UPDATE CASCADE
+)"; 期待されるステートメント "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE SAMPLE2(
+ ID INT,
+ NAME VARCHAR(20),
+ TODAY DATETIME CURRENT_DATE[*],
+ FOREIGN KEY (ID) REFERENCES SAMPLE(ID) ON UPDATE CASCADE
+)"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+create table sample2(
+ id int,
+ name varchar(20),
+ today datetime current_date,
+ foreign key (id) references sample(id) on update cascade
+) [42001-200]
+2022-06-16 13:50:27 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "INTO" が見つかりません
+Table "INTO" not found; SQL statement:
+update into sample2 (id, name)
+values(1, 'おい森') [42102-200]
+2022-06-16 13:50:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "UPDATE SAMPLE2 ([*]ID, NAME)
+VALUES(1, 'おい森')"; 期待されるステートメント "., AS, SET"
+Syntax error in SQL statement "UPDATE SAMPLE2 ([*]ID, NAME)
+VALUES(1, 'おい森')"; expected "., AS, SET"; SQL statement:
+update sample2 (id, name)
+values(1, 'おい森') [42001-200]
+2022-06-16 14:11:08 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "TELPARTNER" が見つかりません
+Column "TELPARTNER" not found; SQL statement:
+insert into partner (telPARTNER PARTNER )
+values(9978) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 14:16:37 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "DELETE FROM FAMILY WHERE CREATED_AT = 2022-06-16 14[*]:12:30.689724"
+Syntax error in SQL statement "DELETE FROM FAMILY WHERE CREATED_AT = 2022-06-16 14[*]:12:30.689724"; SQL statement:
+delete from family where created_at = 2022-06-16 14:12:30.689724 [42000-200]
+2022-06-16 14:17:23 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "FAMILY_ID[*]"
+Syntax error in SQL statement "FAMILY_ID[*]"; SQL statement:
+FAMILY_ID [42000-200]
+2022-06-16 14:46:34 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "ID" が見つかりません
+Column "ID" not found; SQL statement:
+create table sample2(
+ s_id int auto_increment primary key,
+ tel int,
+ id int,
+ foreign key (id) references family(id) ON DELETE CASCADE
+) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:115)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:231)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 14:46:56 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "ID" が見つかりません
+Column "ID" not found; SQL statement:
+create table sample2(
+ s_id int auto_increment primary key,
+ tel int,
+ id int,
+ foreign key (id) references family(id) ON DELETE CASCADE
+) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:115)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:231)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 14:48:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO SAMPLE2(TEL, ID)
+VALUE[*](1111, 1)"; 期待されるステートメント "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "INSERT INTO SAMPLE2(TEL, ID)
+VALUE[*](1111, 1)"; expected "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"; SQL statement:
+insert into sample2(tel, id)
+value(1111, 1) [42001-200]
+2022-06-16 14:48:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO SAMPLE2(TEL, ID)
+VALUE[*](2222, 1)"; 期待されるステートメント "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "INSERT INTO SAMPLE2(TEL, ID)
+VALUE[*](2222, 1)"; expected "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"; SQL statement:
+insert into sample2(tel, id)
+value(2222, 1) [42001-200]
+2022-06-16 14:48:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO SAMPLE2(TEL, ID)
+VALUE[*](3333, 2)"; 期待されるステートメント "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "INSERT INTO SAMPLE2(TEL, ID)
+VALUE[*](3333, 2)"; expected "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"; SQL statement:
+insert into sample2(tel, id)
+value(3333, 2) [42001-200]
+2022-06-16 14:48:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO SAMPLE2(TEL, ID)
+VALUE[*](4444, 4)"; 期待されるステートメント "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "INSERT INTO SAMPLE2(TEL, ID)
+VALUE[*](4444, 4)"; expected "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"; SQL statement:
+insert into sample2(tel, id)
+value(4444, 4) [42001-200]
+2022-06-16 14:50:26 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "DROP TABLE *[*]"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "DROP TABLE *[*]"; expected "identifier"; SQL statement:
+drop table * [42001-200]
+2022-06-16 14:50:40 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: "CONSTRAINT_FB" が依存しているため、"FAMILY" をドロップすることはできません
+Cannot drop "FAMILY" because "CONSTRAINT_FB" depends on it; SQL statement:
+drop table family [90107-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:98)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:124)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 14:51:35 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: "CONSTRAINT_99F" が依存しているため、"SAMPLE" をドロップすることはできません
+Cannot drop "SAMPLE" because "CONSTRAINT_99F" depends on it; SQL statement:
+drop table sample [90107-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:98)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:124)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 15:16:25 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE CHILDCARE_QUEST_LABEL(
+ CHILDCARE_QUEST_LABEL_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ CONTENT_LABEL VARCHAR(100)
+)
+CREATE[*] TABLE COLLUM_GENRE(
+ COLLUM_GENRE_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ NAME VARCHAR(30),
+ IMAGE VARCHAR(100)
+)"
+Syntax error in SQL statement "CREATE TABLE CHILDCARE_QUEST_LABEL(
+ CHILDCARE_QUEST_LABEL_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ CONTENT_LABEL VARCHAR(100)
+)
+CREATE[*] TABLE COLLUM_GENRE(
+ COLLUM_GENRE_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ NAME VARCHAR(30),
+ IMAGE VARCHAR(100)
+)"; SQL statement:
+create table childcare_quest_label(
+ childcare_quest_label_id int auto_increment not null primary key,
+ content_label varchar(100)
+)
+create table collum_genre(
+ collum_genre_id int auto_increment not null primary key,
+ name varchar(30),
+ image varchar(100)
+) [42000-200]
+2022-06-16 16:42:40 jdbc[5]: null
+org.h2.message.DbException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 16 more
+2022-06-16 16:43:38 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "COLUMN_GENRE" が見つかりません
+Table "COLUMN_GENRE" not found; SQL statement:
+drop table column_genre [42102-200]
+2022-06-16 16:45:10 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ EMAIL VARCHAR(60) NOT NULL,
+ PASSWORD VARCHAR NOT NULL,
+ NAME VARCHAR(80),
+ NICKNAME VARCHAR(40),
+ POST_CODE VARCHAR(10),
+ ADDRESS VARCHAR(100),
+ BIRTHDAY DATE,
+ GENDER VARCHAR(10),
+ TEL VARCHAR(20),
+ FAMILY_ID INT,
+ DUE_DATE DATE,
+ CREATED_AT DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+ UPDATED_AT DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL,
+ LOGIN_TIME DATETIME,
+ LOGOUT_TIME DATETIME,
+)[*]"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE USER(
+ USER_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ EMAIL VARCHAR(60) NOT NULL,
+ PASSWORD VARCHAR NOT NULL,
+ NAME VARCHAR(80),
+ NICKNAME VARCHAR(40),
+ POST_CODE VARCHAR(10),
+ ADDRESS VARCHAR(100),
+ BIRTHDAY DATE,
+ GENDER VARCHAR(10),
+ TEL VARCHAR(20),
+ FAMILY_ID INT,
+ DUE_DATE DATE,
+ CREATED_AT DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+ UPDATED_AT DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL,
+ LOGIN_TIME DATETIME,
+ LOGOUT_TIME DATETIME,
+)[*]"; expected "identifier"; SQL statement:
+create table user(
+ user_id int auto_increment not null primary key,
+ email varchar(60) not null,
+ password varchar not null,
+ name varchar(80),
+ nickname varchar(40),
+ post_code varchar(10),
+ address varchar(100),
+ birthday date,
+ gender varchar(10),
+ tel varchar(20),
+ family_id int,
+ due_date date,
+ created_at datetime default current_timestamp not null,
+ updated_at datetime default current_timestamp on update current_timestamp not null,
+ login_time datetime,
+ logout_time datetime,
+) [42001-200]
+2022-06-16 16:46:43 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "USER" が見つかりません
+Table "USER" not found; SQL statement:
+drop table user [42102-200]
+2022-06-16 16:47:25 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "PARTNER_ATTRIBUTE" が見つかりません
+Table "PARTNER_ATTRIBUTE" not found; SQL statement:
+create table partner(
+ partner_id int auto_increment not null primary key,
+ family_id int,
+ name varchar(40),
+ appetite int default 0,
+ sleepiness int default 0,
+ humor int default 0,
+ nausea int default 0,
+ stress int default 0,
+ dizziness int default 0,
+ fatigue int default 0,
+ stiff_shoulder int default 0,
+ headache int default 0,
+ backache int default 0,
+ stomach_ache int default 0,
+ feeling int default 0,
+ tidying int default 0,
+ self_assertion int default 0,
+ poop int default 0,
+ tooth_brushing int default 0,
+ created_at datetime default current_timestamp not null,
+ updated_at datetime default current_timestamp on update current_timestamp not null,
+ foreign key (attribute) references partner_attribute(partner_attribute_id)
+ on delete set null on update cascade
+) [42102-200]
+2022-06-16 16:47:36 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "PARTNER_ATTRIBUTE" が見つかりません
+Table "PARTNER_ATTRIBUTE" not found; SQL statement:
+create table user_condition(
+ user_condition_id int auto_increment not null primary key,
+ partner_id int not null,
+ weight float,
+ body_temparture float,
+ text varchar(1000),
+ appetite int,
+ sleepiness int,
+ humor int,
+ nausea int,
+ stress int,
+ dizziness int,
+ fatigue int,
+ stiff_shoulder int,
+ headache int,
+ backache int,
+ stomach_ache int,
+ feeling int,
+ tidying int,
+ self_assertion int,
+ poop int,
+ tooth_brushing int,
+ created_at datetime default current_timestamp not null,
+ updated_at datetime default current_timestamp on update current_timestamp not null,
+ foreign key (attribute) references partner_attribute(partner_attribute_id)
+ on delete set null on update cascade
+ ) [42102-200]
+2022-06-16 16:47:53 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "GENRE_ID" が見つかりません
+Column "GENRE_ID" not found; SQL statement:
+create table column(
+ column_id int auto_increment not null primary key,
+ title varchar(30),
+ body varchar(5000),
+ genre_id int,
+ foreign key (genre_id) references column_genre(genre_id)
+ on delete set null on update cascade
+) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:115)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:231)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 16:49:07 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; expected "identifier"; SQL statement:
+create table labor_pain(
+ labor_pain_id int auto_increment not null primary key,
+ user_id int,
+ start_time datetime default current_timestamp,
+ stop_time datetime,
+ interval time,
+ foreign key (user_id) references user(user_id) on delete set null on update cascade
+) [42001-200]
+2022-06-16 16:50:54 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; expected "identifier"; SQL statement:
+create table labor_pain(
+ labor_pain_id int auto_increment not null primary key,
+ user_id int,
+ start_time datetime default current_timestamp,
+ stop_time datetime,
+ interval time,
+ foreign key (user_id) references user(user_id) on delete set null on update cascade
+) [42001-200]
+2022-06-16 16:55:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: 不明なデータ型: "NOT"
+Unknown data type: "NOT"; SQL statement:
+create table labor_pain(
+ labor_pain int auto_increment not null primary key,
+ user_id not null,
+ start_time datetime default current_timestamp,
+ stop_time datetime,
+ interval time,
+ foreign key (user_id) references user(user_id) on delete set null on update cascade
+) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 16:55:38 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT NOT NULL,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT NOT NULL,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; expected "identifier"; SQL statement:
+create table labor_pain(
+ labor_pain int auto_increment not null primary key,
+ user_id int not null,
+ start_time datetime default current_timestamp,
+ stop_time datetime,
+ interval time,
+ foreign key (user_id) references user(user_id) on delete set null on update cascade
+) [42001-200]
+2022-06-16 17:37:51 jdbc[6]: null
+org.h2.message.DbException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 16 more
+2022-06-16 17:38:06 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT NOT NULL,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT NOT NULL,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; expected "identifier"; SQL statement:
+create table labor_pain(
+ labor_pain int auto_increment not null primary key,
+ user_id int not null,
+ start_time datetime default current_timestamp,
+ stop_time datetime,
+ interval time,
+ foreign key (user_id) references user(user_id) on delete set null on update cascade
+) [42001-200]
+2022-06-16 18:27:16 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT NOT NULL,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT NOT NULL,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; expected "identifier"; SQL statement:
+create table labor_pain(
+ labor_pain int auto_increment not null primary key,
+ user_id int not null,
+ start_time datetime default current_timestamp,
+ stop_time datetime,
+ interval time,
+ foreign key (user_id) references user(user_id) on delete set null on update cascade
+) [42001-200]
+2022-06-16 19:03:24 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: "CONSTRAINT_A7" が依存しているため、"FAMILY" をドロップすることはできません
+Cannot drop "FAMILY" because "CONSTRAINT_A7" depends on it; SQL statement:
+drop table family [90107-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:98)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:124)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 19:38:13 jdbc[9]: java.lang.Exception: Open Stack Trace
+	at org.h2.util.CloseWatcher.register(CloseWatcher.java:100)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:187)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+org.h2.message.DbException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 16 more
+2022-06-16 19:38:13 jdbc[9]: java.lang.Exception: Open Stack Trace
+	at org.h2.util.CloseWatcher.register(CloseWatcher.java:100)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:187)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+org.h2.message.DbException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 16 more
+2022-06-16 19:38:13 jdbc[9]: java.lang.Exception: Open Stack Trace
+	at org.h2.util.CloseWatcher.register(CloseWatcher.java:100)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:187)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+org.h2.message.DbException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 16 more
+2022-06-16 19:41:05 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "ATTRIBUTE" が見つかりません
+Column "ATTRIBUTE" not found; SQL statement:
+create table partner(
+ partner_id int auto_increment not null primary key,
+ family_id int,
+ name varchar(40),
+ appetite int default 0,
+ sleepiness int default 0,
+ humor int default 0,
+ nausea int default 0,
+ stress int default 0,
+ dizziness int default 0,
+ fatigue int default 0,
+ stiff_shoulder int default 0,
+ headache int default 0,
+ backache int default 0,
+ stomach_ache int default 0,
+ feeling int default 0,
+ tidying int default 0,
+ self_assertion int default 0,
+ poop int default 0,
+ tooth_brushing int default 0,
+ created_at datetime default current_timestamp not null,
+ updated_at datetime default current_timestamp on update current_timestamp not null,
+ foreign key (attribute) references partner_attribute(partner_attribute_id)
+ on delete set null on update cascade
+) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:115)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:216)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 19:41:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "ATTRIBUTE" が見つかりません
+Column "ATTRIBUTE" not found; SQL statement:
+create table user_condition(
+ user_condition_id int auto_increment not null primary key,
+ partner_id int not null,
+ weight float,
+ body_temparture float,
+ text varchar(1000),
+ appetite int,
+ sleepiness int,
+ humor int,
+ nausea int,
+ stress int,
+ dizziness int,
+ fatigue int,
+ stiff_shoulder int,
+ headache int,
+ backache int,
+ stomach_ache int,
+ feeling int,
+ tidying int,
+ self_assertion int,
+ poop int,
+ tooth_brushing int,
+ created_at datetime default current_timestamp not null,
+ updated_at datetime default current_timestamp on update current_timestamp not null,
+ foreign key (attribute) references partner_attribute(partner_attribute_id)
+ on delete set null on update cascade
+ ) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:115)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:216)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 19:42:05 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; expected "identifier"; SQL statement:
+create table labor_pain(
+ labor_pain_id int auto_increment not null primary key,
+ user_id int,
+ start_time datetime default current_timestamp,
+ stop_time datetime,
+ interval time,
+ foreign key (user_id) references user(user_id) on delete set null on update cascade
+) [42001-200]
+2022-06-16 19:42:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; expected "identifier"; SQL statement:
+create table labor_pain(
+ labor_pain_id int auto_increment not null primary key,
+ user_id int,
+ start_time datetime default current_timestamp,
+ stop_time datetime,
+ interval time,
+ foreign key (user_id) references user(user_id) on delete set null on update cascade
+) [42001-200]
+2022-06-16 19:47:00 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: "CONSTRAINT_259, CONSTRAINT_185, CONSTRAINT_1859" が依存しているため、"USER" をドロップすることはできません
+Cannot drop "USER" because "CONSTRAINT_259, CONSTRAINT_185, CONSTRAINT_1859" depends on it; SQL statement:
+drop table user [90107-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:98)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:124)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 19:47:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: "CONSTRAINT_259, CONSTRAINT_185, CONSTRAINT_1859" が依存しているため、"USER" をドロップすることはできません
+Cannot drop "USER" because "CONSTRAINT_259, CONSTRAINT_185, CONSTRAINT_1859" depends on it; SQL statement:
+drop table user [90107-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:98)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:124)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 19:56:30 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE LABOR_PAIN(
+ LABOR_PAIN_ID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ USER_ID INT,
+ START_TIME DATETIME DEFAULT CURRENT_TIMESTAMP,
+ STOP_TIME DATETIME,
+ INTERVAL[*] TIME,
+ FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE SET NULL ON UPDATE CASCADE
+)"; expected "identifier"; SQL statement:
+create table labor_pain(
+ labor_pain_id int auto_increment not null primary key,
+ user_id int,
+ start_time datetime default current_timestamp,
+ stop_time datetime,
+ interval time,
+ foreign key (user_id) references user(user_id) on delete set null on update cascade
+) [42001-200]
+2022-06-16 20:13:34 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "ATTRIBUTE" が見つかりません
+Column "ATTRIBUTE" not found; SQL statement:
+create table partner(
+ partner_id int auto_increment not null primary key,
+ family_id int,
+ name varchar(40),
+ appetite int default 0,
+ sleepiness int default 0,
+ humor int default 0,
+ nausea int default 0,
+ stress int default 0,
+ dizziness int default 0,
+ fatigue int default 0,
+ stiff_shoulder int default 0,
+ headache int default 0,
+ backache int default 0,
+ stomach_ache int default 0,
+ feeling int default 0,
+ tidying int default 0,
+ self_assertion int default 0,
+ poop int default 0,
+ tooth_brushing int default 0,
+ created_at datetime default current_timestamp not null,
+ updated_at datetime default current_timestamp on update current_timestamp not null,
+ foreign key (attribute) references partner_attribute(partner_attribute_id)
+ on delete set null on update cascade
+) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:115)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:216)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 20:13:53 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "ATTRIBUTE" が見つかりません
+Column "ATTRIBUTE" not found; SQL statement:
+create table user_condition(
+ user_condition_id int auto_increment not null primary key,
+ partner_id int not null,
+ weight float,
+ body_temparture float,
+ text varchar(1000),
+ appetite int,
+ sleepiness int,
+ humor int,
+ nausea int,
+ stress int,
+ dizziness int,
+ fatigue int,
+ stiff_shoulder int,
+ headache int,
+ backache int,
+ stomach_ache int,
+ feeling int,
+ tidying int,
+ self_assertion int,
+ poop int,
+ tooth_brushing int,
+ created_at datetime default current_timestamp not null,
+ updated_at datetime default current_timestamp on update current_timestamp not null,
+ foreign key (attribute) references partner_attribute(partner_attribute_id)
+ on delete set null on update cascade
+ ) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:115)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:216)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 20:22:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "ATTRIBUTE" が見つかりません
+Column "ATTRIBUTE" not found; SQL statement:
+create table partner(
+ partner_id int auto_increment not null primary key,
+ family_id int,
+ name varchar(40),
+ appetite int default 0,
+ sleepiness int default 0,
+ humor int default 0,
+ nausea int default 0,
+ stress int default 0,
+ dizziness int default 0,
+ fatigue int default 0,
+ stiff_shoulder int default 0,
+ headache int default 0,
+ backache int default 0,
+ stomach_ache int default 0,
+ feeling int default 0,
+ tidying int default 0,
+ self_assertion int default 0,
+ poop int default 0,
+ tooth_brushing int default 0,
+ created_at datetime default current_timestamp not null,
+ updated_at datetime default current_timestamp on update current_timestamp not null,
+ foreign key (attribute) references partner_attribute(partner_attribute_id)
+ on delete set null on update cascade
+) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:115)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:216)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-16 21:46:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "PODT" が見つかりません
+Table "PODT" not found; SQL statement:
+drop table podt [42102-200]
+2022-06-16 21:48:22 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "ATTRIBUTE" が見つかりません
+Column "ATTRIBUTE" not found; SQL statement:
+create table user_condition(
+ user_condition_id int auto_increment not null primary key,
+ partner_id int not null,
+ weight float,
+ body_temparture float,
+ text varchar(1000),
+ appetite int,
+ sleepiness int,
+ humor int,
+ nausea int,
+ stress int,
+ dizziness int,
+ fatigue int,
+ stiff_shoulder int,
+ headache int,
+ backache int,
+ stomach_ache int,
+ feeling int,
+ tidying int,
+ self_assertion int,
+ poop int,
+ tooth_brushing int,
+ created_at datetime default current_timestamp not null,
+ updated_at datetime default current_timestamp on update current_timestamp not null,
+ foreign key (attribute) references partner_attribute(partner_attribute_id)
+ on delete set null on update cascade
+ ) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:115)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:216)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-17 09:54:56 jdbc[5]: java.lang.Exception: Open Stack Trace
+	at org.h2.util.CloseWatcher.register(CloseWatcher.java:100)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:187)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+org.h2.message.DbException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 16 more
+2022-06-17 09:59:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "ATTRIBUTE" が見つかりません
+Column "ATTRIBUTE" not found; SQL statement:
+create table user_condition(
+ user_condition_id int auto_increment not null primary key,
+ partner_id int not null,
+ weight float,
+ body_temparture float,
+ text varchar(1000),
+ appetite int,
+ sleepiness int,
+ humor int,
+ nausea int,
+ stress int,
+ dizziness int,
+ fatigue int,
+ stiff_shoulder int,
+ headache int,
+ backache int,
+ stomach_ache int,
+ feeling int,
+ tidying int,
+ self_assertion int,
+ poop int,
+ tooth_brushing int,
+ created_at datetime default current_timestamp not null,
+ updated_at datetime default current_timestamp on update current_timestamp not null,
+ foreign key (attribute) references partner_attribute(partner_attribute_id)
+ on delete set null on update cascade
+ ) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:115)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:216)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-17 10:01:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "USER_CONDTION" が見つかりません
+Table "USER_CONDTION" not found; SQL statement:
+drop table user_condtion [42102-200]
+2022-06-17 10:53:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE,)[*]
+VALUES ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13')"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE,)[*]
+VALUES ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13')"; expected "identifier"; SQL statement:
+create table user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date,)
+values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13') [42001-200]
+2022-06-17 10:53:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13')"
+Syntax error in SQL statement "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13')"; SQL statement:
+create table user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date)
+values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13') [42000-200]
+2022-06-17 10:54:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE)
+VALUE[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13')"
+Syntax error in SQL statement "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE)
+VALUE[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13')"; SQL statement:
+create table user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date)
+value ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13') [42000-200]
+2022-06-17 10:54:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE) VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13')"
+Syntax error in SQL statement "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE) VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13')"; SQL statement:
+create table user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date) values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13') [42000-200]
+2022-06-17 10:55:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE) VALUES[*]('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13')"
+Syntax error in SQL statement "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE) VALUES[*]('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13')"; SQL statement:
+create table user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date) values('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13') [42000-200]
+2022-06-17 10:56:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE) VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006-6-22', '男性', '090-1227-1155', 1, '2022-11-13')"
+Syntax error in SQL statement "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE) VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006-6-22', '男性', '090-1227-1155', 1, '2022-11-13')"; SQL statement:
+create table user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date) values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006-6-22', '男性', '090-1227-1155', 1, '2022-11-13') [42000-200]
+2022-06-17 11:11:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE,)[*]
+VALUES ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13')"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE,)[*]
+VALUES ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13')"; expected "identifier"; SQL statement:
+create table user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date,)
+values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13') [42001-200]
+2022-06-17 11:11:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13')"
+Syntax error in SQL statement "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13')"; SQL statement:
+create table user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date)
+values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13') [42000-200]
+2022-06-17 11:12:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE, LOGOUT_TIME)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13', '')"
+Syntax error in SQL statement "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE, LOGOUT_TIME)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13', '')"; SQL statement:
+create table user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date, logout_time)
+values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13', '') [42000-200]
+2022-06-17 11:13:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE, LOGOUT_TIME)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13', '')"
+Syntax error in SQL statement "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE, LOGOUT_TIME)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13', '')"; SQL statement:
+create table user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date, logout_time)
+values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006/6/22', '男性', '090-1227-1155', 1, '2022/11/13', '') [42000-200]
+2022-06-17 11:15:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE, LOGOUT_TIME)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '')"
+Syntax error in SQL statement "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE, LOGOUT_TIME)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '')"; SQL statement:
+create table user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date, logout_time)
+values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '') [42000-200]
+2022-06-17 11:17:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE, LOGOUT_TIME)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原年昭', 'トシキ', '902-2918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '')"
+Syntax error in SQL statement "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE, LOGOUT_TIME)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原年昭', 'トシキ', '902-2918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '')"; SQL statement:
+create table user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date, logout_time)
+values ('SHfm1T@test.com', 'rz444T1l', '清原年昭', 'トシキ', '902-2918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '') [42000-200]
+2022-06-17 11:17:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE, LOGOUT_TIME)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '9022918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '')"
+Syntax error in SQL statement "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE, LOGOUT_TIME)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '9022918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '')"; SQL statement:
+create table user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date, logout_time)
+values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '9022918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '') [42000-200]
+2022-06-17 11:18:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE, LOGOUT_TIME)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '9022918', '熊本県', '2006-06-22', '男性', '09012271155', 1, '2022-11-13', '')"
+Syntax error in SQL statement "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE, LOGOUT_TIME)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '9022918', '熊本県', '2006-06-22', '男性', '09012271155', 1, '2022-11-13', '')"; SQL statement:
+create table user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date, logout_time)
+values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '9022918', '熊本県', '2006-06-22', '男性', '09012271155', 1, '2022-11-13', '') [42000-200]
+2022-06-17 11:21:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "ALTER TABLE ([*]USER) ALTER COLUMN (PASSWORD) (VARCHAR(100))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "ALTER TABLE ([*]USER) ALTER COLUMN (PASSWORD) (VARCHAR(100))"; expected "identifier"; SQL statement:
+alter table (user) alter column (password) (varchar(100)) [42001-200]
+2022-06-17 11:22:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: 不明なデータ型: 
+Unknown data type: ; SQL statement:
+alter table user alter column password (varchar(100)) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseAlterTableAlterColumnType(Parser.java:8065)
+	at org.h2.command.Parser.parseAlterTableAlter(Parser.java:7811)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:7698)
+	at org.h2.command.Parser.parseAlter(Parser.java:6983)
+	at org.h2.command.Parser.parsePrepared(Parser.java:887)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-17 11:24:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: "CONSTRAINT_259, CONSTRAINT_D7, CONSTRAINT_185, CONSTRAINT_1859" が依存しているため、"USER" をドロップすることはできません
+Cannot drop "USER" because "CONSTRAINT_259, CONSTRAINT_D7, CONSTRAINT_185, CONSTRAINT_1859" depends on it; SQL statement:
+DROP TABLE IF EXISTS user [90107-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:98)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:124)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-17 11:24:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "USER" はすでに存在します
+Table "USER" already exists; SQL statement:
+create table user(
+ user_id int auto_increment not null primary key,
+ email varchar(60) not null,
+ password varchar(100) not null,
+ name varchar(80),
+ nickname varchar(40),
+ post_code varchar(10),
+ address varchar(100),
+ birthday date,
+ gender varchar(10),
+ tel varchar(20),
+ family_id int,
+ due_date date,
+ created_at datetime default current_timestamp not null,
+ updated_at datetime default current_timestamp on update current_timestamp not null,
+ login_time datetime default current_timestamp on update current_timestamp not null,
+ logout_time datetime
+) [42101-200]
+2022-06-17 11:27:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE, LOGOUT_TIME)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '')"
+Syntax error in SQL statement "CREATE TABLE USER (EMAIL, PASSWORD, NAME, NICKNAME, POST_CODE, ADDRESS, BIRTHDAY, GENDER, TEL, FAMILY_ID, DUE_DATE, LOGOUT_TIME)
+VALUES[*] ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '')"; SQL statement:
+create table user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date, logout_time)
+values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '') [42000-200]
+2022-06-17 11:30:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: "TIMESTAMP" 定数  を解析できません
+Cannot parse "TIMESTAMP" constant ; SQL statement:
+insert into user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date, logout_time)
+values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '') [22007-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:457)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:136)
+	at org.h2.value.Value.convertToTimestamp(Value.java:1169)
+	at org.h2.value.Value.convertTo(Value.java:822)
+	at org.h2.value.Value.convertTo(Value.java:772)
+	at org.h2.value.TypeInfo.cast(TypeInfo.java:515)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:378)
+	at org.h2.table.Table.validateConvertUpdateSequence(Table.java:845)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:187)
+	at org.h2.command.dml.Insert.update(Insert.java:151)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:47)
+	at java.base/java.lang.String.charAt(String.java:693)
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:145)
+	at org.h2.util.DateTimeUtils.parseTimestamp(DateTimeUtils.java:316)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:134)
+	... 19 more
+2022-06-17 11:31:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: "TIMESTAMP" 定数  を解析できません
+Cannot parse "TIMESTAMP" constant ; SQL statement:
+insert into user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date, created_at, updated_at, login_time, logout_time)
+values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '', '', '', '') [22007-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:457)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:136)
+	at org.h2.value.Value.convertToTimestamp(Value.java:1169)
+	at org.h2.value.Value.convertTo(Value.java:822)
+	at org.h2.value.Value.convertTo(Value.java:772)
+	at org.h2.value.TypeInfo.cast(TypeInfo.java:515)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:378)
+	at org.h2.table.Table.validateConvertUpdateSequence(Table.java:845)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:187)
+	at org.h2.command.dml.Insert.update(Insert.java:151)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:47)
+	at java.base/java.lang.String.charAt(String.java:693)
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:145)
+	at org.h2.util.DateTimeUtils.parseTimestamp(DateTimeUtils.java:316)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:134)
+	... 19 more
+2022-06-17 11:35:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: "TIMESTAMP" 定数  を解析できません
+Cannot parse "TIMESTAMP" constant ; SQL statement:
+insert into user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date, logout_time)
+values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '') [22007-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:457)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:136)
+	at org.h2.value.Value.convertToTimestamp(Value.java:1169)
+	at org.h2.value.Value.convertTo(Value.java:822)
+	at org.h2.value.Value.convertTo(Value.java:772)
+	at org.h2.value.TypeInfo.cast(TypeInfo.java:515)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:378)
+	at org.h2.table.Table.validateConvertUpdateSequence(Table.java:845)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:187)
+	at org.h2.command.dml.Insert.update(Insert.java:151)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:47)
+	at java.base/java.lang.String.charAt(String.java:693)
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:145)
+	at org.h2.util.DateTimeUtils.parseTimestamp(DateTimeUtils.java:316)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:134)
+	... 19 more
+2022-06-17 11:36:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: "TIMESTAMP" 定数  を解析できません
+Cannot parse "TIMESTAMP" constant ; SQL statement:
+insert into user (email, password, name, nickname, post_code, address, birthday, gender, tel, family_id, due_date, logout_time)
+values ('SHfm1T@test.com', 'rz444T1l', '清原 年昭', 'トシキ', '902-2918', '熊本県', '2006-06-22', '男性', '090-1227-1155', 1, '2022-11-13', '') [22007-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:457)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:136)
+	at org.h2.value.Value.convertToTimestamp(Value.java:1169)
+	at org.h2.value.Value.convertTo(Value.java:822)
+	at org.h2.value.Value.convertTo(Value.java:772)
+	at org.h2.value.TypeInfo.cast(TypeInfo.java:515)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:378)
+	at org.h2.table.Table.validateConvertUpdateSequence(Table.java:845)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:187)
+	at org.h2.command.dml.Insert.update(Insert.java:151)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:47)
+	at java.base/java.lang.String.charAt(String.java:693)
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:145)
+	at org.h2.util.DateTimeUtils.parseTimestamp(DateTimeUtils.java:316)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:134)
+	... 19 more
+2022-06-17 13:21:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "ダーリン" が見つかりません
+Column "ダーリン" not found; SQL statement:
+insert into partner (family_id, name, attribute)
+values (1, ダーリン, 2) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-17 13:33:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "[*]□UPDATE PARTNER SET SLEEPINESS = 1"
+Syntax error in SQL statement "[*]□UPDATE PARTNER SET SLEEPINESS = 1"; SQL statement:
+□update partner set sleepiness = 1 [42000-200]
+2022-06-17 13:33:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "[*]□UPDATE PARTNER SET HUMOR = 1"
+Syntax error in SQL statement "[*]□UPDATE PARTNER SET HUMOR = 1"; SQL statement:
+□update partner set humor = 1 [42000-200]
+2022-06-17 13:33:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "[*]□UPDATE PARTNER SET NAUSEA = 1"
+Syntax error in SQL statement "[*]□UPDATE PARTNER SET NAUSEA = 1"; SQL statement:
+□update partner set nausea = 1 [42000-200]
+2022-06-17 13:33:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "[*]□UPDATE PARTNER SET STRESS = 1"
+Syntax error in SQL statement "[*]□UPDATE PARTNER SET STRESS = 1"; SQL statement:
+□update partner set stress = 1 [42000-200]
+2022-06-17 13:33:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "[*]□UPDATE PARTNER SET DIZZINESS = 1"
+Syntax error in SQL statement "[*]□UPDATE PARTNER SET DIZZINESS = 1"; SQL statement:
+□update partner set dizziness = 1 [42000-200]
+2022-06-17 13:33:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "[*]□UPDATE PARTNER SET FATIGUE = 1"
+Syntax error in SQL statement "[*]□UPDATE PARTNER SET FATIGUE = 1"; SQL statement:
+□update partner set fatigue = 1 [42000-200]
+2022-06-17 13:33:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "[*]□UPDATE PARTNER SET STIFF_SHOULDER = 1"
+Syntax error in SQL statement "[*]□UPDATE PARTNER SET STIFF_SHOULDER = 1"; SQL statement:
+□update partner set stiff_shoulder = 1 [42000-200]
+2022-06-17 13:33:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "[*]□UPDATE PARTNER SET HEADACHE = 1"
+Syntax error in SQL statement "[*]□UPDATE PARTNER SET HEADACHE = 1"; SQL statement:
+□update partner set headache = 1 [42000-200]
+2022-06-17 13:33:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "[*]□UPDATE PARTNER SET BACKACHE = 1"
+Syntax error in SQL statement "[*]□UPDATE PARTNER SET BACKACHE = 1"; SQL statement:
+□update partner set backache = 1 [42000-200]
+2022-06-17 13:33:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "[*]□UPDATE PARTNER SET STOMACH_ACHE = 1"
+Syntax error in SQL statement "[*]□UPDATE PARTNER SET STOMACH_ACHE = 1"; SQL statement:
+□update partner set stomach_ache = 1 [42000-200]
+2022-06-17 13:33:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "[*]□UPDATE PARTNER SET FEELING = 1"
+Syntax error in SQL statement "[*]□UPDATE PARTNER SET FEELING = 1"; SQL statement:
+□update partner set feeling = 1 [42000-200]
+2022-06-17 13:41:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "UPDATE PARTNER SET HUMOR = 0 WHERE PARTNER_ID = 1,[*] 4"
+Syntax error in SQL statement "UPDATE PARTNER SET HUMOR = 0 WHERE PARTNER_ID = 1,[*] 4"; SQL statement:
+update partner set humor = 0 where partner_id = 1, 4 [42000-200]
+2022-06-17 13:41:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "UPDATE PARTNER SET HUMOR = 0 WHERE PARTNER_ID = 1,[*]4"
+Syntax error in SQL statement "UPDATE PARTNER SET HUMOR = 0 WHERE PARTNER_ID = 1,[*]4"; SQL statement:
+update partner set humor = 0 where partner_id = 1,4 [42000-200]
+2022-06-17 13:43:39 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "FEELING" が見つかりません
+Column "FEELING" not found; SQL statement:
+update user set feeling = 0 where partner_id = 2 [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.readTableColumn(Parser.java:1274)
+	at org.h2.command.Parser.parseUpdateSetClause(Parser.java:1325)
+	at org.h2.command.Parser.parseUpdate(Parser.java:1290)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1005)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-17 13:44:12 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "FEELING" が見つかりません
+Column "FEELING" not found; SQL statement:
+update user set feeling = 0 where partner_id = 2 [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.readTableColumn(Parser.java:1274)
+	at org.h2.command.Parser.parseUpdateSetClause(Parser.java:1325)
+	at org.h2.command.Parser.parseUpdate(Parser.java:1290)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1005)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-17 13:56:26 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO USER_CONDITION (PARTNER_ID, WEIGHT, BODY_TEMPARTURE, TEXT, APPETITE, SLEEPINESS, HUMOR, NAUSEA, STRESS, DIZZINESS, FATIGUE, STIFF_SHOULDER, HEADACHE, BACKACHE, STOMACH_ACHE, FEELING, TIDYING, SELF_ASSERTION, POOP, TOOTH_BRUSHING)
+VALUES (1, ,[*] 36.1, '', 4, 3, , , 4, 1, 4, 5, 1, 4, 1, 3, , , , )"; 期待されるステートメント "DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "INSERT INTO USER_CONDITION (PARTNER_ID, WEIGHT, BODY_TEMPARTURE, TEXT, APPETITE, SLEEPINESS, HUMOR, NAUSEA, STRESS, DIZZINESS, FATIGUE, STIFF_SHOULDER, HEADACHE, BACKACHE, STOMACH_ACHE, FEELING, TIDYING, SELF_ASSERTION, POOP, TOOTH_BRUSHING)
+VALUES (1, ,[*] 36.1, '', 4, 3, , , 4, 1, 4, 5, 1, 4, 1, 3, , , , )"; expected "DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+insert into user_condition (partner_id, weight, body_temparture, text, appetite, sleepiness, humor, nausea, stress, dizziness, fatigue, stiff_shoulder, headache, backache, stomach_ache, feeling, tidying, self_assertion, poop, tooth_brushing)
+values (1, , 36.1, '', 4, 3, , , 4, 1, 4, 5, 1, 4, 1, 3, , , , ) [42001-200]
+2022-06-17 14:12:33 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO USER_CONDITION (PARTNER_ID, BODY_TEMPARTURE)
+VALUES (3, 35.9,)[*]"; 期待されるステートメント "DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "INSERT INTO USER_CONDITION (PARTNER_ID, BODY_TEMPARTURE)
+VALUES (3, 35.9,)[*]"; expected "DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+insert into user_condition (partner_id, body_temparture)
+values (3, 35.9,) [42001-200]
+2022-06-17 14:39:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('妊婦健診について', '妊婦健診は、妊娠初期～妊娠23週は4週間に1回（計4回）、妊娠24週～妊娠35週は2週間に1回（計6回）、妊娠36週～出産までは週に1回（計4回）、合計14回の受診が目安となります。(Mint+ホームページより)', 1)[*]；"
+Syntax error in SQL statement "INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('妊婦健診について', '妊婦健診は、妊娠初期～妊娠23週は4週間に1回（計4回）、妊娠24週～妊娠35週は2週間に1回（計6回）、妊娠36週～出産までは週に1回（計4回）、合計14回の受診が目安となります。(Mint+ホームページより)', 1)[*]；"; SQL statement:
+insert into column (title, body, genre_id)
+values ('妊婦健診について', '妊婦健診は、妊娠初期～妊娠23週は4週間に1回（計4回）、妊娠24週～妊娠35週は2週間に1回（計6回）、妊娠36週～出産までは週に1回（計4回）、合計14回の受診が目安となります。(Mint+ホームページより)', 1)； [42000-200]
+2022-06-17 15:20:15 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('妊娠中の体温', 'ほとんどの人が妊娠初期に36.7℃以上の高温期が続くようです。そして14週頃から徐々に下がり始め、平熱に戻ります。(stemcellホームページより)', 2)[*]；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('職場にはいつ報告するべき？', '一般的に、早くて産婦人科で妊娠が認められてから、遅くても安定期を目途に行う人が多いようです。(ninaruより)', 3)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('妊娠中のNG食材', 'アルコール、カフェイン、お刺身、生肉はおなかの中の赤ちゃんのために避けましょう！(和光堂ホームページより)', 4)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('いつからマタニティウェアを使うの？', '目安としてはおなかが大きくなり始める妊娠4～5ヶ月頃から！(アカチャンホンポホームページより)', 5)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('臨月に外出するときの注意点', 'いつ何が起こっても対処できるように準備すること・あまり遠くに行かないことが大切です！(ninaruより)', 6)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('産後ダイエットに適した時期', '産後直後は体力が落ちているので、産後1ヶ月からがベスト！(ninaruより)', 7)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('乳児湿疹の原因', '肌の乾燥や、汗が原因となることが多い。(ninaruより)', 8)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('新生児の授乳間隔', '一回の授乳時間も短いため、「泣いたら授乳する」くらいの感覚であげても問題ありません。(ninaruより)', 9)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('育休手当をもらう条件とは？', '雇用保険に加入し、保険料を支払っている・育児休業後、退職予定がない・育休中の就業日数が各1カ月に10日以下・育休中に休業開始前の1カ月の賃金の8割以上が支払われていない・育休前の2年間で11日以上働いた月が12カ月以上であることが条件となります。(カオナビホームページより)', 10)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('2021年版赤ちゃんの名前ランキング', '男の子の1位は「蓮（れん）」、女の子は「陽葵（ひまり）」と「紬（つむぎ）」が同率1位となりました(たまひよホームページより)', 11)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('生後3週間は泣きのピーク！', '生後3週ごろ、多くの赤ちゃんに「泣きのピーク」が訪れます。温かくて守られているだけだった快適なおなかの中から、外の世界へと環境が変わったことを認知しはじめて、新しい環境に適応できずに泣き続けるのだといわれています。(moonyホームページより)', 12)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('赤ちゃんが誤飲してしまったら？', '「顔色」「機嫌」「元気」にもし変わりなければ、様子を見て便から排泄されるのを待って大丈夫です。一般に食道の通過を確認できれば大丈夫と言われています。(あいち省に保健医療総合センターより)', 13)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('保活って？', '近年、待機児童問題はさまざまな地域において深刻化しています。そのため、倍率の厳しくない地域に引っ越したり、入所しやすいように雇用形態を変更したりといった活動が行われており、そうした活動全般を保活と呼びます。(第一生命ホームページより)', 14)；"
+Syntax error in SQL statement "INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('妊娠中の体温', 'ほとんどの人が妊娠初期に36.7℃以上の高温期が続くようです。そして14週頃から徐々に下がり始め、平熱に戻ります。(stemcellホームページより)', 2)[*]；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('職場にはいつ報告するべき？', '一般的に、早くて産婦人科で妊娠が認められてから、遅くても安定期を目途に行う人が多いようです。(ninaruより)', 3)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('妊娠中のNG食材', 'アルコール、カフェイン、お刺身、生肉はおなかの中の赤ちゃんのために避けましょう！(和光堂ホームページより)', 4)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('いつからマタニティウェアを使うの？', '目安としてはおなかが大きくなり始める妊娠4～5ヶ月頃から！(アカチャンホンポホームページより)', 5)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('臨月に外出するときの注意点', 'いつ何が起こっても対処できるように準備すること・あまり遠くに行かないことが大切です！(ninaruより)', 6)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('産後ダイエットに適した時期', '産後直後は体力が落ちているので、産後1ヶ月からがベスト！(ninaruより)', 7)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('乳児湿疹の原因', '肌の乾燥や、汗が原因となることが多い。(ninaruより)', 8)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('新生児の授乳間隔', '一回の授乳時間も短いため、「泣いたら授乳する」くらいの感覚であげても問題ありません。(ninaruより)', 9)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('育休手当をもらう条件とは？', '雇用保険に加入し、保険料を支払っている・育児休業後、退職予定がない・育休中の就業日数が各1カ月に10日以下・育休中に休業開始前の1カ月の賃金の8割以上が支払われていない・育休前の2年間で11日以上働いた月が12カ月以上であることが条件となります。(カオナビホームページより)', 10)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('2021年版赤ちゃんの名前ランキング', '男の子の1位は「蓮（れん）」、女の子は「陽葵（ひまり）」と「紬（つむぎ）」が同率1位となりました(たまひよホームページより)', 11)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('生後3週間は泣きのピーク！', '生後3週ごろ、多くの赤ちゃんに「泣きのピーク」が訪れます。温かくて守られているだけだった快適なおなかの中から、外の世界へと環境が変わったことを認知しはじめて、新しい環境に適応できずに泣き続けるのだといわれています。(moonyホームページより)', 12)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('赤ちゃんが誤飲してしまったら？', '「顔色」「機嫌」「元気」にもし変わりなければ、様子を見て便から排泄されるのを待って大丈夫です。一般に食道の通過を確認できれば大丈夫と言われています。(あいち省に保健医療総合センターより)', 13)；
+INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('保活って？', '近年、待機児童問題はさまざまな地域において深刻化しています。そのため、倍率の厳しくない地域に引っ越したり、入所しやすいように雇用形態を変更したりといった活動が行われており、そうした活動全般を保活と呼びます。(第一生命ホームページより)', 14)；"; SQL statement:
+insert into column (title, body, genre_id)
+values ('妊娠中の体温', 'ほとんどの人が妊娠初期に36.7℃以上の高温期が続くようです。そして14週頃から徐々に下がり始め、平熱に戻ります。(stemcellホームページより)', 2)；
+insert into column (title, body, genre_id)
+values ('職場にはいつ報告するべき？', '一般的に、早くて産婦人科で妊娠が認められてから、遅くても安定期を目途に行う人が多いようです。(ninaruより)', 3)；
+insert into column (title, body, genre_id)
+values ('妊娠中のNG食材', 'アルコール、カフェイン、お刺身、生肉はおなかの中の赤ちゃんのために避けましょう！(和光堂ホームページより)', 4)；
+insert into column (title, body, genre_id)
+values ('いつからマタニティウェアを使うの？', '目安としてはおなかが大きくなり始める妊娠4～5ヶ月頃から！(アカチャンホンポホームページより)', 5)；
+insert into column (title, body, genre_id)
+values ('臨月に外出するときの注意点', 'いつ何が起こっても対処できるように準備すること・あまり遠くに行かないことが大切です！(ninaruより)', 6)；
+insert into column (title, body, genre_id)
+values ('産後ダイエットに適した時期', '産後直後は体力が落ちているので、産後1ヶ月からがベスト！(ninaruより)', 7)；
+insert into column (title, body, genre_id)
+values ('乳児湿疹の原因', '肌の乾燥や、汗が原因となることが多い。(ninaruより)', 8)；
+insert into column (title, body, genre_id)
+values ('新生児の授乳間隔', '一回の授乳時間も短いため、「泣いたら授乳する」くらいの感覚であげても問題ありません。(ninaruより)', 9)；
+insert into column (title, body, genre_id)
+values ('育休手当をもらう条件とは？', '雇用保険に加入し、保険料を支払っている・育児休業後、退職予定がない・育休中の就業日数が各1カ月に10日以下・育休中に休業開始前の1カ月の賃金の8割以上が支払われていない・育休前の2年間で11日以上働いた月が12カ月以上であることが条件となります。(カオナビホームページより)', 10)；
+insert into column (title, body, genre_id)
+values ('2021年版赤ちゃんの名前ランキング', '男の子の1位は「蓮（れん）」、女の子は「陽葵（ひまり）」と「紬（つむぎ）」が同率1位となりました(たまひよホームページより)', 11)；
+insert into column (title, body, genre_id)
+values ('生後3週間は泣きのピーク！', '生後3週ごろ、多くの赤ちゃんに「泣きのピーク」が訪れます。温かくて守られているだけだった快適なおなかの中から、外の世界へと環境が変わったことを認知しはじめて、新しい環境に適応できずに泣き続けるのだといわれています。(moonyホームページより)', 12)；
+insert into column (title, body, genre_id)
+values ('赤ちゃんが誤飲してしまったら？', '「顔色」「機嫌」「元気」にもし変わりなければ、様子を見て便から排泄されるのを待って大丈夫です。一般に食道の通過を確認できれば大丈夫と言われています。(あいち省に保健医療総合センターより)', 13)；
+insert into column (title, body, genre_id)
+values ('保活って？', '近年、待機児童問題はさまざまな地域において深刻化しています。そのため、倍率の厳しくない地域に引っ越したり、入所しやすいように雇用形態を変更したりといった活動が行われており、そうした活動全般を保活と呼びます。(第一生命ホームページより)', 14)； [42000-200]
+2022-06-17 15:20:34 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('妊娠中の体温', 'ほとんどの人が妊娠初期に36.7℃以上の高温期が続くようです。そして14週頃から徐々に下がり始め、平熱に戻ります。(stemcellホームページより)', 2)[*]；"
+Syntax error in SQL statement "INSERT INTO COLUMN (TITLE, BODY, GENRE_ID)
+VALUES ('妊娠中の体温', 'ほとんどの人が妊娠初期に36.7℃以上の高温期が続くようです。そして14週頃から徐々に下がり始め、平熱に戻ります。(stemcellホームページより)', 2)[*]；"; SQL statement:
+insert into column (title, body, genre_id)
+values ('妊娠中の体温', 'ほとんどの人が妊娠初期に36.7℃以上の高温期が続くようです。そして14週頃から徐々に下がり始め、平熱に戻ります。(stemcellホームページより)', 2)； [42000-200]
+2022-06-17 15:50:27 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列番号が一致しません
+Column count does not match; SQL statement:
+insert into weekly_report (week, person, title, body, image) 
+values (12, '胎動を感じる時期に', '赤ちゃんは羊水に浮かびながら、子宮の中を自由に動いています。手足を曲げたり、体全体を揺らしたり、いろんな動きができるようになりました。', '') [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-17 15:51:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO WEEKLY_REPORT (WEEK, PERSON, TITLE, BODY, IMAGE) 
+VALUES (12,''赤ちゃん[*], '胎動を感じる時期に', '赤ちゃんは羊水に浮かびながら、子宮の中を自由に動いています。手足を曲げたり、体全体を揺らしたり、いろんな動きができるようになりました。', '')"; 期待されるステートメント "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"
+Syntax error in SQL statement "INSERT INTO WEEKLY_REPORT (WEEK, PERSON, TITLE, BODY, IMAGE) 
+VALUES (12,''赤ちゃん[*], '胎動を感じる時期に', '赤ちゃんは羊水に浮かびながら、子宮の中を自由に動いています。手足を曲げたり、体全体を揺らしたり、いろんな動きができるようになりました。', '')"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+insert into weekly_report (week, person, title, body, image) 
+values (12,''赤ちゃん, '胎動を感じる時期に', '赤ちゃんは羊水に浮かびながら、子宮の中を自由に動いています。手足を曲げたり、体全体を揺らしたり、いろんな動きができるようになりました。', '') [42001-200]
+2022-06-17 16:33:05 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "LSTART_TIME" が見つかりません
+Column "LSTART_TIME" not found; SQL statement:
+update labor_pain set lstart_time = now() where user_id = 10 [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.readTableColumn(Parser.java:1274)
+	at org.h2.command.Parser.parseUpdateSetClause(Parser.java:1325)
+	at org.h2.command.Parser.parseUpdate(Parser.java:1290)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1005)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-17 16:34:42 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "DELETE FROM LABOR_PAIN([*]LABOR_INTERVAL) WHERE USER_ID = 10"
+Syntax error in SQL statement "DELETE FROM LABOR_PAIN([*]LABOR_INTERVAL) WHERE USER_ID = 10"; SQL statement:
+delete from labor_pain(labor_interval) where user_id = 10 [42000-200]
+2022-06-17 16:39:12 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT_INTO[*] USER_ICON (PERSON, IMAGE) VALUE ('女性','')"; 期待されるステートメント "INSERT"
+Syntax error in SQL statement "INSERT_INTO[*] USER_ICON (PERSON, IMAGE) VALUE ('女性','')"; expected "INSERT"; SQL statement:
+insert_into user_icon (person, image) value ('女性','') [42001-200]
+2022-06-17 16:39:12 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT_INTO[*] USER_ICON (PERSON, IMAGE) VALUE ('男性','')"; 期待されるステートメント "INSERT"
+Syntax error in SQL statement "INSERT_INTO[*] USER_ICON (PERSON, IMAGE) VALUE ('男性','')"; expected "INSERT"; SQL statement:
+insert_into user_icon (person, image) value ('男性','') [42001-200]
+2022-06-17 16:39:33 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO USER_ICON (PERSON, IMAGE) VALUE[*] ('女性','')"; 期待されるステートメント "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "INSERT INTO USER_ICON (PERSON, IMAGE) VALUE[*] ('女性','')"; expected "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"; SQL statement:
+insert into user_icon (person, image) value ('女性','') [42001-200]
+2022-06-17 16:39:33 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO USER_ICON (PERSON, IMAGE) VALUE[*] ('男性','')"; 期待されるステートメント "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "INSERT INTO USER_ICON (PERSON, IMAGE) VALUE[*] ('男性','')"; expected "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"; SQL statement:
+insert into user_icon (person, image) value ('男性','') [42001-200]
+2022-06-17 17:36:16 jdbc[6]: null
+org.h2.message.DbException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 16 more
+2022-06-19 14:16:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列名 "LOGIN_TIME" が重複しています
+Duplicate column name "LOGIN_TIME"; SQL statement:
+ALTER TABLE user ADD login_time  datetime [42121-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.setColumns(Table.java:446)
+	at org.h2.table.TableBase.<init>(TableBase.java:75)
+	at org.h2.table.RegularTable.<init>(RegularTable.java:126)
+	at org.h2.mvstore.db.MVTable.<init>(MVTable.java:113)
+	at org.h2.mvstore.db.MVTableEngine$Store.createTable(MVTableEngine.java:253)
+	at org.h2.mvstore.db.MVTableEngine.createTable(MVTableEngine.java:127)
+	at org.h2.mvstore.db.MVTableEngine.createTable(MVTableEngine.java:41)
+	at org.h2.schema.Schema.createTable(Schema.java:697)
+	at org.h2.command.ddl.AlterTableAlterColumn.cloneTableStructure(AlterTableAlterColumn.java:414)
+	at org.h2.command.ddl.AlterTableAlterColumn.copyData(AlterTableAlterColumn.java:301)
+	at org.h2.command.ddl.AlterTableAlterColumn.update(AlterTableAlterColumn.java:210)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-19 15:57:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列番号が一致しません
+Column count does not match; SQL statement:
+insert into weekly_report (week, person, title, body, image) 
+values (29, '赤ちゃん', 'モロー反射', '大きな音や自分のくしゃみに反応してビクッとしたり、両手を軽く広げたりする反応を「モロー反射」といいます。エコーなどで見られるかもしれませんよ。') [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-19 16:20:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "UPDATE USER SET EMAIL = FAMITY@[*]GMAIL.COM WHERE USER_ID = 5"
+Syntax error in SQL statement "UPDATE USER SET EMAIL = FAMITY@[*]GMAIL.COM WHERE USER_ID = 5"; SQL statement:
+update user set email = famity@gmail.com where user_id = 5 [42000-200]
+2022-06-19 16:20:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "CC80CAC8EAB9043C38CDA3D5BA397C7C9800C9B1C9E6A1CB07C4D5B438D55119" が見つかりません
+Column "CC80CAC8EAB9043C38CDA3D5BA397C7C9800C9B1C9E6A1CB07C4D5B438D55119" not found; SQL statement:
+update user set password = cc80cac8eab9043c38cda3d5ba397c7c9800c9b1c9e6a1cb07c4d5b438d55119 where user_id = 5 [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Update.prepare(Update.java:275)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-20 09:53:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列番号が一致しません
+Column count does not match; SQL statement:
+insert into weekly_report (week, person, title, body, image) 
+values (29, '赤ちゃん', 'モロー反射', '大きな音や自分のくしゃみに反応してビクッとしたり、両手を軽く広げたりする反応を「モロー反射」といいます。エコーなどで見られるかもしれませんよ。') [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-20 09:55:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列番号が一致しません
+Column count does not match; SQL statement:
+insert into weekly_report (week, person, title, body, image) 
+values (29, '赤ちゃん', 'モロー反射', '大きな音や自分のくしゃみに反応してビクッとしたり、両手を軽く広げたりする反応を「モロー反射」といいます。エコーなどで見られるかもしれませんよ。') [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
