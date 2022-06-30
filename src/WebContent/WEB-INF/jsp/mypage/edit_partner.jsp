@@ -168,7 +168,7 @@
 								</div></td>
 							 <td><div class="form-check form-switch">
 									  <input class="humor form-check-input" type="checkbox" value="1" name="humor" >
-									  <label  for="humor">期限</label>
+									  <label  for="humor">機嫌</label>
 								</div></td>
 							<td><div class="form-check form-switch">
 									  <input class="nausea form-check-input" type="checkbox" value="1" name="nausea" >

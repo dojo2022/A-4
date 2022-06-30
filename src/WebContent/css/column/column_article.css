@@ -7,8 +7,9 @@ body{
 }
 
 .scroller{
+	margin:0 100px;
 	border:solid #D2DFF3;
-	height:170px;
+	height:380px;
 	overflow-y:scroll;
 }
 
